@@ -1,0 +1,8 @@
+[remote "origin"]
+lfsurl=https://git.noxdew.com/morwoen/written-in-stone.git/info/lfs/
+
+[lfs]
+locksverify=true
+
+[lfs "https://git.noxdew.com"]
+access=basic
