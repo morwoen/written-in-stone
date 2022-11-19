@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60e021de2dc1dff468b1a584df2a1262, type: 3}
-  m_Name: PlayerInventory
+  m_Script: {fileID: 11500000, guid: 5e80d5274cd444d4eb7d7edc82c4fc0c, type: 3}
+  m_Name: DebugDatabase
   m_EditorClassIdentifier: 
-  slots: []
-  stones: 0
-  rocks: 0
+  active:
+  - {fileID: 11400000, guid: df6383d6e0518634d90545ee993818f7, type: 2}
+  passive: []
+  enemyActive: []
+  enemyPassive: []

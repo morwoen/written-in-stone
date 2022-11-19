@@ -37,8 +37,8 @@ public class EffectsExecutor : MonoBehaviour
 
     private void ExecuteEvent(ActiveEffectSO active) {
         var slot = inventory.GetSlot(active);
-        var level = active.levels[slot.permanent + slot.temporary];
-        cooldownTracker.Add(active, Cooldown.Wait(level.cooldown)
+        var level = active.levels[slot.permanent + slot.temporary - 1];
+        cooldownTracker[active] = Cooldown.Wait(level.cooldown)
             .OnComplete(() => {
                 if (active.spawnOnPlayer) {
                     Instantiate(level.spellPrefab, transform.position, transform.rotation, transform);
@@ -46,6 +46,6 @@ public class EffectsExecutor : MonoBehaviour
                     Instantiate(level.spellPrefab, transform.position, transform.rotation);
                 }
                 ExecuteEvent(active);
-            }));
+            });
     }
 }
