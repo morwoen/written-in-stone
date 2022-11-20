@@ -60,6 +60,7 @@ public class Enemy : MonoBehaviour
     }
 
     public void Damage(int damage) {
+        Debug.Log(damage);
         health = Mathf.Clamp(health - damage, 0, maxHealth);
         if (health == 0) {
             SwitchState(State.Stunned);

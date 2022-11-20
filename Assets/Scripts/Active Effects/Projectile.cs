@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Projectile : MonoBehaviour, IActiveEffect
+public class Projectile : ActiveEffect
 {
     [SerializeField]
     int range = 5;
@@ -19,32 +19,12 @@ public class Projectile : MonoBehaviour, IActiveEffect
     Vector3 initialPosition;
     Vector3 direction = Vector3.forward;
 
-    float effectScale = 1f;
-
-    public float EffectScale {
-        get {
-            return effectScale;
-        }
-
-        set {
-            effectScale = value;
-        }
-    }
-
-    public void SetParameters(float effectScale) {
-        this.EffectScale = effectScale;
-    }
-
-    public void UpdateGameObject() {
-        transform.localScale = transform.localScale * EffectScale;
-        BoxCollider collider = transform.GetComponent<BoxCollider>();
-        collider.size = collider.size * EffectScale;
+    public override void UpdateGameObject() {
+        return;
     }
 
     void Explode() {
-        Explosion explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity).GetComponent<Explosion>();
-        explosionInstance.SetParameters(EffectScale);
-        explosionInstance.UpdateGameObject();
+        Instantiate(explosion, transform.position, Quaternion.identity).GetComponent<Explosion>();
         Destroy(gameObject);
     }
 
@@ -64,7 +44,7 @@ public class Projectile : MonoBehaviour, IActiveEffect
         Enemy enemy = other.GetComponent<Enemy>();
 
         if (enemy) {
-            enemy.Damage(10);
+            enemy.Damage(damage);
         }
 
         if (!isPiercing || !enemy) {
