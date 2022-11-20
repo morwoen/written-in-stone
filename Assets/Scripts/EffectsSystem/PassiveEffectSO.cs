@@ -28,7 +28,7 @@ public class PassiveEffectSO : ScriptableObject
         SpellCooldown,
         SpellArea,
         SpellCritDamage,
-        SpellCritChange,
+        SpellCritChance,
         SpellMulticast,
     }
 
@@ -92,6 +92,5 @@ public class PassiveEffectSO : ScriptableObject
     {
         public EffectProperty property;
         public int modifier;
-
     }
 }

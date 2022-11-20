@@ -22,6 +22,7 @@ public class ActiveEffectSO : ScriptableObject
     public string displayName;
     public string tooltip;
     public bool spawnOnPlayer = true;
+    public EffectTrait[] traits;
 
     public EffectLevel[] levels = new[] {
         new EffectLevel(),
