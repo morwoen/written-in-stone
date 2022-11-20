@@ -31,6 +31,8 @@ public class Enemy : MonoBehaviour
     private void OnEnable() {
         agent = GetComponent<NavMeshAgent>();
         player = FindObjectOfType<PlayerController>().transform;
+
+        agent.avoidancePriority = Random.Range(1, 500);
     }
 
     private void Update() {

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7349793146543143507}
   - component: {fileID: 7349793146543143505}
   - component: {fileID: 204255639}
-  - component: {fileID: 1428704201}
   m_Layer: 6
   m_Name: Enemy1
   m_TagString: Untagged
@@ -87,22 +86,6 @@ MonoBehaviour:
   enemyKilled: {fileID: 11400000, guid: fa1f99320db969b4e930030d0772d9df, type: 2}
   range: 1
   maxHealth: 10
---- !u!208 &1428704201
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7349793146543143508}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 0
-  m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &7349793146988270128
 GameObject:
   m_ObjectHideFlags: 0
