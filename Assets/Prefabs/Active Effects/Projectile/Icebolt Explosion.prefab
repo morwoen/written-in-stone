@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7287754858345100792}
   - component: {fileID: -8607476039410448288}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Icebolt Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62584e172231af749802ea9d61ca5e8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 5
+  duration: 1
 --- !u!1001 &8161498460131814011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58,6 +58,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceBigExplosion
       objectReference: {fileID: 0}
+    - target: {fileID: 1944020486928733632, guid: 8552d32b513b77347afa9c6a68fcc6ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2050879412228153148, guid: 8552d32b513b77347afa9c6a68fcc6ec,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -68,15 +73,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3619746292673095946, guid: 8552d32b513b77347afa9c6a68fcc6ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3808419851534760107, guid: 8552d32b513b77347afa9c6a68fcc6ec,
         type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4626433496282186081, guid: 8552d32b513b77347afa9c6a68fcc6ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6091459766046979322, guid: 8552d32b513b77347afa9c6a68fcc6ec,
         type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6640648778135329773, guid: 8552d32b513b77347afa9c6a68fcc6ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9008214907204258642, guid: 8552d32b513b77347afa9c6a68fcc6ec,
         type: 3}

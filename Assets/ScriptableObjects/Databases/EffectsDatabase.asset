@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EffectsDatabase
   m_EditorClassIdentifier: 
   active:
-  - {fileID: 11400000, guid: 1aef439db1f69284ebc3e2eb82a85b1c, type: 2}
+  - {fileID: 11400000, guid: 67a87de22597a8243a5ae5c32d5ddf2b, type: 2}
   - {fileID: 11400000, guid: df6383d6e0518634d90545ee993818f7, type: 2}
   - {fileID: 11400000, guid: 0bc46d58dd7c2c04bbee1cd0e353b0a0, type: 2}
   passive:

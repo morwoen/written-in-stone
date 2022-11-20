@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7287754858345100792}
   - component: {fileID: -8607476039410448288}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thunderbolt Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62584e172231af749802ea9d61ca5e8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 5
+  duration: 1
 --- !u!1001 &2100532723995216444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53,6 +53,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7287754858345100792}
     m_Modifications:
+    - target: {fileID: 1794996977774578638, guid: 08f3f958a19213b4e85c715e0b459b11,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2265627957585088018, guid: 08f3f958a19213b4e85c715e0b459b11,
         type: 3}
       propertyPath: m_RootOrder
@@ -123,10 +128,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3902942038634681675, guid: 08f3f958a19213b4e85c715e0b459b11,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4475024482371776589, guid: 08f3f958a19213b4e85c715e0b459b11,
         type: 3}
       propertyPath: m_Name
       value: LightningExplosionYellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475024482371776589, guid: 08f3f958a19213b4e85c715e0b459b11,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704494229635249468, guid: 08f3f958a19213b4e85c715e0b459b11,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6285010549533883936, guid: 08f3f958a19213b4e85c715e0b459b11,
         type: 3}

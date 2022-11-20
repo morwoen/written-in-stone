@@ -54,7 +54,7 @@ public class Projectile : MonoBehaviour, IActiveEffect
     }
 
     void OnTriggerEnter(Collider other) {
-        if (!isPiercing && !other.CompareTag("Player")) {
+        if (!isPiercing) {
             Explosion explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity).GetComponent<Explosion>();
             explosionInstance.SetParameters(EffectScale);
             explosionInstance.UpdateGameObject();

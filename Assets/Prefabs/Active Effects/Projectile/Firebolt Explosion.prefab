@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7287754858345100792}
   - component: {fileID: -8607476039410448288}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firebolt Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62584e172231af749802ea9d61ca5e8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 5
+  duration: 1
 --- !u!1001 &6988836874405493959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53,9 +53,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7287754858345100792}
     m_Modifications:
+    - target: {fileID: 1147022872980752, guid: 8c988011ae9fc604a8a3761a0ac3d8a8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251721777823268, guid: 8c988011ae9fc604a8a3761a0ac3d8a8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501599223710028, guid: 8c988011ae9fc604a8a3761a0ac3d8a8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1879798220002124, guid: 8c988011ae9fc604a8a3761a0ac3d8a8, type: 3}
       propertyPath: m_Name
       value: FireballExplosionRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879798220002124, guid: 8c988011ae9fc604a8a3761a0ac3d8a8, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4752123170018852, guid: 8c988011ae9fc604a8a3761a0ac3d8a8, type: 3}
       propertyPath: m_RootOrder

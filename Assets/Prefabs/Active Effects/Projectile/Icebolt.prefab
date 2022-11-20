@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4339214223748108925}
   - component: {fileID: -8220605893438962175}
   - component: {fileID: 2148853300619675207}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Icebolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,10 +178,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4266046204859286285, guid: 70c64294021a4dd48b7e4401c85abbce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4266197911013094007, guid: 70c64294021a4dd48b7e4401c85abbce,
         type: 3}
       propertyPath: m_Name
       value: IceMissileBig
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266197911013094007, guid: 70c64294021a4dd48b7e4401c85abbce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266435043461763167, guid: 70c64294021a4dd48b7e4401c85abbce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266465403671556431, guid: 70c64294021a4dd48b7e4401c85abbce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70c64294021a4dd48b7e4401c85abbce, type: 3}

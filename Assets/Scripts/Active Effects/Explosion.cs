@@ -7,7 +7,7 @@ public class Explosion : MonoBehaviour, IActiveEffect
     float effectScale = 1f;
 
     [SerializeField]
-    int duration = 5;
+    int duration = 1;
 
     public float EffectScale {
         get {

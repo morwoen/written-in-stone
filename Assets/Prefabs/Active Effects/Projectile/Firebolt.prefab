@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4339214223748108925}
   - component: {fileID: -8220605893438962175}
   - component: {fileID: 2148853300619675207}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firebolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,6 +91,22 @@ PrefabInstance:
     - target: {fileID: 1006269644436722, guid: 8241db815e240fa408297a3015a6db53, type: 3}
       propertyPath: m_Name
       value: FireballRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006269644436722, guid: 8241db815e240fa408297a3015a6db53, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418886582916154, guid: 8241db815e240fa408297a3015a6db53, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534166139631254, guid: 8241db815e240fa408297a3015a6db53, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870774096287004, guid: 8241db815e240fa408297a3015a6db53, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4866859738511908, guid: 8241db815e240fa408297a3015a6db53, type: 3}
       propertyPath: m_RootOrder

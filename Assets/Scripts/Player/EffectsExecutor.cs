@@ -46,7 +46,7 @@ public class EffectsExecutor : MonoBehaviour
     }
 
     private void CastSpell(ActiveEffectSO.EffectLevel effectLevel, bool onPlayer, float multicast, float damageMultiplier, float areaMultiplier) {
-        if (multicast > 1) {
+        if (multicast >= 1) {
             multicast -= 1;
         } else {
             var roll = Random.Range(0, 1f);
@@ -81,7 +81,7 @@ public class EffectsExecutor : MonoBehaviour
     private void ExecuteEvent(ActiveEffectSO active) {
         var slot = inventory.GetSlot(active);
         var level = active.levels[slot.permanent + slot.temporary - 1];
-        var cooldownMultiplier = inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellCooldown, slot.effect.traits) / 100;
+        var cooldownMultiplier = 1 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellCooldown, slot.effect.traits) / 100;
         cooldownTracker[active] = Cooldown.Wait(level.cooldown, cooldownMultiplier)
             .OnComplete(() => {
                 var spellMulticast = multicast + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellMulticast, slot.effect.traits) / 100;
