@@ -76,7 +76,7 @@ public class InventorySO : ScriptableObject
 
     public int GetPassiveMultiplier(PassiveEffectSO.EffectProperty effectProperty, ActiveEffectSO.EffectTrait[] traits) {
         return passive
-            .Where(slot => slot.effect.traits.Union(traits).Count() > 0)
+            .Where(slot => slot.effect.traits.Intersect(traits).Count() > 0)
             .Select(slot => slot.details.effectedProperties.FirstOrDefault(prop => prop.property == effectProperty)?.modifier ?? 0)
             .Sum();
     }

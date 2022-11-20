@@ -42,7 +42,7 @@ public class EffectsExecutor : MonoBehaviour
     }
 
     private void OnEffectsChange(List<InventorySO.ActiveInventorySlot> active, List<InventorySO.PassiveInventorySlot> passive) {
-        multicast = 1 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.Multicast) / 100;
+        multicast = 1 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.Multicast) / 100f;
     }
 
     private void CastSpell(ActiveEffectSO.EffectLevel effectLevel, bool onPlayer, float multicast, float damageMultiplier, float areaMultiplier) {
@@ -55,12 +55,12 @@ public class EffectsExecutor : MonoBehaviour
             }
         }
 
-        var critChance = 0.05f + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellCritChance) / 100;
+        var critChance = 0.05f + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellCritChance) / 100f;
         var crit = Random.Range(0, 1f) < critChance;
 
         var damage = effectLevel.damage * damageMultiplier;
         if (crit) {
-            var critDamageMultiplier = 2 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellCritDamage) / 100;
+            var critDamageMultiplier = 2 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellCritDamage) / 100f;
             damage *= critDamageMultiplier;
         }
 
@@ -72,6 +72,7 @@ public class EffectsExecutor : MonoBehaviour
         }
 
         // TODO: get the component & give it dmg & area
+        go.GetComponent<ActiveEffect>().SetParameters(Mathf.CeilToInt(damage));
 
         Cooldown.Wait(0.2f).OnComplete(() => {
             CastSpell(effectLevel, onPlayer, multicast, damageMultiplier, areaMultiplier);
@@ -81,12 +82,12 @@ public class EffectsExecutor : MonoBehaviour
     private void ExecuteEvent(ActiveEffectSO active) {
         var slot = inventory.GetSlot(active);
         var level = active.levels[slot.permanent + slot.temporary - 1];
-        var cooldownMultiplier = 1 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellCooldown, slot.effect.traits) / 100;
+        var cooldownMultiplier = 1 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellCooldown, slot.effect.traits) / 100f;
         cooldownTracker[active] = Cooldown.Wait(level.cooldown, cooldownMultiplier)
             .OnComplete(() => {
-                var spellMulticast = multicast + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellMulticast, slot.effect.traits) / 100;
-                var damageMultiplier = inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellDamage, slot.effect.traits) / 100;
-                var areaMultiplier = inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellArea, slot.effect.traits) / 100;
+                var spellMulticast = multicast + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellMulticast, slot.effect.traits) / 100f;
+                var damageMultiplier = 1 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellDamage, slot.effect.traits) / 100f;
+                var areaMultiplier = 1 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellArea, slot.effect.traits) / 100f;
 
                 CastSpell(level, slot.effect.spawnOnPlayer, spellMulticast, damageMultiplier, areaMultiplier);
                 
