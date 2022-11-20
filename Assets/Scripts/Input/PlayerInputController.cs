@@ -12,7 +12,7 @@ public class PlayerInputController : MonoBehaviour
     [SerializeField] private float interactPersistence = 0.2f;
 
     public bool Dash { get; private set; }
-    public bool LookBack { get; private set; }
+    //public bool LookBack { get; private set; }
     public bool Interact { get; private set; }
     public bool Attack { get; private set; }
     public Vector3 Movement { get; private set; }
@@ -23,20 +23,20 @@ public class PlayerInputController : MonoBehaviour
 
         input.Player.Move.performed += OnMove;
         input.Player.Attack.performed += OnAttack;
-        //input.Player.Look.performed += OnLook;
+        input.Player.Look.performed += OnLook;
         //input.controlSchemeChange += OnControlSchemeChange;
     }
 
     private void OnDisable() {
         input.Player.Move.performed -= OnMove;
         input.Player.Attack.performed -= OnAttack;
-        //input.Player.Look.performed -= OnLook;
+        input.Player.Look.performed -= OnLook;
         //input.Player.OpenPauseMenu.performed -= OpenPauseMenu;
         //input.controlSchemeChange -= OnControlSchemeChange;
 
         Movement = Vector3.zero;
         Dash = false;
-        LookBack = false;
+        //LookBack = false;
         Attack = false;
     }
 
@@ -48,12 +48,12 @@ public class PlayerInputController : MonoBehaviour
         }
     }
 
-    //void OnLook(InputAction.CallbackContext ctx) {
-    //    LookDirection = ctx.ReadValue<Vector2>();
-    //    if (input.CurrentControlScheme == InputManager.ControlScheme.Keyboard) {
-    //        LookDirection = new Vector2(LookDirection.x.Remap(0, Screen.width, -1, 1), LookDirection.y.Remap(0, Screen.height, -1, 1));
-    //    }
-    //}
+    void OnLook(InputAction.CallbackContext ctx) {
+        LookDirection = ctx.ReadValue<Vector2>();
+        if (input.CurrentControlScheme == InputManager.ControlScheme.Keyboard) {
+            LookDirection = new Vector2(LookDirection.x.Remap(0, Screen.width, -1, 1), LookDirection.y.Remap(0, Screen.height, -1, 1));
+        }
+    }
 
     void OnAttack(InputAction.CallbackContext ctx) {
         var isPressed = ctx.ReadValueAsButton();

@@ -153,17 +153,17 @@ public class PlayerController : MonoBehaviour, ICharacterController
     public void UpdateRotation(ref Quaternion currentRotation, float deltaTime) {
         switch (CurrentCharacterState) {
             case CharacterState.Grounded: {
-                    if (((input.LookBack && input.LookDirection.sqrMagnitude > 0f) || input.Movement.sqrMagnitude > 0f) && rotationSharpness > 0f) {
-                        Vector3 direction = input.LookBack ? new Vector3(input.LookDirection.x, 0, input.LookDirection.y) : input.Movement;
-                        Vector3 smoothedLookInputDirection = Vector3.Slerp(Motor.CharacterForward, direction, 1 - Mathf.Exp(-rotationSharpness * deltaTime)).normalized;
+                if (input.LookDirection.sqrMagnitude > 0f && rotationSharpness > 0f) {
+                    Vector3 direction = new Vector3(input.LookDirection.x, 0, input.LookDirection.y);
+                    Vector3 smoothedLookInputDirection = Vector3.Slerp(Motor.CharacterForward, direction, 1 - Mathf.Exp(-rotationSharpness * deltaTime)).normalized;
 
-                        // Set the current rotation (which will be used by the KinematicCharacterMotor)
-                        Quaternion LookAtRotation = Quaternion.LookRotation(smoothedLookInputDirection, Motor.CharacterUp);
+                    // Set the current rotation (which will be used by the KinematicCharacterMotor)
+                    Quaternion LookAtRotation = Quaternion.LookRotation(smoothedLookInputDirection, Motor.CharacterUp);
 
-                        currentRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, LookAtRotation.eulerAngles.y, transform.rotation.eulerAngles.z);
-                    }
-                    break;
+                    currentRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, LookAtRotation.eulerAngles.y, transform.rotation.eulerAngles.z);
                 }
+                break;
+            }
         }
     }
 
@@ -182,7 +182,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
                         // Calculate target velocity
                         Vector3 inputRight = Vector3.Cross(input.Movement, Motor.CharacterUp);
                         Vector3 reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized * input.Movement.magnitude;
-                        var maxVelocity = maxStableMoveSpeed * (input.LookBack ? .7f : 1);
+                        var maxVelocity = maxStableMoveSpeed;
                         Vector3 targetMovementVelocity = reorientedInput * maxVelocity;
 
                         // Smooth movement Velocity
