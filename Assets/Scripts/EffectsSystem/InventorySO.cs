@@ -64,6 +64,23 @@ public class InventorySO : ScriptableObject
         return passive.FirstOrDefault(slot => slot.effect == effect && slot.rarity == rarity);
     }
 
+    public PassiveInventorySlot GetSlot(PassiveEffectSO effect) {
+        return passive.FirstOrDefault(slot => slot.effect == effect);
+    }
+
+    public int GetPassiveMultiplier(PassiveEffectSO.EffectProperty effectProperty) {
+        return passive
+            .Select(slot => slot.details.effectedProperties.FirstOrDefault(prop => prop.property == effectProperty)?.modifier ?? 0)
+            .Sum();
+    }
+
+    public int GetPassiveMultiplier(PassiveEffectSO.EffectProperty effectProperty, ActiveEffectSO.EffectTrait[] traits) {
+        return passive
+            .Where(slot => slot.effect.traits.Union(traits).Count() > 0)
+            .Select(slot => slot.details.effectedProperties.FirstOrDefault(prop => prop.property == effectProperty)?.modifier ?? 0)
+            .Sum();
+    }
+
     public void RemoveTemporary() {
         var activeSlotsToRemove = active.Where(slot => slot.temporary > 0)
             .Where(slot => {
@@ -178,10 +195,14 @@ public class InventorySO : ScriptableObject
     {
         public PassiveEffectSO effect;
         public PassiveEffectSO.EffectRarity rarity;
+        public PassiveEffectSO.EffectProperty[] properties;
+        public PassiveEffectSO.EffectDetails details;
 
         public PassiveInventorySlot(PassiveEffectSO effect, PassiveEffectSO.EffectRarity rarity, int permanent, int temporary) : base(permanent, temporary) {
             this.effect = effect;
             this.rarity = rarity;
+            this.details = effect.rarities.FirstOrDefault(e => e.rarity == rarity);
+            this.properties = this.details.effectedProperties.Select(p => p.property).ToArray();
         }
     }
 }
