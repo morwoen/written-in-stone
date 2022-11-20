@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyKilled: {fileID: 11400000, guid: fa1f99320db969b4e930030d0772d9df, type: 2}
-  range: 1
+  range: 2
   maxHealth: 10
 --- !u!1 &7349793146988270128
 GameObject:
