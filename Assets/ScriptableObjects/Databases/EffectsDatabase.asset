@@ -15,6 +15,7 @@ MonoBehaviour:
   active:
   - {fileID: 11400000, guid: 1aef439db1f69284ebc3e2eb82a85b1c, type: 2}
   - {fileID: 11400000, guid: df6383d6e0518634d90545ee993818f7, type: 2}
+  - {fileID: 11400000, guid: 0bc46d58dd7c2c04bbee1cd0e353b0a0, type: 2}
   passive:
   - {fileID: 11400000, guid: f232868860e13a144ae5b0c26b4b1c5b, type: 2}
   enemyActive:

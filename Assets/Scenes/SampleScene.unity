@@ -171,31 +171,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &252676065 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6545762196948485077, guid: 2d3fdf9b477544544ad9e416a353ffb7,
-    type: 3}
-  m_PrefabInstance: {fileID: 6545762197228786260}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &323686786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6545762196948485078, guid: 2d3fdf9b477544544ad9e416a353ffb7,
     type: 3}
   m_PrefabInstance: {fileID: 6545762197228786260}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &323686791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252676065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ad432bc2c8643f45a706e1c92c03d09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 11400000, guid: 8cc70bfa099b6794da12b99af4b05484, type: 2}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1192,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28470
+  m_Name: pb_Mesh28586
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1460,6 +1441,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6545762196948485077, guid: 2d3fdf9b477544544ad9e416a353ffb7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6545762196948485078, guid: 2d3fdf9b477544544ad9e416a353ffb7,
         type: 3}
       propertyPath: m_RootOrder
@@ -1515,7 +1501,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6545762197592845454, guid: 2d3fdf9b477544544ad9e416a353ffb7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d3fdf9b477544544ad9e416a353ffb7, type: 3}
 --- !u!1001 &6573333563163377020
 PrefabInstance:
