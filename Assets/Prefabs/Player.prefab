@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 6545762196948485073}
   - component: {fileID: 6545762196948485072}
   - component: {fileID: 6545762196948485074}
+  - component: {fileID: 323686791}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -217,6 +218,20 @@ MonoBehaviour:
   hitColor: {r: 1, g: 1, b: 1, a: 1}
   ignoredColliders: []
   animator: {fileID: 0}
+--- !u!114 &323686791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6545762196948485077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad432bc2c8643f45a706e1c92c03d09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: 8cc70bfa099b6794da12b99af4b05484, type: 2}
+  spawnPointOffset: {x: 0, y: 1, z: 0}
 --- !u!1 &6545762197592845452
 GameObject:
   m_ObjectHideFlags: 0

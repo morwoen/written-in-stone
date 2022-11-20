@@ -31,11 +31,10 @@ public class EffectsManager : MonoBehaviour
 
         // TODO: Change the database effects lenght checks
         for (int i = 0; i < 3; i++) {
-            if (!hasActive && Random.Range(0, 3) == 0 && database.active.Length > 0) {
+            if (((!hasActive && Random.Range(0, 3) == 0) || playerInventory.active.Count < 1) && database.active.Length > 0) {
                 playerInventory.AddTemporary(database.active[Random.Range(0, database.active.Length)]);
                 hasActive = true;
-            }
-            else if (database.passive.Length > 0) {
+            } else if (database.passive.Length > 0) {
                 var passive = database.passive[Random.Range(0, database.passive.Length)];
                 playerInventory.AddTemporary(passive, passive.rarities[Random.Range(0, passive.rarities.Length)].rarity);
             }
@@ -44,8 +43,7 @@ public class EffectsManager : MonoBehaviour
         var enemyTypeRandom = Random.Range(0, 2);
         if (enemyTypeRandom == 0 && database.enemyActive.Length > 0) {
             enemyInventory.AddTemporary(database.enemyActive[Random.Range(0, database.enemyActive.Length)]);
-        }
-        else if (database.enemyPassive.Length > 0) {
+        } else if (database.enemyPassive.Length > 0) {
             var passive = database.enemyPassive[Random.Range(0, database.enemyPassive.Length)];
             enemyInventory.AddTemporary(passive, passive.rarities[Random.Range(0, passive.rarities.Length)].rarity);
         }

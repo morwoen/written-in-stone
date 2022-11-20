@@ -7,6 +7,7 @@ using CooldownManagement;
 public class EffectsExecutor : MonoBehaviour
 {
     [SerializeField] private InventorySO inventory;
+    [SerializeField] private Vector3 spawnPointOffset;
 
     private Dictionary<ActiveEffectSO, Cooldown> cooldownTracker;
 
@@ -41,9 +42,9 @@ public class EffectsExecutor : MonoBehaviour
         cooldownTracker[active] = Cooldown.Wait(level.cooldown)
             .OnComplete(() => {
                 if (active.spawnOnPlayer) {
-                    Instantiate(level.spellPrefab, transform.position, transform.rotation, transform);
+                    Instantiate(level.spellPrefab, transform.position + spawnPointOffset, transform.rotation, transform);
                 } else {
-                    Instantiate(level.spellPrefab, transform.position, transform.rotation);
+                    Instantiate(level.spellPrefab, transform.position + spawnPointOffset, transform.rotation);
                 }
                 ExecuteEvent(active);
             });
