@@ -91,7 +91,8 @@ public class InventorySO : ScriptableObject
                     return true;
                 }
             })
-            .Select(slot => slot.effect);
+            .Select(slot => slot.effect)
+            .ToList();
 
         active.RemoveAll(slot => activeSlotsToRemove.Contains(slot.effect));
 
@@ -104,7 +105,8 @@ public class InventorySO : ScriptableObject
                     return true;
                 }
             })
-            .Select(slot => Tuple.Create(slot.effect, slot.rarity));
+            .Select(slot => Tuple.Create(slot.effect, slot.rarity))
+            .ToList();
 
         passive.RemoveAll(slot => passiveSlotsToRemove.Contains(Tuple.Create(slot.effect, slot.rarity)));
 
