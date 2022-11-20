@@ -41,6 +41,13 @@ public class Projectile : MonoBehaviour, IActiveEffect
         collider.size = collider.size * EffectScale;
     }
 
+    void Explode() {
+        Explosion explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity).GetComponent<Explosion>();
+        explosionInstance.SetParameters(EffectScale);
+        explosionInstance.UpdateGameObject();
+        Destroy(gameObject);
+    }
+
     void Awake() {
         initialPosition = transform.position;
     }
@@ -49,16 +56,19 @@ public class Projectile : MonoBehaviour, IActiveEffect
         transform.Translate(direction * velocity * Time.deltaTime);
 
         if (Vector3.Distance(initialPosition, transform.position) >= range) {
-            Destroy(gameObject);
+            Explode();
         }
     }
 
     void OnTriggerEnter(Collider other) {
-        if (!isPiercing) {
-            Explosion explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity).GetComponent<Explosion>();
-            explosionInstance.SetParameters(EffectScale);
-            explosionInstance.UpdateGameObject();
-            Destroy(gameObject);
+        Enemy enemy = other.GetComponent<Enemy>();
+
+        if (enemy) {
+            enemy.Damage(10);
+        }
+
+        if (!isPiercing || !enemy) {
+            Explode();
         }
     }
 }
