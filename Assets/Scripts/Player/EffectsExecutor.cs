@@ -46,14 +46,14 @@ public class EffectsExecutor : MonoBehaviour
     }
 
     private void CastSpell(ActiveEffectSO.EffectLevel effectLevel, bool onPlayer, float multicast, float damageMultiplier, float areaMultiplier) {
-        if (multicast >= 1) {
-            multicast -= 1;
-        } else {
+        if (multicast < 1) {
             var roll = Random.Range(0, 1f);
             if (roll > multicast) {
                 return;
             }
         }
+
+        multicast -= 1;
 
         var critChance = 0.05f + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellCritChance) / 100f;
         var crit = Random.Range(0, 1f) < critChance;
@@ -71,8 +71,8 @@ public class EffectsExecutor : MonoBehaviour
             go = Instantiate(effectLevel.spellPrefab, transform.position + spawnPointOffset, transform.rotation);
         }
 
-        // TODO: get the component & give it dmg & area
-        go.GetComponent<ActiveEffect>().SetParameters(Mathf.CeilToInt(damage));
+        ActiveEffect effect = go.GetComponent<ActiveEffect>();
+        effect.SetParameters(Mathf.CeilToInt(damage), areaMultiplier);
 
         Cooldown.Wait(0.2f).OnComplete(() => {
             CastSpell(effectLevel, onPlayer, multicast, damageMultiplier, areaMultiplier);

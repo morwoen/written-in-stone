@@ -20,7 +20,7 @@ public class Projectile : ActiveEffect
     Vector3 direction = Vector3.forward;
 
     public override void UpdateGameObject() {
-        return;
+        transform.localScale *= areaMultiplier;
     }
 
     void Explode() {
