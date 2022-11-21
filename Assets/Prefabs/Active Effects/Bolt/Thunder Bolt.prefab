@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8220605893438962175}
   - component: {fileID: 2148853300619675207}
   m_Layer: 7
-  m_Name: Thunderbolt
+  m_Name: Thunder Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

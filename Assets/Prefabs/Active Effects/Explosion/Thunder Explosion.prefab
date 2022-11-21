@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7287754858345100792}
-  - component: {fileID: -8607476039410448288}
   m_Layer: 7
-  m_Name: Thunderbolt Explosion
+  m_Name: Thunder Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,19 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-8607476039410448288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9135538746692676714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62584e172231af749802ea9d61ca5e8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 1
 --- !u!1001 &2100532723995216444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66,17 +52,17 @@ PrefabInstance:
     - target: {fileID: 2265627957585088018, guid: 08f3f958a19213b4e85c715e0b459b11,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2265627957585088018, guid: 08f3f958a19213b4e85c715e0b459b11,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2265627957585088018, guid: 08f3f958a19213b4e85c715e0b459b11,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2265627957585088018, guid: 08f3f958a19213b4e85c715e0b459b11,
         type: 3}

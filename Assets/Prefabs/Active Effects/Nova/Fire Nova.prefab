@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4773254902357213122}
   - component: {fileID: -3660871298566212900}
   - component: {fileID: 7101783529189944599}
-  m_Layer: 0
-  m_Name: Firenova
+  m_Layer: 7
+  m_Name: Fire Nova
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,6 +87,18 @@ PrefabInstance:
     - target: {fileID: 1147590679914176, guid: 9b69a83a2d393a84f8a860f9966c861a, type: 3}
       propertyPath: m_Name
       value: FireNovaRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147590679914176, guid: 9b69a83a2d393a84f8a860f9966c861a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443465745440728, guid: 9b69a83a2d393a84f8a860f9966c861a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990804211898624, guid: 9b69a83a2d393a84f8a860f9966c861a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4500654311645770, guid: 9b69a83a2d393a84f8a860f9966c861a, type: 3}
       propertyPath: m_RootOrder

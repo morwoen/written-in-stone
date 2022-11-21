@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Projectile : ActiveEffect
+public class Bolt : ActiveEffect
 {
     [SerializeField]
     int range = 5;
@@ -12,6 +12,10 @@ public class Projectile : ActiveEffect
     int velocity = 1;
     [SerializeField]
     bool isPiercing = false;
+    [SerializeField]
+    float explosionDuration = 1f;
+    [SerializeField]
+    int explosionScale = 2;
 
     [SerializeField]
     GameObject explosion;
@@ -24,7 +28,9 @@ public class Projectile : ActiveEffect
     }
 
     void Explode() {
-        Instantiate(explosion, transform.position, Quaternion.identity).GetComponent<Explosion>();
+        GameObject explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity);
+        explosionInstance.transform.localScale *= explosionScale * areaMultiplier;
+        Destroy(explosionInstance, explosionDuration);
         Destroy(gameObject);
     }
 
