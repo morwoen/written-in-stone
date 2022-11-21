@@ -18,10 +18,10 @@ public class EffectsManager : MonoBehaviour
     }
 
     private void Start() {
-        OnKill(0);
+        OnKill(0, 0);
     }
 
-    private void OnKill(int remaining) {
+    private void OnKill(int remaining, int total) {
         if (remaining > 0) return;
 
         playerInventory.RemoveTemporary();

@@ -36,10 +36,12 @@ public class Meteor : ActiveEffect
     }
 
     void Start() {
+        var randomPoint = Random.insideUnitCircle;
+
         transform.position = new Vector3(
-            transform.position.x + Random.insideUnitCircle.x * spawnRange,
+            transform.position.x + randomPoint.x * spawnRange,
             spawnHeight,
-            transform.position.z + Random.insideUnitCircle.y * spawnRange
+            transform.position.z + randomPoint.y * spawnRange
         );
 
         direction = transform.position;

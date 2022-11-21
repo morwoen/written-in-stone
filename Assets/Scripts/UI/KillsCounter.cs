@@ -11,14 +11,14 @@ public class KillsCounter : MonoBehaviour
     private void OnEnable() {
         enemyKilled.killed += OnKill;
 
-        OnKill(enemyKilled.remaining);
+        OnKill(enemyKilled.remaining, 0);
     }
 
     private void OnDisable() {
         enemyKilled.killed -= OnKill;
     }
 
-    private void OnKill(int remaining) {
+    private void OnKill(int remaining, int total) {
         text.SetText(remaining.ToString("00.##"));
     }
 }
