@@ -36,7 +36,6 @@ public class PlayerInputController : MonoBehaviour
 
         Movement = Vector3.zero;
         Dash = false;
-        //LookBack = false;
         Attack = false;
     }
 

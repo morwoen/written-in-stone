@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NovaMulticast
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  displayName: 
+  displayName: Nova Multicast
   tooltip: 
   traits: 02000000
   rarities:

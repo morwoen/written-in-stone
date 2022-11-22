@@ -11,6 +11,13 @@ public class EffectsManager : MonoBehaviour
 
     private void OnEnable() {
         enemyKilled.killed += OnKill;
+        playerInventory.stonesChange += OnStonesChanged;
+    }
+
+    private void OnStonesChanged(int stones, int rocks, bool consumed) {
+        if (consumed) {
+            OnKill(0, 0);
+        }
     }
 
     private void OnDisable() {

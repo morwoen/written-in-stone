@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IceNova
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  displayName: 
+  displayName: Ice Nova
   tooltip: 
   spawnOnPlayer: 1
   traits: 02000000

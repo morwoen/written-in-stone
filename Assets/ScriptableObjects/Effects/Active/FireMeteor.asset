@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FireMeteor
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  displayName: 
+  displayName: Fire Meteor
   tooltip: 
   spawnOnPlayer: 0
   traits: 02000000

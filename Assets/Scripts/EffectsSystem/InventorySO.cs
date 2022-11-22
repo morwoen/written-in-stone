@@ -16,7 +16,7 @@ public class InventorySO : ScriptableObject
     public int stones;
     public int rocks;
 
-    public delegate void StonesChange(int stones, int rocks);
+    public delegate void StonesChange(int stones, int rocks, bool consumed);
     public event StonesChange stonesChange;
     public delegate void EffectsChange(List<ActiveInventorySlot> active, List<PassiveInventorySlot> passive);
     public event EffectsChange effectsChange;
@@ -34,7 +34,7 @@ public class InventorySO : ScriptableObject
 
     public void AddStone() {
         stones += 1;
-        stonesChange?.Invoke(stones, rocks);
+        stonesChange?.Invoke(stones, rocks, false);
     }
 
     public void AddRock() {
@@ -43,7 +43,7 @@ public class InventorySO : ScriptableObject
             rocks = 0;
             stones += 1;
         }
-        stonesChange?.Invoke(stones, rocks);
+        stonesChange?.Invoke(stones, rocks, false);
     }
 
     public void RemoveStone() {
@@ -53,7 +53,7 @@ public class InventorySO : ScriptableObject
         }
 
         stones -= 1;
-        stonesChange?.Invoke(stones, rocks);
+        stonesChange?.Invoke(stones, rocks, true);
     }
 
     public ActiveInventorySlot GetSlot(ActiveEffectSO effect) {
@@ -153,6 +153,24 @@ public class InventorySO : ScriptableObject
     }
 
     public void Promote(ActiveEffectSO effect) {
+        var slot = GetSlot(effect);
+        if (slot == null) {
+            Debug.LogError("Promoting missing effect");
+            return;
+        }
+
+        if (slot.temporary < 1) {
+            Debug.LogError("Promoting effect without temporary stacks");
+            return;
+        }
+
+        slot.temporary -= 1;
+        slot.permanent += 1;
+
+        effectsChange?.Invoke(active, passive);
+    }
+
+    public void Promote(PassiveEffectSO effect) {
         var slot = GetSlot(effect);
         if (slot == null) {
             Debug.LogError("Promoting missing effect");

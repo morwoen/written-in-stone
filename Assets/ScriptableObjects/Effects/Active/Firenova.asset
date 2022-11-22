@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FireNova
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  displayName: 
+  displayName: Fire Nova
   tooltip: 
   spawnOnPlayer: 1
   traits: 02000000

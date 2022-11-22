@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NovaSize
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  displayName: 
+  displayName: Nova Size
   tooltip: 
   traits: 02000000
   rarities:
