@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 172805515}
   - component: {fileID: 172805514}
   - component: {fileID: 172805516}
+  - component: {fileID: 172805517}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -191,6 +192,20 @@ MonoBehaviour:
   bossPrefabs:
   - {fileID: 5947291767703740866, guid: d574e8138c136426695a30a79adca9c5, type: 3}
   spawnDistanceMinMax: {x: 20, y: 30}
+--- !u!114 &172805517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172805513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e45a2ecaaa66497b9b92397e70e4da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerExperience: {fileID: 11400000, guid: cea5121e2eb5d4b3890598757cd2b837, type: 2}
+  playerInventory: {fileID: 11400000, guid: 8cc70bfa099b6794da12b99af4b05484, type: 2}
 --- !u!4 &323686786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6545762196948485078, guid: 2d3fdf9b477544544ad9e416a353ffb7,

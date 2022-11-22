@@ -86,6 +86,7 @@ MonoBehaviour:
   enemyKilled: {fileID: 11400000, guid: fa1f99320db969b4e930030d0772d9df, type: 2}
   range: 5
   maxHealth: 100
+  playerExperience: {fileID: 11400000, guid: cea5121e2eb5d4b3890598757cd2b837, type: 2}
 --- !u!1 &5947291768399448486
 GameObject:
   m_ObjectHideFlags: 0
