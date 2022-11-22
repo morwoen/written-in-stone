@@ -67,9 +67,9 @@ MonoBehaviour:
   spawnHeight: 50
   velocity: 20
   explosionDuration: 1
-  markerDuration: 2.6
+  markerDuration: 3
   explosionScale: 4
-  rangeMultiplier: 2
+  rangeMultiplier: 2.2
   explosion: {fileID: 9135538746692676714, guid: 7909dfda0c9479b4fbd6c9e9fd180b3e,
     type: 3}
   marker: {fileID: 8911680293599798200, guid: 03adc49eb2f4fc443b48471b9c0eec16, type: 3}
@@ -168,6 +168,21 @@ PrefabInstance:
     - target: {fileID: 4866859738511908, guid: 8241db815e240fa408297a3015a6db53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199460593314475044, guid: 8241db815e240fa408297a3015a6db53,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199634485192772984, guid: 8241db815e240fa408297a3015a6db53,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199693865085524354, guid: 8241db815e240fa408297a3015a6db53,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8241db815e240fa408297a3015a6db53, type: 3}

@@ -67,9 +67,9 @@ MonoBehaviour:
   spawnHeight: 50
   velocity: 20
   explosionDuration: 1
-  markerDuration: 2.6
+  markerDuration: 3
   explosionScale: 4
-  rangeMultiplier: 2
+  rangeMultiplier: 2.2
   explosion: {fileID: 9135538746692676714, guid: 9bd6cb455c445754a9ac4fb03cb86f2e,
     type: 3}
   marker: {fileID: 8911680293599798200, guid: 03adc49eb2f4fc443b48471b9c0eec16, type: 3}
