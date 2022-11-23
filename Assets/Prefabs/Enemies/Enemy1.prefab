@@ -87,6 +87,8 @@ MonoBehaviour:
   range: 3
   maxHealth: 10
   playerExperience: {fileID: 11400000, guid: cea5121e2eb5d4b3890598757cd2b837, type: 2}
+  experiencePrefab: {fileID: 3905952768875748400, guid: 2a81ecaf2aab90343bbe209b411484e7,
+    type: 3}
 --- !u!1 &7349793146988270128
 GameObject:
   m_ObjectHideFlags: 0
