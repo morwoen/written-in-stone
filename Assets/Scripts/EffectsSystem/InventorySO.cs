@@ -64,20 +64,16 @@ public class InventorySO : ScriptableObject
         return passive.FirstOrDefault(slot => slot.effect == effect && slot.rarity == rarity);
     }
 
-    public PassiveInventorySlot GetSlot(PassiveEffectSO effect) {
-        return passive.FirstOrDefault(slot => slot.effect == effect);
-    }
-
     public int GetPassiveMultiplier(PassiveEffectSO.EffectProperty effectProperty) {
         return passive
-            .Select(slot => slot.details.effectedProperties.FirstOrDefault(prop => prop.property == effectProperty)?.modifier ?? 0)
+            .Select(slot => (slot.details.effectedProperties.FirstOrDefault(prop => prop.property == effectProperty)?.modifier ?? 0) * (slot.permanent + slot.temporary))
             .Sum();
     }
 
     public int GetPassiveMultiplier(PassiveEffectSO.EffectProperty effectProperty, ActiveEffectSO.EffectTrait[] traits) {
         return passive
             .Where(slot => slot.effect.traits.Intersect(traits).Count() > 0)
-            .Select(slot => slot.details.effectedProperties.FirstOrDefault(prop => prop.property == effectProperty)?.modifier ?? 0)
+            .Select(slot => (slot.details.effectedProperties.FirstOrDefault(prop => prop.property == effectProperty)?.modifier ?? 0) * (slot.permanent + slot.temporary))
             .Sum();
     }
 
@@ -155,12 +151,12 @@ public class InventorySO : ScriptableObject
     public void Promote(ActiveEffectSO effect) {
         var slot = GetSlot(effect);
         if (slot == null) {
-            Debug.LogError("Promoting missing effect");
+            Debug.LogError($"Promoting missing effect {effect.name}");
             return;
         }
 
         if (slot.temporary < 1) {
-            Debug.LogError("Promoting effect without temporary stacks");
+            Debug.LogError($"Promoting effect without temporary stacks {effect.name}");
             return;
         }
 
@@ -170,8 +166,8 @@ public class InventorySO : ScriptableObject
         effectsChange?.Invoke(active, passive);
     }
 
-    public void Promote(PassiveEffectSO effect) {
-        var slot = GetSlot(effect);
+    public void Promote(PassiveEffectSO effect, PassiveEffectSO.EffectRarity rarity) {
+        var slot = GetSlot(effect, rarity);
         if (slot == null) {
             Debug.LogError("Promoting missing effect");
             return;

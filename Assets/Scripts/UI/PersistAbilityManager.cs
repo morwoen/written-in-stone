@@ -92,7 +92,7 @@ public class PersistAbilityManager : MonoBehaviour
         if (current.activeEffect) {
             inventory.Promote(current.activeEffect);
         } else {
-            inventory.Promote(current.passiveEffect);
+            inventory.Promote(current.passiveEffect, current.passiveRarity);
         }
 
         inventory.RemoveStone();

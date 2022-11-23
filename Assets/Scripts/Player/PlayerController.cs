@@ -72,6 +72,8 @@ public class PlayerController : MonoBehaviour, ICharacterController
         TransitionToState(CharacterState.Grounded);
         Motor.CharacterController = this;
         health.Respawn();
+
+        Application.targetFrameRate = 60;
     }
 
     private void OnDisable() {

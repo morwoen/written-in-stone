@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EffectsManager : MonoBehaviour
@@ -35,15 +36,28 @@ public class EffectsManager : MonoBehaviour
         enemyInventory.RemoveTemporary();
 
         var hasActive = false;
+        int added = 0;
+        var tempPassiveIndeces = new List<int>();
 
-        // TODO: Change the database effects lenght checks
-        for (int i = 0; i < 3; i++) {
+        while (added < 3) {
             if (((!hasActive && Random.Range(0, 3) == 0) || playerInventory.active.Count < 1) && database.active.Length > 0) {
-                playerInventory.AddTemporary(database.active[Random.Range(0, database.active.Length)]);
+                var active = database.active[Random.Range(0, database.active.Length)];
+                var slot = playerInventory.GetSlot(active);
+                if ((slot == null && playerInventory.active.Count >= playerInventory.maxActiveSlots) || (slot != null && active.levels.Length < (slot.permanent + slot.temporary + 1))) {
+                    continue;
+                }
+                playerInventory.AddTemporary(active);
                 hasActive = true;
+                added += 1;
             } else if (database.passive.Length > 0) {
-                var passive = database.passive[Random.Range(0, database.passive.Length)];
+                var passiveIndex = Random.Range(0, database.passive.Length);
+                if (tempPassiveIndeces.Contains(passiveIndex)) {
+                    continue;
+                }
+                var passive = database.passive[passiveIndex];
+                tempPassiveIndeces.Add(passiveIndex);
                 playerInventory.AddTemporary(passive, passive.rarities[Random.Range(0, passive.rarities.Length)].rarity);
+                added += 1;
             }
         }
 
@@ -54,6 +68,5 @@ public class EffectsManager : MonoBehaviour
             var passive = database.enemyPassive[Random.Range(0, database.enemyPassive.Length)];
             enemyInventory.AddTemporary(passive, passive.rarities[Random.Range(0, passive.rarities.Length)].rarity);
         }
-        // TODO: Add random 3 effects that aren't too high level
     }
 }

@@ -15,6 +15,7 @@ public class AbilityUICard : MonoBehaviour, ISelectHandler, IDeselectHandler, IP
 
     [NonSerialized] public ActiveEffectSO activeEffect;
     [NonSerialized] public PassiveEffectSO passiveEffect;
+    [NonSerialized] public PassiveEffectSO.EffectRarity passiveRarity;
 
     public void Assign(InventorySO.ActiveInventorySlot slot) {
         image.sprite = slot.effect.sprite;
@@ -30,6 +31,7 @@ public class AbilityUICard : MonoBehaviour, ISelectHandler, IDeselectHandler, IP
         description.SetText(slot.effect.tooltip);
         activeEffect = null;
         passiveEffect = slot.effect;
+        passiveRarity = slot.rarity;
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
