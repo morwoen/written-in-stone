@@ -13,6 +13,8 @@ public class Bolt : ActiveEffect
     [SerializeField]
     bool isPiercing = false;
     [SerializeField]
+    float rangeMultiplier = 2f;
+    [SerializeField]
     float explosionDuration = 1f;
     [SerializeField]
     int explosionScale = 2;
@@ -47,10 +49,16 @@ public class Bolt : ActiveEffect
     }
 
     void OnTriggerEnter(Collider other) {
+        
         Enemy enemy = other.GetComponent<Enemy>();
 
         if (enemy) {
-            enemy.Damage(damage);
+            LayerMask mask = LayerMask.GetMask("Enemy");
+            Collider[] hitColliders = Physics.OverlapSphere(enemy.transform.position, transform.localScale.x * rangeMultiplier, mask);
+
+            foreach (Collider hitCollider in hitColliders) {
+                hitCollider.GetComponent<Enemy>().Damage(damage);
+            }
         }
 
         if (!isPiercing || !enemy) {

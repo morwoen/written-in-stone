@@ -20,7 +20,7 @@ public class Meteor : ActiveEffect
     [SerializeField]
     GameObject explosion;
     [SerializeField]
-    GameObject marker;
+    Transform marker;
 
     Vector3 direction;
 
@@ -46,7 +46,8 @@ public class Meteor : ActiveEffect
 
         direction = transform.position;
         direction.y = 0;
-        GameObject markerInstance = Instantiate(marker, direction, Quaternion.identity);
+        Transform markerInstance = Instantiate(marker, direction, Quaternion.identity);
+        markerInstance.localScale = transform.localScale;
         Destroy(markerInstance, markerDuration);
     }
 

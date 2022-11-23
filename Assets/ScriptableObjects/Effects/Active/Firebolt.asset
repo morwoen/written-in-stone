@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4776e97b6222f3a4f986c3da2e4be634, type: 3}
-  m_Name: FireBolt
+  m_Name: Firebolt
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
   displayName: Fire Bolt
@@ -20,5 +20,5 @@ MonoBehaviour:
   levels:
   - spellPrefab: {fileID: 4339214223748108914, guid: 7cdb04a746dc9e4489b90b89e6829f62,
       type: 3}
-    cooldown: 1.5
+    cooldown: 1.7
     damage: 10

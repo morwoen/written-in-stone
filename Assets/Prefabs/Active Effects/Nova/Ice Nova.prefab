@@ -192,6 +192,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSizeZ.scalar
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7579710066917345, guid: f02feb3ef3947e4478ef1d4e422266f2, type: 3}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 200918068895278475, guid: f02feb3ef3947e4478ef1d4e422266f2,
         type: 3}
       propertyPath: m_RootOrder
@@ -287,6 +291,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1534112477549221397, guid: f02feb3ef3947e4478ef1d4e422266f2,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1697356781506459147, guid: f02feb3ef3947e4478ef1d4e422266f2,
         type: 3}
       propertyPath: m_Layer
@@ -314,6 +323,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7059126013947022433, guid: f02feb3ef3947e4478ef1d4e422266f2,
         type: 3}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7059126013947022433, guid: f02feb3ef3947e4478ef1d4e422266f2,
+        type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -331,6 +345,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.r
       value: 0.12941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866654400282664207, guid: f02feb3ef3947e4478ef1d4e422266f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f02feb3ef3947e4478ef1d4e422266f2, type: 3}

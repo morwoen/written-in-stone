@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4339214223748108924}
   - component: {fileID: 4339214223748108925}
   - component: {fileID: -8220605893438962175}
-  - component: {fileID: 2148853300619675207}
+  - component: {fileID: 5698303012033110951}
   m_Layer: 7
   m_Name: Thunder Bolt
   m_TagString: Untagged
@@ -49,7 +49,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 25
   velocity: 20
-  isPiercing: 0
+  isPiercing: 1
+  rangeMultiplier: 0.3
+  explosionDuration: 1
+  explosionScale: 2
   explosion: {fileID: 9135538746692676714, guid: 9bd6cb455c445754a9ac4fb03cb86f2e,
     type: 3}
 --- !u!54 &-8220605893438962175
@@ -68,8 +71,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2148853300619675207
-BoxCollider:
+--- !u!135 &5698303012033110951
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -79,7 +82,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.6, z: 0.6}
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2331968678174606677
 PrefabInstance:

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4339214223748108924}
   - component: {fileID: 4339214223748108925}
   - component: {fileID: -8220605893438962175}
-  - component: {fileID: 2148853300619675207}
+  - component: {fileID: 5638424902986297250}
   m_Layer: 7
   m_Name: Ice Bolt
   m_TagString: Untagged
@@ -48,8 +48,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 25
-  velocity: 20
+  velocity: 23
   isPiercing: 0
+  rangeMultiplier: 0.3
+  explosionDuration: 1
+  explosionScale: 2
   explosion: {fileID: 9135538746692676714, guid: 93d9deb340b23a34f89b76b2ddf8ff51,
     type: 3}
 --- !u!54 &-8220605893438962175
@@ -68,8 +71,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2148853300619675207
-BoxCollider:
+--- !u!135 &5638424902986297250
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -79,7 +82,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.6, z: 0.6}
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2641442219449096397
 PrefabInstance:

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4776e97b6222f3a4f986c3da2e4be634, type: 3}
-  m_Name: Icemeteor
+  m_Name: Axestab
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  displayName: Ice Meteor
+  displayName: Stab
   tooltip: 
   spawnOnPlayer: 0
-  traits: 02000000
+  traits: 03000000
   levels:
-  - spellPrefab: {fileID: 3625319077097973860, guid: d6f386d75cf8d2847a10db0b1e3364ab,
+  - spellPrefab: {fileID: 80469326896008048, guid: 3b235ea1dc3e7e24795a6dcf0cef9690,
       type: 3}
-    cooldown: 4.8
-    damage: 15
+    cooldown: 1.5
+    damage: 10
