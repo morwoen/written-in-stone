@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4776e97b6222f3a4f986c3da2e4be634, type: 3}
-  m_Name: Thunderbolt
+  m_Name: Swordstab
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  displayName: Thunder Bolt
+  displayName: Sword Stab
   tooltip: 
   spawnOnPlayer: 0
-  traits: 00000000
+  traits: 03000000
   levels:
-  - spellPrefab: {fileID: 4339214223748108914, guid: 4c4fcb6ee8edd23408c1c67628b86dbb,
+  - spellPrefab: {fileID: 4479095369093849505, guid: b688f45898c8bf442a2a16faee8cbf25,
       type: 3}
-    cooldown: 1.5
+    cooldown: 1.4
     damage: 10

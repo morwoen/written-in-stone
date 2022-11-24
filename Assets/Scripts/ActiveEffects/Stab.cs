@@ -27,4 +27,12 @@ public class Stab : ActiveEffect
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other) {
+        Enemy enemy = other.GetComponent<Enemy>();
+
+        if (enemy) {
+            enemy.GetComponent<Enemy>().Damage(damage);
+        }
+    }
 }

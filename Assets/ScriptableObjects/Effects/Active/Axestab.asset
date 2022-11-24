@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Axestab
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  displayName: Stab
+  displayName: Axe Stab
   tooltip: 
   spawnOnPlayer: 0
   traits: 03000000
   levels:
   - spellPrefab: {fileID: 80469326896008048, guid: 3b235ea1dc3e7e24795a6dcf0cef9690,
       type: 3}
-    cooldown: 1.5
+    cooldown: 1.9
     damage: 10
