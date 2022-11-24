@@ -16,9 +16,9 @@ MonoBehaviour:
   displayName: Ice Nova
   tooltip: 
   spawnOnPlayer: 1
-  traits: 02000000
+  traits: 0100000007000000
   levels:
   - spellPrefab: {fileID: 3381627214888534555, guid: 97e2aa6163b8d2742bde2be2bd0619b3,
       type: 3}
     cooldown: 2.2
-    damage: 7
+    damage: 6

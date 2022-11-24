@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 0}
   displayName: Nova Damage
   tooltip: 
-  traits: 02000000
+  traits: 01000000
   rarities:
   - rarity: 0
     effectedProperties:

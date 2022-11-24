@@ -16,9 +16,9 @@ MonoBehaviour:
   displayName: Thunder Bolt
   tooltip: 
   spawnOnPlayer: 0
-  traits: 00000000
+  traits: 0000000008000000
   levels:
   - spellPrefab: {fileID: 4339214223748108914, guid: 4c4fcb6ee8edd23408c1c67628b86dbb,
       type: 3}
     cooldown: 1.5
-    damage: 10
+    damage: 8

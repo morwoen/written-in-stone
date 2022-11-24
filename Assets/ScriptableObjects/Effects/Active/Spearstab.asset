@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Spear Stab
   tooltip: 
   spawnOnPlayer: 0
-  traits: 03000000
+  traits: 030000000a000000
   levels:
   - spellPrefab: {fileID: 4479095369093849505, guid: bff7cace5eb511245aa66786997c67f8,
       type: 3}

@@ -16,9 +16,9 @@ MonoBehaviour:
   displayName: Thunder Meteor
   tooltip: 
   spawnOnPlayer: 0
-  traits: 02000000
+  traits: 0200000008000000
   levels:
   - spellPrefab: {fileID: 3625319077097973860, guid: ebd2a91ee98b08c4e8f6f8cdd8ffbd75,
       type: 3}
     cooldown: 5
-    damage: 15
+    damage: 14

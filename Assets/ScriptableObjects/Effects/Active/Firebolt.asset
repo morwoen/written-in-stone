@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Fire Bolt
   tooltip: 
   spawnOnPlayer: 0
-  traits: 00000000
+  traits: 0000000006000000
   levels:
   - spellPrefab: {fileID: 4339214223748108914, guid: 7cdb04a746dc9e4489b90b89e6829f62,
       type: 3}

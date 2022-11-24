@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Thunder Nova
   tooltip: 
   spawnOnPlayer: 1
-  traits: 02000000
+  traits: 0200000008000000
   levels:
   - spellPrefab: {fileID: 3381627214888534555, guid: 85fdc0a8dad8f8544859ea6acc8eecc5,
       type: 3}

@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Axe Stab
   tooltip: 
   spawnOnPlayer: 0
-  traits: 03000000
+  traits: 0300000009000000
   levels:
   - spellPrefab: {fileID: 80469326896008048, guid: 3b235ea1dc3e7e24795a6dcf0cef9690,
       type: 3}
