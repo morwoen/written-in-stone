@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8854470607017137757
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1230290157618766, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+      propertyPath: m_Name
+      value: LevelUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572778466463998, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572778466463998, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572778466463998, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.157
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572778466463998, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572778466463998, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710653
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572778466463998, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071071
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572778466463998, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572778466463998, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572778466463998, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572778466463998, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572778466463998, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198937531864687680, guid: f5e7fc7cd8ce8774889c86c927b64f29,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199435065662243370, guid: f5e7fc7cd8ce8774889c86c927b64f29,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199731505129448700, guid: f5e7fc7cd8ce8774889c86c927b64f29,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5e7fc7cd8ce8774889c86c927b64f29, type: 3}
+--- !u!1 &8855546826857910291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1230290157618766, guid: f5e7fc7cd8ce8774889c86c927b64f29,
+    type: 3}
+  m_PrefabInstance: {fileID: 8854470607017137757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1463740193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8855546826857910291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774ae0aaf97d23941ba31a5740953e40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions:
+  - delay: 2
+    events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1463740194}
+          m_TargetAssemblyTypeName: UnityEventUtils, Assembly-CSharp
+          m_MethodName: Destroy
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1463740194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8855546826857910291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af69e34bc2164ce0a7f10d4c10f76f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

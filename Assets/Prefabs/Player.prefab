@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1997c5199351d436c871427274145e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: 8cc70bfa099b6794da12b99af4b05484, type: 2}
 --- !u!54 &355459385
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -172,6 +173,7 @@ GameObject:
   - component: {fileID: 6545762196948485072}
   - component: {fileID: 6545762196948485074}
   - component: {fileID: 323686791}
+  - component: {fileID: 2013017025}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -308,6 +310,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 8cc70bfa099b6794da12b99af4b05484, type: 2}
   spawnPointOffset: {x: 0, y: 1, z: 0}
+--- !u!114 &2013017025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6545762196948485077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e45a2ecaaa66497b9b92397e70e4da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerExperience: {fileID: 11400000, guid: cea5121e2eb5d4b3890598757cd2b837, type: 2}
+  playerInventory: {fileID: 11400000, guid: 8cc70bfa099b6794da12b99af4b05484, type: 2}
+  levelUpPrefab: {fileID: 8855546826857910291, guid: 2a273a8d3bc1c4066a1268f725a6ed2d,
+    type: 3}
 --- !u!1 &6545762197592845452
 GameObject:
   m_ObjectHideFlags: 0
