@@ -76,7 +76,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ramp:
-        m_Texture: {fileID: 2800000, guid: 6844a24f1b1b407e8deb3b0e4d3f41e5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2f126060a46d4a018caad99e69d3cc69, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Test:
@@ -96,6 +96,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -136,6 +148,8 @@ Material:
     - _ParallaxNoiseScaleU: 2
     - _ParallaxNoiseScaleV: 2
     - _ParallaxPower: 0.175
+    - _QueueControl: 0
+    - _QueueOffset: 0
     - _RAMPENABLED: 1
     - _RampOffsetExp: 1
     - _RampRemapMax: 0.08

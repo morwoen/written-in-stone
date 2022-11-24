@@ -48,7 +48,7 @@ public class Meteor : ActiveEffect
         direction.y = 0;
         Transform markerInstance = Instantiate(marker, direction, Quaternion.identity);
         markerInstance.localScale = transform.localScale;
-        Destroy(markerInstance, markerDuration);
+        Destroy(markerInstance.gameObject, markerDuration);
     }
 
     void Update() {
