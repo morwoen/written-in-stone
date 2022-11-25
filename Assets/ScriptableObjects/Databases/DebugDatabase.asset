@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e80d5274cd444d4eb7d7edc82c4fc0c, type: 3}
   m_Name: DebugDatabase
   m_EditorClassIdentifier: 
-  active:
-  - {fileID: 11400000, guid: f5ec656178749334d97fa1bd03b45bce, type: 2}
-  passive:
-  - {fileID: 11400000, guid: ddcb1da3760c5b248bc96da8e2efdc96, type: 2}
-  - {fileID: 11400000, guid: ddcb1da3760c5b248bc96da8e2efdc96, type: 2}
-  - {fileID: 11400000, guid: ddcb1da3760c5b248bc96da8e2efdc96, type: 2}
+  active: []
+  passive: []
   enemyActive: []
   enemyPassive: []

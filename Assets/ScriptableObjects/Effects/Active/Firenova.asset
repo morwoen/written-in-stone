@@ -16,9 +16,9 @@ MonoBehaviour:
   displayName: Fire Nova
   tooltip: 
   spawnOnPlayer: 1
-  traits: 02000000
+  traits: 0100000006000000
   levels:
   - spellPrefab: {fileID: 3381627214888534555, guid: da95fbb4eb4cdb34b87feb8151aa26cd,
       type: 3}
     cooldown: 2.8
-    damage: 7
+    damage: 8

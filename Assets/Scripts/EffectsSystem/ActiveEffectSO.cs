@@ -8,14 +8,21 @@ public class ActiveEffectSO : ScriptableObject
 {
     public enum EffectTrait
     {
-        // Ranged
-        Projectile,
-        Beam,
-        Area,
+        Bolt,
+        Nova,
+        Meteor,
 
-        // Melee
         Stab,
-        Slash,
+        Whirl,
+        Bash,
+
+        Fire,
+        Ice,
+        Thunder,
+
+        Axe,
+        Spear,
+        Sword,
     }
 
     public Sprite sprite;

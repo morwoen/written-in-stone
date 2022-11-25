@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Fire Meteor
   tooltip: 
   spawnOnPlayer: 0
-  traits: 02000000
+  traits: 0200000006000000
   levels:
   - spellPrefab: {fileID: 3625319077097973860, guid: 7804790965195884790420b8a3591db4,
       type: 3}

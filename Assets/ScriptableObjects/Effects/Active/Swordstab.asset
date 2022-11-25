@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Sword Stab
   tooltip: 
   spawnOnPlayer: 0
-  traits: 03000000
+  traits: 030000000b000000
   levels:
   - spellPrefab: {fileID: 4479095369093849505, guid: b688f45898c8bf442a2a16faee8cbf25,
       type: 3}

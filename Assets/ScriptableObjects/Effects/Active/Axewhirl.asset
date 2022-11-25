@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4776e97b6222f3a4f986c3da2e4be634, type: 3}
-  m_Name: Icebolt
+  m_Name: Axewhirl
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  displayName: Ice Bolt
+  displayName: Axe Whirl
   tooltip: 
-  spawnOnPlayer: 0
-  traits: 0000000007000000
+  spawnOnPlayer: 1
+  traits: 0400000009000000
   levels:
-  - spellPrefab: {fileID: 4339214223748108914, guid: 50c47b20f80584748a8a6f6ec9e4846a,
+  - spellPrefab: {fileID: 80469326896008048, guid: ccc5ef22b3333ce43a28e924386b7bbd,
       type: 3}
-    cooldown: 1.4
-    damage: 12
+    cooldown: 8
+    damage: 4
