@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01086e7b815cbbf408193931397c8cbd, type: 3}
-  m_Name: BoltDamage
+  m_Name: Boltdamage
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 1780532245, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
+  secondarySprite: {fileID: -462002307, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
   displayName: Bolt Damage
   tooltip: 
   traits: 00000000
