@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float attackDelay = 1;
     [SerializeField] private float attackRecovery= 1;
     [SerializeField] private GameObject attackPrefab;
+    [SerializeField] private GameObject deathEffect;
+    
     private Cooldown cooldown;
 
     private int health;
@@ -26,16 +28,19 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent agent;
     private Transform player;
 
+    Animator animator;
+
     private State state;
 
     private void Start() {
-        state = State.Chasing;
+        SwitchState(State.Chasing);
         health = maxHealth;
     }
 
     private void OnEnable() {
         agent = GetComponent<NavMeshAgent>();
         player = FindObjectOfType<PlayerController>().transform;
+        animator = GetComponentInChildren<Animator>();
 
         agent.avoidancePriority = Random.Range(1, 500);
     }
@@ -60,6 +65,9 @@ public class Enemy : MonoBehaviour
     private void SwitchState(State newState) {
         state = newState;
         switch (newState) {
+            case State.Chasing:
+                animator.SetTrigger("walking");
+                break;
             case State.Attacking:
                 //  TODO:
                 agent.SetDestination(transform.position);
@@ -85,6 +93,9 @@ public class Enemy : MonoBehaviour
             enemyKilled.Kill();
             // TODO: Play effect / animation
             Instantiate(experiencePrefab, transform.position, Quaternion.identity);
+            GameObject deathInstance = Instantiate(deathEffect, transform.position, transform.rotation);
+            deathInstance.transform.localScale = transform.localScale;
+            Destroy(deathInstance, 3);
             Destroy(gameObject);
         }
     }

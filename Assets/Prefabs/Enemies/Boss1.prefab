@@ -91,6 +91,7 @@ MonoBehaviour:
   attackDelay: 1
   attackRecovery: 1
   attackPrefab: {fileID: 3381627214888534555, guid: da95fbb4eb4cdb34b87feb8151aa26cd,
+  deathEffect: {fileID: 3825455922101144633, guid: d41045928ffb47049910a6d4e3fdb02d,
     type: 3}
 --- !u!1 &5947291768399448486
 GameObject:

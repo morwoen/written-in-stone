@@ -568,9 +568,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyKilled: {fileID: 11400000, guid: fa1f99320db969b4e930030d0772d9df, type: 2}
   enemyPrefabs:
-  - {fileID: 7349793146543143508, guid: c328eca85ca2544aabaa4a7a60987c0f, type: 3}
+  - {fileID: 4284517310661388776, guid: 15ee22a39d248e544a24bec348a6117e, type: 3}
+  - {fileID: 4284517310661388776, guid: 0d20a5bc38391614aad65e14148798df, type: 3}
+  - {fileID: 4284517310661388776, guid: fb385f15d021b0045b2c870c64419c47, type: 3}
   bossPrefabs:
-  - {fileID: 5947291767703740866, guid: d574e8138c136426695a30a79adca9c5, type: 3}
+  - {fileID: 5947291767703740866, guid: fe70318e371d6e74abec2fb640a0794b, type: 3}
   spawnDistanceMinMax: {x: 20, y: 30}
 --- !u!114 &172805518
 MonoBehaviour:
@@ -1421,7 +1423,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 78.74, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
@@ -1718,7 +1720,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
@@ -6950,7 +6952,7 @@ PrefabInstance:
     - target: {fileID: 6545762196948485078, guid: 2d3fdf9b477544544ad9e416a353ffb7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6545762196948485078, guid: 2d3fdf9b477544544ad9e416a353ffb7,
         type: 3}
