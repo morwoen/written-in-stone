@@ -15,7 +15,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyKilledSO enemyKilled;
     [SerializeField] private float range = 1;
     [SerializeField] private int maxHealth;
-    [SerializeField] private ExperienceSO playerExperience;
     [SerializeField] private GameObject experiencePrefab;
 
     private int health;
@@ -67,7 +66,6 @@ public class Enemy : MonoBehaviour
             SwitchState(State.Stunned);
             enemyKilled.Kill();
             // TODO: Play effect / animation
-            playerExperience.AddExperience(5);
             Instantiate(experiencePrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
