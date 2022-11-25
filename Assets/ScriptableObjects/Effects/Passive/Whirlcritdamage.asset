@@ -10,30 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01086e7b815cbbf408193931397c8cbd, type: 3}
-  m_Name: WhirlSize
+  m_Name: Whirlcritdamage
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  displayName: Whirl Size
+  sprite: {fileID: -780788093, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
+  secondarySprite: {fileID: -22845670, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
+  displayName: Whirl Critical Damage
   tooltip: 
   traits: 04000000
   rarities:
   - rarity: 0
     effectedProperties:
-    - property: 9
+    - property: 10
       modifier: 5
   - rarity: 1
     effectedProperties:
-    - property: 9
+    - property: 10
       modifier: 10
   - rarity: 2
     effectedProperties:
-    - property: 9
+    - property: 10
       modifier: 20
   - rarity: 3
     effectedProperties:
-    - property: 9
+    - property: 10
       modifier: 40
   - rarity: 4
     effectedProperties:
-    - property: 9
+    - property: 10
       modifier: 60

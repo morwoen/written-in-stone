@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4776e97b6222f3a4f986c3da2e4be634, type: 3}
   m_Name: Firebolt
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: -394410189, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
   displayName: Fire Bolt
   tooltip: 
   spawnOnPlayer: 0
