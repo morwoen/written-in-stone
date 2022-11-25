@@ -10,6 +10,8 @@ public class StonesCounter : MonoBehaviour
 
     [SerializeField] private InventorySO inventory;
 
+    [SerializeField] private GameObject prompt;
+
     private void OnEnable() {
         inventory.stonesChange += OnStonesChanged;
 
@@ -23,5 +25,7 @@ public class StonesCounter : MonoBehaviour
     private void OnStonesChanged(int stones, int rocks, bool consumed) {
         stonesText.SetText(stones.ToString("00.##"));
         rocksText.SetText(rocks.ToString("0.#/3"));
+
+        prompt.SetActive(stones > 0);
     }
 }

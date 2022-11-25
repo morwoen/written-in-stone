@@ -22,4 +22,8 @@ public static class ExtensionMethods
     public static Vector2 Abs(this Vector2 value) {
         return new Vector2(Mathf.Abs(value.x), Mathf.Abs(value.y));
     }
+
+    public static Vector3 WithY(this Vector3 value, float y) {
+        return new Vector3(value.x, y, value.z);
+    }
 }

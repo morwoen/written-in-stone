@@ -11,6 +11,8 @@ public class ExperienceCounter : MonoBehaviour
 
     [SerializeField] private ExperienceSO experience;
 
+    private float desiredValue;
+
     private void OnEnable() {
         experience.change += OnExperienceChange;
 
@@ -23,6 +25,14 @@ public class ExperienceCounter : MonoBehaviour
 
     private void OnExperienceChange(int level, bool levelUp, int current, int required) {
         levelText.SetText(level.ToString());
-        slider.value = ((float)current) / required;
+        desiredValue = ((float)current) / required;
+    }
+
+    private void Update() {
+        if (slider.value > desiredValue) {
+            slider.value = desiredValue;
+        } else {
+            slider.value = Mathf.Lerp(slider.value, desiredValue, .5f);
+        }
     }
 }

@@ -8,6 +8,7 @@ namespace CooldownManagement
     /// Cooldown management class
     /// Originally created for Hanger Management
     /// Improved for Scenery
+    /// Multi-actions support added for Written In Stone
     /// </summary>
     public class Cooldown
     {
@@ -57,48 +58,56 @@ namespace CooldownManagement
 
         protected float time;
         protected float elapsed;
-        internal Action action;
-        protected Action onStop;
-        protected Action<float, float, float> onProgress;
-        internal Action always;
+        internal List<Action> action;
+        protected List<Action> onStop;
+        protected List<Action<float, float, float>> onProgress;
+        internal List<Action> always;
         private float timeModifier;
 
         internal Cooldown(float time, float timeModifier = 1) {
             this.time = time;
             this.elapsed = 0;
             this.timeModifier = timeModifier;
+            this.action = new();
+            this.onStop = new();
+            this.onProgress = new();
+            this.always = new();
         }
 
         public Cooldown OnComplete(Action action) {
-            this.action = action;
+            this.action.Add(action);
             return this;
         }
 
         public Cooldown OnProgress(Action<float, float, float> action) {
-            this.onProgress = action;
+            this.onProgress.Add(action);
             return this;
         }
 
         public Cooldown OnProgress(Action<float, float> action) {
-            this.onProgress = (elapsed, total, delta) => action(elapsed, total);
+            this.onProgress.Add((elapsed, total, delta) => action(elapsed, total));
             return this;
         }
 
         public Cooldown OnStop(Action action) {
-            this.onStop = action;
+            this.onStop.Add(action);
             return this;
         }
 
         public Cooldown Always(Action action) {
-            this.always = action;
+            this.always.Add(action);
             return this;
         }
 
         public void Stop() {
-            onStop?.Invoke();
-            always?.Invoke();
-            action = null;
-            always = null; // Making sure Cooldowns doesn't call it a frame later
+            foreach (var action in onStop) {
+                action?.Invoke();
+            }
+            foreach (var action in always) {
+                action?.Invoke();
+            }
+            action.Clear();
+            always.Clear(); // Making sure Cooldowns doesn't call it a frame later
             time = elapsed;
         }
 
@@ -109,7 +118,10 @@ namespace CooldownManagement
                 elapsed = time;
             }
 
-            onProgress?.Invoke(elapsed, time, delta);
+            
+            foreach (var action in onProgress) {
+                action?.Invoke(elapsed, time, delta);
+            }
             return Ongoing();
         }
 
@@ -135,8 +147,12 @@ namespace CooldownManagement
                     if (cooldowns[i].Ongoing() && cooldowns[i].Progress(Time.deltaTime)) {
                         i += 1;
                     } else {
-                        cooldowns[i].action?.Invoke();
-                        cooldowns[i].always?.Invoke();
+                        foreach (var action in cooldowns[i].action) {
+                            action?.Invoke();
+                        }
+                        foreach (var action in cooldowns[i].always) {
+                            action?.Invoke();
+                        }
                         cooldowns.RemoveAt(i);
                     }
                 }

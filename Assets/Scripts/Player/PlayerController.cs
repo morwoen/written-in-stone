@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using KinematicCharacterController;
 using UnityEngine.InputSystem;
+using CooldownManagement;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerController : MonoBehaviour, ICharacterController
 {
@@ -11,6 +13,12 @@ public class PlayerController : MonoBehaviour, ICharacterController
         Grounded,
         Dashing,
         Dead,
+    }
+
+    public enum DashDirection
+    {
+        LookDirection,
+        MovementDirection,
     }
 
     private KinematicCharacterMotor Motor;
@@ -33,12 +41,12 @@ public class PlayerController : MonoBehaviour, ICharacterController
     //[SerializeField] private float JumpPreGroundingGraceTime = 0f;
     //[SerializeField] private float JumpPostGroundingGraceTime = 0f;
 
-    //[Header("Dashing")]
-    //[SerializeField] private float dashSpeed = 50f;
-    //[SerializeField] private float dashDuration = 0.05f;
-    //[SerializeField] private float dashCooldown = 1f;
-    //[SerializeField] private ParticleSystem dashEffect;
-    //private bool canDash = true;
+    [Header("Dashing")]
+    [SerializeField] private float dashSpeed = 50f;
+    [SerializeField] private float dashDuration = 0.05f;
+    [SerializeField] private DashDirection dashDirection;
+    [SerializeField] private ParticleSystem dashEffect = null;
+    [SerializeField] private DashSO dash;
 
     [Header("Health")]
     [SerializeField] public HealthSO health;
@@ -58,7 +66,8 @@ public class PlayerController : MonoBehaviour, ICharacterController
 
     [Header("Misc")]
     [SerializeField] private List<Collider> ignoredColliders = new List<Collider>();
-    [SerializeField] private Animator animator;
+    [SerializeField] private Animator animator = null;
+    [SerializeField] private LayerMask enemyLayerMask;
 
     public CharacterState CurrentCharacterState { get; private set; }
 
@@ -112,7 +121,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
     }
 
     public bool IsColliderValidForCollisions(Collider coll) {
-        if (CurrentCharacterState == CharacterState.Dashing && coll.CompareTag("Enemy")) {
+        if (CurrentCharacterState == CharacterState.Dashing && enemyLayerMask == (enemyLayerMask | (1 << coll.gameObject.layer))) {
             return false;
         }
 
@@ -266,27 +275,27 @@ public class PlayerController : MonoBehaviour, ICharacterController
                     //  }
                     //}
 
-                    //if (input.Dash && canDash) {
-                    //    TransitionToState(CharacterState.Dashing);
-                    //    input.DashPerformed();
-                    //    canDash = false;
-                    //    dashEffect.Play();
-                    //    dashEffect.GetComponent<PolygonSoundSpawn>().Execute();
-                    //    animator.SetTrigger("Dash");
-                    //    Cooldowns.Wait(dashDuration)
-                    //      .OnComplete(() => {
-                    //          dashEffect.Stop();
-                    //          TransitionToState(CharacterState.Grounded);
-                    //          Cooldowns.Wait(dashCooldown)
-                    //.OnComplete(() => {
-                    //              canDash = true;
-                    //          });
-                    //      });
-                    //}
+                    if (input.Dash && dash.Charges > 0) {
+                        TransitionToState(CharacterState.Dashing);
+                        input.DashPerformed();
+                        dash.Dash();
+                        //dashEffect?.Play();
+                        //dashEffect?.GetComponent<PolygonSoundSpawn>().Execute();
+                        //animator?.SetTrigger("Dash");
+                        Cooldown.Wait(dashDuration)
+                            .OnComplete(() => {
+                                //dashEffect?.Stop();
+                                TransitionToState(CharacterState.Grounded);
+                            });
+                    }
                     break;
                 }
             case CharacterState.Dashing: {
-                    //currentVelocity = (input.LookBack ? -Motor.CharacterForward : Motor.CharacterForward) * dashSpeed;
+                    if (dashDirection == DashDirection.LookDirection) {
+                        currentVelocity = Motor.CharacterForward * dashSpeed;
+                    } else if (dashDirection == DashDirection.MovementDirection) {
+                        currentVelocity = currentVelocity.WithY(0).normalized * dashSpeed;
+                    }
                     break;
                 }
         }

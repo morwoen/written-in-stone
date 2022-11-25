@@ -12,9 +12,13 @@ public class ExperienceManager : MonoBehaviour
         playerExperience.change += OnExperienceChange;
     }
 
+    private void OnDisable() {
+        playerExperience.change -= OnExperienceChange;
+    }
+
     private void OnExperienceChange(int level, bool levelUp, int current, int required) {
-            Instantiate(levelUpPrefab, transform);
         if (levelUp) {
+            Instantiate(levelUpPrefab, transform);
             playerInventory.AddStone();
         }
     }

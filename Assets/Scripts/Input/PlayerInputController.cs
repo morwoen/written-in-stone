@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using System.Linq;
+using CooldownManagement;
 
 public class PlayerInputController : MonoBehaviour
 {
@@ -18,12 +19,15 @@ public class PlayerInputController : MonoBehaviour
     public Vector3 Movement { get; private set; }
     public Vector2 LookDirection { get; private set; }
 
+    private Cooldown dashCooldown;
+
     private void OnEnable() {
         input = InputManager.Instance;
 
         input.Player.Move.performed += OnMove;
         input.Player.Attack.performed += OnAttack;
         input.Player.Look.performed += OnLook;
+        input.Player.Dash.performed += OnDash;
         //input.controlSchemeChange += OnControlSchemeChange;
     }
 
@@ -31,6 +35,7 @@ public class PlayerInputController : MonoBehaviour
         input.Player.Move.performed -= OnMove;
         input.Player.Attack.performed -= OnAttack;
         input.Player.Look.performed -= OnLook;
+        input.Player.Dash.performed -= OnDash;
         //input.Player.OpenPauseMenu.performed -= OpenPauseMenu;
         //input.controlSchemeChange -= OnControlSchemeChange;
 
@@ -57,5 +62,20 @@ public class PlayerInputController : MonoBehaviour
     void OnAttack(InputAction.CallbackContext ctx) {
         var isPressed = ctx.ReadValueAsButton();
         Attack = isPressed;
+    }
+
+    void OnDash(InputAction.CallbackContext ctx) {
+        var isPressed = ctx.ReadValueAsButton();
+        if (!isPressed) return;
+        Dash = true;
+        dashCooldown?.Stop();
+        dashCooldown = Cooldown.Wait(interactPersistence).OnComplete(() => {
+            Dash = false;
+        });
+    }
+
+    public void DashPerformed() {
+        Dash = false;
+        dashCooldown.Stop();
     }
 }
