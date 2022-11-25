@@ -322,7 +322,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
         } else {
             //Instantiate(hitEffectPrefab, transform.position, hitEffectPrefab.transform.rotation, transform);
 
-            invulnerable = true;
+            //invulnerable = true;
             meshRenderer.material.SetColor("_BaseColor", hitColor);
             //Cooldowns.Wait(invulnerabilityTime)
             //  .OnComplete(() => {

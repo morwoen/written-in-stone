@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
 
         agent.avoidancePriority = Random.Range(1, 500);
+        agent.stoppingDistance = range;
     }
 
     private void OnDestroy()
@@ -66,21 +67,18 @@ public class Enemy : MonoBehaviour
         state = newState;
         switch (newState) {
             case State.Chasing:
-                animator.SetTrigger("walking");
                 break;
             case State.Attacking:
-                //  TODO:
                 agent.SetDestination(transform.position);
                 cooldown = Cooldown.Wait(attackDelay)
                     .OnComplete(() => {
-                        //TODO attack
+                        animator.SetTrigger("Attack");
                         Instantiate(attackPrefab, transform.position, transform.rotation, transform);
 
                         cooldown = Cooldown.Wait(attackRecovery)
-                        .OnComplete(() =>
-                        {
-                            SwitchState(State.Chasing);
-                        });
+                            .OnComplete(() => {
+                                SwitchState(State.Chasing);
+                            });
                     });
                 break;
         }
@@ -91,7 +89,6 @@ public class Enemy : MonoBehaviour
         if (health == 0) {
             SwitchState(State.Stunned);
             enemyKilled.Kill();
-            // TODO: Play effect / animation
             Instantiate(experiencePrefab, transform.position, Quaternion.identity);
             GameObject deathInstance = Instantiate(deathEffect, transform.position, transform.rotation);
             deathInstance.transform.localScale = transform.localScale;

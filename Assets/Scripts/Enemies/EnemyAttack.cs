@@ -6,21 +6,14 @@ public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] private int damage = 10;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnTriggerEnter(Collider collider)
-    {
+    private void OnTriggerEnter(Collider collider){
         var player = collider.GetComponent<PlayerController>();
         player.Damage(damage);
+    }
+
+    private void OnDrawGizmos() {
+        var coll = GetComponent<BoxCollider>();
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(transform.position + coll.center, coll.size);
     }
 }
