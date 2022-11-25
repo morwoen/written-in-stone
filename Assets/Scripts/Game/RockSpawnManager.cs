@@ -18,7 +18,7 @@ public class RockSpawnManager : MonoBehaviour
                 spawnedRock = Instantiate(rockPrefab, new Vector3(x, transform.position.y, y), Quaternion.identity, transform);
             }
 
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(40);
         }
     }
 
