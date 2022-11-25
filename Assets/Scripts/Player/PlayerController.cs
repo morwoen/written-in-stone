@@ -307,11 +307,11 @@ public class PlayerController : MonoBehaviour, ICharacterController
     protected void OnLeaveStableGround() {
     }
 
-    public void Damage(int damage, Vector3 impulse) {
+    public void Damage(int damage) {
         if (CurrentCharacterState == CharacterState.Dashing || invulnerable || health.CurrentHealth <= 0) return;
         var screenShakeMultiplier = 1 - PlayerPrefs.GetInt("NoScreenShake", 0);
         //GetComponent<Cinemachine.CinemachineImpulseSource>().GenerateImpulseAt(transform.position, impulse * screenShakeMultiplier);
-
+        print("damaged!!!==================");
         var dead = health.Damage(damage);
         if (dead) {
             animator.SetTrigger("Die");
