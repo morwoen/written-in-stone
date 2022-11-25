@@ -1,0 +1,1083 @@
+fileFormatVersion: 2
+guid: cf73d4df1ff114702b05f36044e372ed
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WIS_Projectile_Base
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1519
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14f6d634ccfb4f8fbdb1da139294dd8
+      internalID: -462002307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Meteor_Base
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1519
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2f1cc33d45d4f1cb2818df08973ac0
+      internalID: 216591165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Nova_Base
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1519
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e149d9b84fd444ac84501c2d9851ce5
+      internalID: -762481965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Passive_Cooldown
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1519
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113b56e508c924d97bb607bb565c5377
+      internalID: -2073609005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Passive_Crit_Damage
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1518
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba7724009621c458fae51d4bea953983
+      internalID: -780788093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Passive_Crit_Chance
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1519
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da36035e78fc4da68e3bdc949977317
+      internalID: -691672061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Passive_XP
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1519
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f27d5486b25e4e26a2b626176632816
+      internalID: 2097707857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Projectile_Fire
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1439
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247e4cf5db3d34694bf098220f755394
+      internalID: -394410189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Meteor_Fire
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1439
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85278e77a7a1947aab6f8fc6b861f1bb
+      internalID: 202581931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Nova_Fire
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1439
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1be8f69d65bf4461a149673eb267101
+      internalID: 1307658114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Passive_Multicast
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1439
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c622fdbe9211e4fd1b6b90e00b84bf05
+      internalID: -1023107760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Passive_Defence
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1439
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a33908dc4e44c6badaf39dba74a93f
+      internalID: -385541340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Button_Base
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 1439
+        width: 240
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adec762d69e1940bf8f397fc12caf48c
+      internalID: 2038808670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Button_Hover
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1439
+        width: 240
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae2898a29eed4528a91c6d4082b07b4
+      internalID: 1230845216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Button_Press
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 1439
+        width: 240
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16e57da96bcb4ec4801f78ac9c8b631
+      internalID: 929040472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Projectile_Ice
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1359
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c0a9146278d4aadb9d73f8201edbc9
+      internalID: -2143283472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Meteor_Ice
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1359
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70bd444c329dc434da52c9151c33b5f4
+      internalID: 872534256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Nova_Ice
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1359
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f441752f1ca4f30b7259720de321fc
+      internalID: 373085374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Passive_Damage
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1359
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdecd0d41c17c48fba15fd41fa0ea679
+      internalID: 1780532245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Passive_Dodge
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1359
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a021b4269dd04cfe9a669ac46edeb4e
+      internalID: 1609935146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Passive_Health
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1359
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6017514a9b98f4762ba98857c5763192
+      internalID: -1235471943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Kills
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1359
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff31308cc878740ef9313fdc77b4bb4c
+      internalID: 1535445899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Projectile_Electric
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1279
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf6523cff5004a6d9b4dfb15c20cfa0
+      internalID: -2013206964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Meteor_Electric
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1279
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d395c1403f5ef47389a73ecf0f45e649
+      internalID: 1879424834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Nova_Electric
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1279
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8989154e5f9104e27a22b08771a1a03f
+      internalID: -1769466783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Passive_Area
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1279
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99f57ea3bff444e5b2549757fac0264
+      internalID: 774511705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Passive_Speed
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1279
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce3a8433ae904ee4bd19c16b82d2102
+      internalID: 1500621980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Passive_Pickup
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1279
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869fb4c9106784ed7ac471543d484d45
+      internalID: 768028601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteSquare
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1279
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f49c3acd85d4a799f0351e33a6a819
+      internalID: 542044496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Cursor
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1279
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d694a49ac62248848abe50de38c7723
+      internalID: 1080790664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Stone
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 839
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb9108df35a740e38a2fe707f4a4f43
+      internalID: 684378350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Rock_1
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 839
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9dd2653552d7435eb36191034273694
+      internalID: -1786049319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Rock_2
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 839
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e397dcd8656495b86a36365ff6969a
+      internalID: 1626277277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Rock_3
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 838
+        width: 371
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef6d61f3e5194dfdb4bf25022d65ceb
+      internalID: 1907402649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Background
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 78
+        width: 480
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd8fbaeac0394d68acc31a210a81a5d
+      internalID: 919645381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Rock_Crack
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 353
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50dd5ffad1a541cd8a9ae81cc8169ae
+      internalID: -284409567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 562eae3481acc4cfda509534648422f6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      WrittenInStoneSprites_86: 1186552584
+      WIS_Nova_Base: -762481965
+      WrittenInStoneSprites_123: -739875060
+      WrittenInStoneSprites_82: -1697488264
+      WrittenInStoneSprites_89: 755296791
+      WIS_Passive_Cooldown: -2073609005
+      WrittenInStoneSprites_57: -38520291
+      WrittenInStoneSprites_178: 2072587852
+      WIS_Nova_Fire: 1307658114
+      WIS_Kills: 1535445899
+      WrittenInStoneSprites_78: -133482951
+      WrittenInStoneSprites_9: 1429163761
+      WrittenInStoneSprites_179: -1429700524
+      WrittenInStoneSprites_154: -639989238
+      WrittenInStoneSprites_186: -1849495875
+      WIS_Passive_Defence: -385541340
+      WIS_Passive_Area: 774511705
+      WrittenInStoneSprites_81: 362151558
+      WIS_Passive_Multicast: -1023107760
+      WIS_Rock_1: -1786049319
+      WIS_Projectile_Base: -462002307
+      WrittenInStoneSprites_62: -1908968983
+      WrittenInStoneSprites_96: 2107251821
+      WrittenInStoneSprites_119: -365250387
+      WrittenInStoneSprites_30: 735169911
+      WrittenInStoneSprites_151: 1268962306
+      WrittenInStoneSprites_66: -414592666
+      WrittenInStoneSprites_60: 1082305077
+      WhiteSquare: 542044496
+      WrittenInStoneSprites_52: -36974911
+      WrittenInStoneSprites_135: -431881263
+      WIS_Passive_Pickup: 768028601
+      WrittenInStoneSprites_196: -1663607376
+      WrittenInStoneSprites_102: 642101333
+      WIS_Button_Press: 929040472
+      WrittenInStoneSprites_15: -1727747230
+      WrittenInStoneSprites_127: -460398779
+      WrittenInStoneSprites_92: -271984076
+      WrittenInStoneSprites_167: -1488781293
+      WrittenInStoneSprites_113: -1434768371
+      WrittenInStoneSprites_159: -651340758
+      WrittenInStoneSprites_26: -756933458
+      WrittenInStoneSprites_85: 1597487860
+      WrittenInStoneSprites_181: 1783384312
+      WrittenInStoneSprites_173: -321111389
+      WrittenInStoneSprites_148: -78051812
+      WrittenInStoneSprites_200: -1184056080
+      WrittenInStoneSprites_193: -1536905462
+      WIS_Passive_Dodge: 1609935146
+      WrittenInStoneSprites_198: 1762553403
+      WrittenInStoneSprites_100: 498930339
+      WIS_Rock_Crack: -284409567
+      WrittenInStoneSprites_107: -520370813
+      WrittenInStoneSprites_41: -1098123261
+      WrittenInStoneSprites_69: -1458078000
+      WrittenInStoneSprites_149: -1887988286
+      WrittenInStoneSprites_91: -627978972
+      WrittenInStoneSprites_103: -454738323
+      WrittenInStoneSprites_11: -2064846330
+      WrittenInStoneSprites_84: 690883648
+      WIS_Cursor: 1080790664
+      WrittenInStoneSprites_162: -403755332
+      WrittenInStoneSprites_177: 352687077
+      WrittenInStoneSprites_88: -550660827
+      WrittenInStoneSprites_99: 903423489
+      WrittenInStoneSprites_53: -1212391452
+      WIS_Nova_Ice: 373085374
+      WIS_Meteor_Fire: 202581931
+      WrittenInStoneSprites_74: 814428363
+      WrittenInStoneSprites_51: 36574976
+      WrittenInStoneSprites_128: -939953690
+      WrittenInStoneSprites_61: 218275874
+      WrittenInStoneSprites_55: -1133086480
+      WrittenInStoneSprites_138: -311693734
+      WrittenInStoneSprites_109: 850547328
+      WrittenInStoneSprites_192: 369049319
+      WrittenInStoneSprites_157: 1469573700
+      WIS_Nova_Electric: -1769466783
+      WrittenInStoneSprites_54: 2143932811
+      WIS_Passive_Crit_Chance: -691672061
+      WrittenInStoneSprites_143: 1254001651
+      WrittenInStoneSprites_106: 1273230215
+      WrittenInStoneSprites_118: 610265211
+      WrittenInStoneSprites_163: 2077072543
+      WrittenInStoneSprites_160: 1519173234
+      WrittenInStoneSprites_201: 1109567955
+      WrittenInStoneSprites_87: 1147240617
+      WrittenInStoneSprites_50: -797358698
+      WrittenInStoneSprites_190: -621623487
+      WrittenInStoneSprites_29: -1782567506
+      WrittenInStoneSprites_64: -1417971778
+      WrittenInStoneSprites_121: 1627399979
+      WIS_Passive_Damage: 1780532245
+      WrittenInStoneSprites_184: -4573083
+      WrittenInStoneSprites_168: -414693641
+      WrittenInStoneSprites_174: 1034139953
+      WrittenInStoneSprites_112: 1150661152
+      WrittenInStoneSprites_141: -150835221
+      WrittenInStoneSprites_8: 1440750172
+      WrittenInStoneSprites_145: 1277690931
+      WrittenInStoneSprites_105: -538862693
+      WrittenInStoneSprites_93: -621566615
+      WrittenInStoneSprites_111: -1202088971
+      WrittenInStoneSprites_94: 117719948
+      WrittenInStoneSprites_10: 990497809
+      WrittenInStoneSprites_139: 1391246312
+      WrittenInStoneSprites_153: 1678076097
+      WrittenInStoneSprites_171: -366846793
+      WrittenInStoneSprites_67: 265592847
+      WIS_Passive_Health: -1235471943
+      WrittenInStoneSprites_27: -303979400
+      WrittenInStoneSprites_122: 924995829
+      WrittenInStoneSprites_203: -718168608
+      WrittenInStoneSprites_170: 865340386
+      WrittenInStoneSprites_117: 1590601240
+      WrittenInStoneSprites_137: 450482898
+      WrittenInStoneSprites_166: 1728732816
+      WrittenInStoneSprites_116: 175346470
+      WrittenInStoneSprites_77: -1851027517
+      WrittenInStoneSprites_71: -1917582601
+      WrittenInStoneSprites_75: 1990879493
+      WrittenInStoneSprites_95: 1327349656
+      WrittenInStoneSprites_169: 744305128
+      WrittenInStoneSprites_79: 755762239
+      WrittenInStoneSprites_101: 952707091
+      WrittenInStoneSprites_182: 78182099
+      WrittenInStoneSprites_152: 1808879411
+      WrittenInStoneSprites_83: -1471523768
+      WIS_Projectile_Ice: -2143283472
+      WIS_Button_Hover: 1230845216
+      WrittenInStoneSprites_104: -926935431
+      WrittenInStoneSprites_120: -259155329
+      WIS_Rock_3: 1907402649
+      WrittenInStoneSprites_146: 433413869
+      WIS_Projectile_Fire: -394410189
+      WrittenInStoneSprites_24: -584525768
+      WrittenInStoneSprites_150: 469519643
+      WrittenInStoneSprites_161: -1519044241
+      WrittenInStoneSprites_7: -537571221
+      WrittenInStoneSprites_115: 636228998
+      WrittenInStoneSprites_202: -1562872120
+      WIS_Passive_XP: 2097707857
+      WrittenInStoneSprites_56: -1257143942
+      WIS_Meteor_Electric: 1879424834
+      WrittenInStoneSprites_172: -1843584999
+      WrittenInStoneSprites_126: 301436226
+      WrittenInStoneSprites_14: -1261029677
+      WrittenInStoneSprites_158: 1881926326
+      WIS_Rock_2: 1626277277
+      WrittenInStoneSprites_108: -442965661
+      WrittenInStoneSprites_140: 2106066563
+      WrittenInStoneSprites_98: -1461805739
+      WrittenInStoneSprites_33: 1691649790
+      WIS_Passive_Crit_Damage: -780788093
+      WrittenInStoneSprites_59: 87457166
+      WrittenInStoneSprites_70: 198418824
+      WrittenInStoneSprites_189: -1794662019
+      WrittenInStoneSprites_195: -1170445728
+      WIS_Passive_Speed: 1500621980
+      WIS_Projectile_Electric: -2013206964
+      WrittenInStoneSprites_197: -2144486818
+      WrittenInStoneSprites_124: -1345001154
+      WrittenInStoneSprites_180: 1818529090
+      WrittenInStoneSprites_110: -1413896707
+      WrittenInStoneSprites_32: -200048505
+      WrittenInStoneSprites_13: -876779466
+      WrittenInStoneSprites_194: -2080384149
+      WIS_Meteor_Base: 216591165
+      WrittenInStoneSprites_97: 549030743
+      WrittenInStoneSprites_130: -995949698
+      WrittenInStoneSprites_73: -813901052
+      WrittenInStoneSprites_136: -1870540776
+      WrittenInStoneSprites_188: 984737354
+      WIS_Button_Base: 2038808670
+      WrittenInStoneSprites_147: 257861528
+      WrittenInStoneSprites_65: -1433877108
+      WrittenInStoneSprites_144: 188820150
+      WrittenInStoneSprites_156: 1696304664
+      WrittenInStoneSprites_114: 440848592
+      WrittenInStoneSprites_68: -651196390
+      WrittenInStoneSprites_23: -950090629
+      WrittenInStoneSprites_185: 1783428089
+      WrittenInStoneSprites_129: 1384622231
+      WrittenInStoneSprites_176: -108849079
+      WrittenInStoneSprites_175: 1722457637
+      WrittenInStoneSprites_183: -896702386
+      WrittenInStoneSprites_199: -477902472
+      WIS_Stone: 684378350
+      WrittenInStoneSprites_132: -785895253
+      WrittenInStoneSprites_12: 157338865
+      WrittenInStoneSprites_72: -783831576
+      WrittenInStoneSprites_90: -1593406921
+      WrittenInStoneSprites_187: 1745831243
+      WIS_Background: 919645381
+      WrittenInStoneSprites_63: 1858274526
+      WrittenInStoneSprites_165: 546591510
+      WrittenInStoneSprites_16: 382512767
+      WrittenInStoneSprites_21: -767448956
+      WrittenInStoneSprites_191: -967342017
+      WIS_Meteor_Ice: 872534256
+      WrittenInStoneSprites_49: 1141059737
+      WrittenInStoneSprites_164: -2075645215
+      WrittenInStoneSprites_76: 280457334
+      WrittenInStoneSprites_80: -1436416395
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

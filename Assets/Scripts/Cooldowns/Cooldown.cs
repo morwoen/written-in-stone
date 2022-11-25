@@ -8,7 +8,7 @@ namespace CooldownManagement
     /// Cooldown management class
     /// Originally created for Hanger Management
     /// Improved for Scenery
-    /// Multi-actions support added for Written In Stone
+    /// Multi-actions support & unscaled time support added for Written In Stone
     /// </summary>
     public class Cooldown
     {
@@ -50,6 +50,12 @@ namespace CooldownManagement
             return cooldown;
         }
 
+        public static Cooldown WaitUnscaled(float timeInSeconds) {
+            Cooldown cooldown = new Cooldown(timeInSeconds, 1, true);
+            Instance.cooldowns.Add(cooldown);
+            return cooldown;
+        }
+
         public static Cooldown WaitGlobal(float timeInSeconds) {
             Cooldown cooldown = new Cooldown(timeInSeconds);
             GlobalInstance.cooldowns.Add(cooldown);
@@ -63,11 +69,13 @@ namespace CooldownManagement
         protected List<Action<float, float, float>> onProgress;
         internal List<Action> always;
         private float timeModifier;
+        private bool unscaled;
 
-        internal Cooldown(float time, float timeModifier = 1) {
+        internal Cooldown(float time, float timeModifier = 1, bool unscaled = false) {
             this.time = time;
             this.elapsed = 0;
             this.timeModifier = timeModifier;
+            this.unscaled = unscaled;
             this.action = new();
             this.onStop = new();
             this.onProgress = new();
@@ -111,7 +119,12 @@ namespace CooldownManagement
             time = elapsed;
         }
 
-        internal bool Progress(float delta) {
+        internal bool Progress() {
+            var delta = Time.deltaTime;
+            if (unscaled) {
+                delta = Time.unscaledDeltaTime;
+            }
+
             elapsed += delta * timeModifier;
 
             if (elapsed > time) {
@@ -144,7 +157,7 @@ namespace CooldownManagement
             private void Update() {
                 int i = 0;
                 while (i < cooldowns.Count) {
-                    if (cooldowns[i].Ongoing() && cooldowns[i].Progress(Time.deltaTime)) {
+                    if (cooldowns[i].Ongoing() && cooldowns[i].Progress()) {
                         i += 1;
                     } else {
                         foreach (var action in cooldowns[i].action) {

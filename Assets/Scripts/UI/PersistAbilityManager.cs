@@ -41,6 +41,8 @@ public class PersistAbilityManager : MonoBehaviour
     public void Show() {
         if (isOpen || inventory.stones < 1) return;
 
+        InputManager.Instance.SwitchTo(InputManager.Instance.Menu);
+
         content.SetActive(true);
 
         var activeSpell = inventory.active
@@ -73,6 +75,8 @@ public class PersistAbilityManager : MonoBehaviour
 
     public void Hide() {
         if (!isOpen) return;
+
+        InputManager.Instance.SwitchTo(InputManager.Instance.Player);
 
         content.SetActive(false);
 

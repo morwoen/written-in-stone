@@ -26,4 +26,10 @@ public static class ExtensionMethods
     public static Vector3 WithY(this Vector3 value, float y) {
         return new Vector3(value.x, y, value.z);
     }
+
+    public static void DestroyChildren(this Transform transform) {
+        for (int i = transform.childCount - 1; i >= 0; i --) {
+            Object.Destroy(transform.GetChild(i).gameObject);
+        }
+    }
 }
