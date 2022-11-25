@@ -16,6 +16,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float range = 1;
     [SerializeField] private int maxHealth;
     [SerializeField] private GameObject experiencePrefab;
+    [SerializeField] private float attackDelay = 1;
+    [SerializeField] private float attackRecovery= 1;
+    [SerializeField] private GameObject attackPrefab;
+    private Cooldown cooldown;
 
     private int health;
 
@@ -36,6 +40,11 @@ public class Enemy : MonoBehaviour
         agent.avoidancePriority = Random.Range(1, 500);
     }
 
+    private void OnDestroy()
+    {
+        cooldown?.Stop();
+    }
+
     private void Update() {
         switch (state) {
             case State.Chasing:
@@ -49,12 +58,21 @@ public class Enemy : MonoBehaviour
     }
 
     private void SwitchState(State newState) {
+        state = newState;
         switch (newState) {
             case State.Attacking:
                 //  TODO:
-                Cooldown.Wait(1)
+                agent.SetDestination(transform.position);
+                cooldown = Cooldown.Wait(attackDelay)
                     .OnComplete(() => {
-                        SwitchState(State.Chasing);
+                        //TODO attack
+                        Instantiate(attackPrefab, transform.position, transform.rotation, transform);
+
+                        cooldown = Cooldown.Wait(attackRecovery)
+                        .OnComplete(() =>
+                        {
+                            SwitchState(State.Chasing);
+                        });
                     });
                 break;
         }
