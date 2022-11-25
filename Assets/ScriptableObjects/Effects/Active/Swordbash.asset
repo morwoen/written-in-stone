@@ -16,9 +16,9 @@ MonoBehaviour:
   displayName: Axe Bash
   tooltip: 
   spawnOnPlayer: 1
-  traits: 0500000009000000
+  traits: 050000000b000000
   levels:
-  - spellPrefab: {fileID: 2948311860319475145, guid: 1caddab79afd78d41b988877e1bcd152,
+  - spellPrefab: {fileID: 2948311860319475145, guid: d3f65d4696eae034391402428c72d9c3,
       type: 3}
-    cooldown: 5
-    damage: 8
+    cooldown: 4.6
+    damage: 7

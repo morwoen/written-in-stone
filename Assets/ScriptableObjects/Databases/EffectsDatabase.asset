@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: EffectsDatabase
   m_EditorClassIdentifier: 
   active:
+  - {fileID: 11400000, guid: 6016cc75efe57c3408291152accc6ecf, type: 2}
   - {fileID: 11400000, guid: f5ec656178749334d97fa1bd03b45bce, type: 2}
   - {fileID: 11400000, guid: a484ce233bc6e5646a54201f2ac5f81c, type: 2}
   - {fileID: 11400000, guid: df6383d6e0518634d90545ee993818f7, type: 2}
@@ -21,8 +22,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0bc46d58dd7c2c04bbee1cd0e353b0a0, type: 2}
   - {fileID: 11400000, guid: 7239168eaed0c7a40940fbe801bf7451, type: 2}
   - {fileID: 11400000, guid: d094ea63a3d1875409b28bde48f8c22c, type: 2}
+  - {fileID: 11400000, guid: 425261674d456824ba01ddb24fc09c32, type: 2}
   - {fileID: 11400000, guid: fbf10c45347bcf845b0f14931c2652f9, type: 2}
   - {fileID: 11400000, guid: c778bbf7e3b08b54fbff86dd4f6a6a3c, type: 2}
+  - {fileID: 11400000, guid: 38d309758c27379478150011d8992df3, type: 2}
   - {fileID: 11400000, guid: 4e09ef4b97aefbc489cbf2c4e9f3ab42, type: 2}
   - {fileID: 11400000, guid: 2790092758e2d514ab03c91ad17f6350, type: 2}
   - {fileID: 11400000, guid: 67a87de22597a8243a5ae5c32d5ddf2b, type: 2}
