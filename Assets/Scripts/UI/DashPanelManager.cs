@@ -21,7 +21,7 @@ public class DashPanelManager : MonoBehaviour
 
     private void OnDashUsed(Cooldown cooldown) {
         for (var i = 0; i < transform.childCount; i++) {
-            var uiElement = transform.GetChild(i).GetComponent<DashUIElement>();
+            var uiElement = transform.GetChild(i).GetComponent<CooldownUIOverlay>();
             if (!uiElement.IsAnimating()) {
                 uiElement.ShowCooldown(cooldown);
                 break;
@@ -38,7 +38,7 @@ public class DashPanelManager : MonoBehaviour
         } else if (charges < transform.childCount) {
             var extraElements = transform.childCount - charges;
             for (var i = 0; i < extraElements; i++) {
-                Destroy(transform.GetChild(transform.childCount - i - 1));
+                Destroy(transform.GetChild(transform.childCount - i - 1).gameObject);
             }
         }
     }

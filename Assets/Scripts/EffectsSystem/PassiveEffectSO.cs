@@ -6,7 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Passive Effect", menuName = "ScriptableObjects/Passive Effect")]
 public class PassiveEffectSO : ScriptableObject
 {
-    // TODO: Define static with colours for each rarity
     public enum EffectRarity {
         Common,
         Uncommon,
@@ -33,6 +32,7 @@ public class PassiveEffectSO : ScriptableObject
     }
 
     public Sprite sprite;
+    public Sprite secondarySprite;
     public string displayName;
     public string tooltip;
     public ActiveEffectSO.EffectTrait[] traits;

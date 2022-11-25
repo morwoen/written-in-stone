@@ -9,8 +9,7 @@ public class EffectsExecutor : MonoBehaviour
 {
     [SerializeField] private InventorySO inventory;
     [SerializeField] private Vector3 spawnPointOffset;
-
-    private Dictionary<ActiveEffectSO, Cooldown> cooldownTracker;
+    [SerializeField] private EffectCooldownsTrackerSO cooldownsTracker;
 
     private float multicast = 0;
 
@@ -18,7 +17,6 @@ public class EffectsExecutor : MonoBehaviour
         inventory.effectAdded += OnEffectAdded;
         inventory.effectRemoved += OnEffectRemoved;
         inventory.effectsChange += OnEffectsChange;
-        cooldownTracker = new();
     }
 
     private void OnDisable() {
@@ -29,15 +27,12 @@ public class EffectsExecutor : MonoBehaviour
 
     private void OnEffectRemoved(ActiveEffectSO active, PassiveEffectSO passive) {
         if (active == null) return;
-        if (cooldownTracker.ContainsKey(active)) {
-            cooldownTracker[active].Stop();
-            cooldownTracker.Remove(active);
-        }
+        cooldownsTracker.RemoveCooldown(active);
     }
 
     private void OnEffectAdded(ActiveEffectSO active, PassiveEffectSO passive) {
         if (active == null) return;
-        if (cooldownTracker.ContainsKey(active)) return;
+        if (cooldownsTracker.HasCooldown(active)) return;
         ExecuteEvent(active);
     }
 
@@ -83,7 +78,7 @@ public class EffectsExecutor : MonoBehaviour
         var slot = inventory.GetSlot(active);
         var level = active.levels[slot.permanent + slot.temporary - 1];
         var cooldownMultiplier = 1 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellCooldown, slot.effect.traits) / 100f;
-        cooldownTracker[active] = Cooldown.Wait(level.cooldown, cooldownMultiplier)
+        var cd = Cooldown.Wait(level.cooldown, cooldownMultiplier)
             .OnComplete(() => {
                 var spellMulticast = multicast + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellMulticast, slot.effect.traits) / 100f;
                 var damageMultiplier = 1 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.SpellDamage, slot.effect.traits) / 100f;
@@ -93,5 +88,6 @@ public class EffectsExecutor : MonoBehaviour
                 
                 ExecuteEvent(active);
             });
+        cooldownsTracker.RegisterCooldown(active, cd);
     }
 }

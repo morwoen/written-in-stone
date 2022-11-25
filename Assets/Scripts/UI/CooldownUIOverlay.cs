@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using CooldownManagement;
 
-public class DashUIElement : MonoBehaviour
+public class CooldownUIOverlay : MonoBehaviour
 {
     [SerializeField] private Image overlay;
 

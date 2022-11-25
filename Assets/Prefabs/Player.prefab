@@ -318,6 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 8cc70bfa099b6794da12b99af4b05484, type: 2}
   spawnPointOffset: {x: 0, y: 1, z: 0}
+  cooldownsTracker: {fileID: 11400000, guid: 06e7f9087e89e4c0794abf37fb61ac8b, type: 2}
 --- !u!114 &2013017025
 MonoBehaviour:
   m_ObjectHideFlags: 0

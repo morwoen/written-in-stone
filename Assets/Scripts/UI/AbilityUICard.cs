@@ -8,7 +8,7 @@ using System;
 
 public class AbilityUICard : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerEnterHandler
 {
-    [SerializeField] private Image image;
+    [SerializeField] private EffectImage image;
     [SerializeField] private TextMeshProUGUI title;
     [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private Animator animator;
@@ -18,7 +18,7 @@ public class AbilityUICard : MonoBehaviour, ISelectHandler, IDeselectHandler, IP
     [NonSerialized] public PassiveEffectSO.EffectRarity passiveRarity;
 
     public void Assign(InventorySO.ActiveInventorySlot slot) {
-        image.sprite = slot.effect.sprite;
+        image.Apply(slot);
         title.SetText(slot.effect.displayName);
         description.SetText(slot.effect.tooltip);
         activeEffect = slot.effect;
@@ -26,7 +26,7 @@ public class AbilityUICard : MonoBehaviour, ISelectHandler, IDeselectHandler, IP
     }
 
     public void Assign(InventorySO.PassiveInventorySlot slot) {
-        image.sprite = slot.effect.sprite;
+        image.Apply(slot);
         title.SetText(slot.effect.displayName);
         description.SetText(slot.effect.tooltip);
         activeEffect = null;
