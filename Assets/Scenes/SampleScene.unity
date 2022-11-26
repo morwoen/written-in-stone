@@ -735,7 +735,9 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 669973443361258153, guid: 15ee22a39d248e544a24bec348a6117e, type: 3}
   - {fileID: 669973443361258153, guid: fb385f15d021b0045b2c870c64419c47, type: 3}
-  bossPrefabs: []
+  bossPrefabs:
+  - {fileID: 3996579319005014529, guid: fe70318e371d6e74abec2fb640a0794b, type: 3}
+  - {fileID: 3996579319005014529, guid: 0dda2645506197c43ab5ce459af66434, type: 3}
   spawnDistanceMinMax: {x: 20, y: 30}
 --- !u!114 &172805518
 MonoBehaviour:

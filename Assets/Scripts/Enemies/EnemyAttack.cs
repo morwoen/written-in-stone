@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    private int damage = 10;
+    protected int damage = 10;
 
     public void SetDamage(int damage) {
         this.damage = damage;
