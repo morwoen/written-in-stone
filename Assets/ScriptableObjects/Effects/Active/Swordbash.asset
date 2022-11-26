@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Swordbash
   m_EditorClassIdentifier: 
   sprite: {fileID: 813534837, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
+  secondarySprite: {fileID: -2091234472, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
   displayName: Axe Bash
   tooltip: 
   spawnOnPlayer: 1
