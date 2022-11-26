@@ -20,7 +20,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float attackRecovery= 1;
     [SerializeField] private EnemyAttack attackPrefab;
     [SerializeField] private GameObject deathEffect;
-    
+    [SerializeField] private float deathEffectScale;
+
+
     private Cooldown cooldown;
 
     private int health;
@@ -92,7 +94,7 @@ public class Enemy : MonoBehaviour
             enemyKilled.Kill();
             Instantiate(experiencePrefab, transform.position, Quaternion.identity);
             GameObject deathInstance = Instantiate(deathEffect, transform.position, transform.rotation);
-            deathInstance.transform.localScale = transform.localScale;
+            deathInstance.transform.localScale *= deathEffectScale;
             Destroy(deathInstance, 3);
             Destroy(gameObject);
         }

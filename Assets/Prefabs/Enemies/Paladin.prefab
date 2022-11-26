@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5947291767703740866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0, z: 4.98}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -86,11 +86,15 @@ MonoBehaviour:
   enemyKilled: {fileID: 11400000, guid: fa1f99320db969b4e930030d0772d9df, type: 2}
   range: 5
   maxHealth: 100
-  playerExperience: {fileID: 11400000, guid: cea5121e2eb5d4b3890598757cd2b837, type: 2}
   experiencePrefab: {fileID: 3905952768875748400, guid: 2a81ecaf2aab90343bbe209b411484e7,
+    type: 3}
+  attackDelay: 0.5
+  attackRecovery: 2
+  attackPrefab: {fileID: 7404225859638616959, guid: 2a1a671409c735e48ada254567ce5ae7,
     type: 3}
   deathEffect: {fileID: 3825455922101144633, guid: d41045928ffb47049910a6d4e3fdb02d,
     type: 3}
+  deathEffectScale: 4
 --- !u!1001 &4843114671090248025
 PrefabInstance:
   m_ObjectHideFlags: 0

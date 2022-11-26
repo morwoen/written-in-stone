@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5947291767703740866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0, z: 4.98}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -84,15 +84,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyKilled: {fileID: 11400000, guid: fa1f99320db969b4e930030d0772d9df, type: 2}
-  range: 5
+  range: 15
   maxHealth: 100
   experiencePrefab: {fileID: 3905952768875748400, guid: 2a81ecaf2aab90343bbe209b411484e7,
     type: 3}
-  attackDelay: 1
-  attackRecovery: 1
-  attackPrefab: {fileID: 0}
+  attackDelay: 0.5
+  attackRecovery: 3
+  attackPrefab: {fileID: 572141818072440962, guid: 09415ebb93c0b6e46823081be43d9b35,
+    type: 3}
   deathEffect: {fileID: 3825455922101144633, guid: d41045928ffb47049910a6d4e3fdb02d,
     type: 3}
+  deathEffectScale: 4
 --- !u!1001 &7885274017792534795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -187,6 +189,32 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 68045ed99cf9b264a80f7bb6dc8f19e9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cf7b72ad6fa14555b13ede6a7b001cb, type: 3}
+--- !u!1 &7038975726609568858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1cf7b72ad6fa14555b13ede6a7b001cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 7885274017792534795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2470431908151947248
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7038975726609568858}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be3891332fe47a5499e8351f054cf2c0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &7702465489118252768 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1cf7b72ad6fa14555b13ede6a7b001cb,
