@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    [SerializeField] private int damage = 10;
+    private int damage = 10;
+
+    public void SetDamage(int damage) {
+        this.damage = damage;
+    }
 
     private void OnTriggerEnter(Collider collider){
         var player = collider.GetComponent<PlayerController>();

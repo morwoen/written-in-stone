@@ -18,12 +18,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject experiencePrefab;
     [SerializeField] private float attackDelay = 1;
     [SerializeField] private float attackRecovery= 1;
-    [SerializeField] private GameObject attackPrefab;
+    [SerializeField] private EnemyAttack attackPrefab;
     [SerializeField] private GameObject deathEffect;
     
     private Cooldown cooldown;
 
     private int health;
+    private int damage = 10;
 
     private NavMeshAgent agent;
     private Transform player;
@@ -46,8 +47,7 @@ public class Enemy : MonoBehaviour
         agent.stoppingDistance = range;
     }
 
-    private void OnDestroy()
-    {
+    private void OnDestroy() {
         cooldown?.Stop();
     }
 
@@ -73,7 +73,8 @@ public class Enemy : MonoBehaviour
                 cooldown = Cooldown.Wait(attackDelay)
                     .OnComplete(() => {
                         animator.SetTrigger("Attack");
-                        Instantiate(attackPrefab, transform.position, transform.rotation, transform);
+                        var attack = Instantiate(attackPrefab, transform.position, transform.rotation, transform);
+                        attack.SetDamage(damage);
 
                         cooldown = Cooldown.Wait(attackRecovery)
                             .OnComplete(() => {
@@ -95,5 +96,11 @@ public class Enemy : MonoBehaviour
             Destroy(deathInstance, 3);
             Destroy(gameObject);
         }
+    }
+
+    public void SetMultiplier(float multi) {
+        this.damage = Mathf.FloorToInt(this.damage * multi);
+        this.maxHealth = Mathf.FloorToInt(maxHealth * multi);
+        this.health = Mathf.FloorToInt(maxHealth * multi);
     }
 }

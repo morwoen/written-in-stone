@@ -567,7 +567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIS_Projectile_Electric
+      name: WIS_Electric
       rect:
         serializedVersion: 2
         x: 4
@@ -869,7 +869,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -890,7 +890,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -911,7 +911,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -932,7 +932,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -953,7 +953,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -974,7 +974,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -982,6 +982,195 @@ TextureImporter:
       bones: []
       spriteID: 3892d7ac54a304ab2a310ff426d14677
       internalID: -22845670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Projectile_Secondary
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 639
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ee23bb468fc48a3938e2455283567e
+      internalID: -1355209400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Meteor_Secondary
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 638
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b402b6779eade432ba5fb0351ca3ae3b
+      internalID: 637071680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Nova_Secondary
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295e2b96e60604ebcbdb5bfacb490c0b
+      internalID: -283257260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Sword_Secondary
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 479
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3796be2009be44b2d80d9f4c6494259d
+      internalID: -2091234472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Spear_Secondary
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 481
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e73dfdb0dcc6471581efe67ca6bd641
+      internalID: -774032971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Axe_Secondary
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a525ca1d2924a3c8f5356b1ba3c22d
+      internalID: 370979788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Ice
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc011a13b9d14fdeb716be575f698b5
+      internalID: -520587502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Fire
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1438
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40cb19d7462a4ebda182dd395aea656
+      internalID: -282896680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Projectile_Electric
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7884dc7cd8aab40feb3b39062c7f54db
+      internalID: 515663394
       vertices: []
       indices: 
       edges: []
@@ -1010,6 +1199,7 @@ TextureImporter:
       WrittenInStoneSprites_78: -133482951
       WrittenInStoneSprites_9: 1429163761
       WrittenInStoneSprites_179: -1429700524
+      WIS_Ice: -520587502
       WrittenInStoneSprites_154: -639989238
       WrittenInStoneSprites_186: -1849495875
       WIS_Passive_Defence: -385541340
@@ -1036,6 +1226,7 @@ TextureImporter:
       WrittenInStoneSprites_15: -1727747230
       WrittenInStoneSprites_127: -460398779
       WrittenInStoneSprites_92: -271984076
+      WIS_Sword_Secondary: -2091234472
       WrittenInStoneSprites_167: -1488781293
       WrittenInStoneSprites_113: -1434768371
       WrittenInStoneSprites_159: -651340758
@@ -1060,6 +1251,7 @@ TextureImporter:
       WrittenInStoneSprites_84: 690883648
       WIS_Cursor: 1080790664
       WrittenInStoneSprites_162: -403755332
+      WIS_Projectile_Secondary: -1355209400
       WrittenInStoneSprites_177: 352687077
       WrittenInStoneSprites_88: -550660827
       WIS_: -1145148452
@@ -1079,6 +1271,7 @@ TextureImporter:
       WIS_Nova_Electric: -1769466783
       WrittenInStoneSprites_54: 2143932811
       WIS_Passive_Crit_Chance: -691672061
+      WIS_Meteor_Secondary: 637071680
       WrittenInStoneSprites_143: 1254001651
       WrittenInStoneSprites_106: 1273230215
       WrittenInStoneSprites_118: 610265211
@@ -1087,6 +1280,7 @@ TextureImporter:
       WrittenInStoneSprites_201: 1109567955
       WrittenInStoneSprites_87: 1147240617
       WrittenInStoneSprites_50: -797358698
+      WIS_Electric: -2013206964
       WrittenInStoneSprites_190: -621623487
       WIS_Whirl: -22845670
       WrittenInStoneSprites_29: -1782567506
@@ -1108,6 +1302,7 @@ TextureImporter:
       WrittenInStoneSprites_10: 990497809
       WrittenInStoneSprites_139: 1391246312
       WrittenInStoneSprites_153: 1678076097
+      WIS_Axe_Secondary: 370979788
       WrittenInStoneSprites_171: -366846793
       WrittenInStoneSprites_67: 265592847
       WIS_Passive_Health: -1235471943
@@ -1161,7 +1356,8 @@ TextureImporter:
       WrittenInStoneSprites_189: -1794662019
       WrittenInStoneSprites_195: -1170445728
       WIS_Passive_Speed: 1500621980
-      WIS_Projectile_Electric: -2013206964
+      WIS_Spear_Secondary: -774032971
+      WIS_Projectile_Electric: 515663394
       WrittenInStoneSprites_197: -2144486818
       WrittenInStoneSprites_124: -1345001154
       WrittenInStoneSprites_180: 1818529090
@@ -1175,6 +1371,7 @@ TextureImporter:
       WrittenInStoneSprites_73: -813901052
       WrittenInStoneSprites_136: -1870540776
       WrittenInStoneSprites_188: 984737354
+      WIS_Fire: -282896680
       WIS_Button_Base: 2038808670
       WrittenInStoneSprites_147: 257861528
       WrittenInStoneSprites_65: -1433877108
@@ -1204,6 +1401,7 @@ TextureImporter:
       WrittenInStoneSprites_191: -967342017
       WIS_Meteor_Ice: 872534256
       WrittenInStoneSprites_49: 1141059737
+      WIS_Nova_Secondary: -283257260
       WrittenInStoneSprites_164: -2075645215
       WrittenInStoneSprites_76: 280457334
       WrittenInStoneSprites_80: -1436416395

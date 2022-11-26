@@ -73,6 +73,9 @@ MonoBehaviour:
   explosion: {fileID: 9135538746692676714, guid: 93d9deb340b23a34f89b76b2ddf8ff51,
     type: 3}
   marker: {fileID: 6154350939864161618, guid: 03adc49eb2f4fc443b48471b9c0eec16, type: 3}
+  enemiesLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!135 &8285263302156819290
 SphereCollider:
   m_ObjectHideFlags: 0

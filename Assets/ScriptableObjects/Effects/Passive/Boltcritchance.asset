@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boltcritchance
   m_EditorClassIdentifier: 
   sprite: {fileID: -691672061, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
-  secondarySprite: {fileID: -462002307, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
+  secondarySprite: {fileID: -1355209400, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
   displayName: Bolt Critical Chance
   tooltip: 
   traits: 00000000

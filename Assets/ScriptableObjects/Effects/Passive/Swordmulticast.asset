@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Swordmulticast
   m_EditorClassIdentifier: 
   sprite: {fileID: -1023107760, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
-  secondarySprite: {fileID: 593659216, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
+  secondarySprite: {fileID: -2091234472, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
   displayName: Sword Multicast
   tooltip: 
   traits: 0b000000

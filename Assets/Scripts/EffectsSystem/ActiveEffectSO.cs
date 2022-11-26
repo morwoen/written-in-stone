@@ -26,6 +26,7 @@ public class ActiveEffectSO : ScriptableObject
     }
 
     public Sprite sprite;
+    public Sprite secondarySprite;
     public string displayName;
     public string tooltip;
     public bool spawnOnPlayer = true;

@@ -21,6 +21,7 @@ public class Meteor : ActiveEffect
     GameObject explosion;
     [SerializeField]
     Transform marker;
+    [SerializeField] private LayerMask enemiesLayerMask;
 
     Vector3 direction;
 
@@ -38,11 +39,17 @@ public class Meteor : ActiveEffect
     void Start() {
         var randomPoint = Random.insideUnitCircle;
 
-        transform.position = new Vector3(
-            transform.position.x + randomPoint.x * spawnRange,
-            spawnHeight,
-            transform.position.z + randomPoint.y * spawnRange
-        );
+        var enemies = Physics.OverlapSphere(transform.position, spawnRange, enemiesLayerMask);
+        if (enemies.Length == 0) {
+            transform.position = new Vector3(
+                transform.position.x + randomPoint.x * spawnRange,
+                spawnHeight,
+                transform.position.z + randomPoint.y * spawnRange
+            );
+        } else {
+            var target = enemies[Random.Range(0, enemies.Length)];
+            transform.position = target.transform.position.WithY(spawnHeight);
+        }
 
         direction = transform.position;
         direction.y = 0;

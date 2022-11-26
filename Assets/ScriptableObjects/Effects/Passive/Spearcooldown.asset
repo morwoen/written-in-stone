@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Spearcooldown
   m_EditorClassIdentifier: 
   sprite: {fileID: -2073609005, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
-  secondarySprite: {fileID: -1188763706, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
+  secondarySprite: {fileID: -774032971, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
   displayName: Spear Cooldown
   tooltip: 
   traits: 0a000000

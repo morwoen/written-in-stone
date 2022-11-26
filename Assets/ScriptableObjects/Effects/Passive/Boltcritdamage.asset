@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boltcritdamage
   m_EditorClassIdentifier: 
   sprite: {fileID: -780788093, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
-  secondarySprite: {fileID: -462002307, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
+  secondarySprite: {fileID: -1355209400, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
   displayName: Bolt Critical Damage
   tooltip: 
   traits: 00000000

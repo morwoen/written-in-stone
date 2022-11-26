@@ -67,9 +67,20 @@ public class EffectImage : MonoBehaviour
             secondary.color = transparent;
             primary.sprite = activeSlot.effect.sprite;
             rarity.color = activeEffectRarity;
+            
+            if (activeSlot.effect.secondarySprite) {
+                secondary.color = opaque;
+                secondary.sprite = activeSlot.effect.secondarySprite;
+            } else {
+                secondary.color = transparent;
+            }
         } else {
-            secondary.color = opaque;
-            secondary.sprite = passiveSlot.effect.secondarySprite;
+            if (passiveSlot.effect.secondarySprite) {
+                secondary.color = opaque;
+                secondary.sprite = passiveSlot.effect.secondarySprite;
+            } else {
+                secondary.color = transparent;
+            }
             primary.sprite = passiveSlot.effect.sprite;
             switch (passiveSlot.rarity) {
                 case PassiveEffectSO.EffectRarity.Common:

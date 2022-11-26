@@ -5,8 +5,9 @@ using UnityEngine;
 public class EnemyDirector : MonoBehaviour
 {
     [SerializeField] private EnemyKilledSO enemyKilled;
-    [SerializeField] private GameObject[] enemyPrefabs;
-    [SerializeField] private GameObject[] bossPrefabs;
+    [SerializeField] private ExperienceSO experience;
+    [SerializeField] private Enemy[] enemyPrefabs;
+    [SerializeField] private Enemy[] bossPrefabs;
     [SerializeField] private Vector2 spawnDistanceMinMax;
 
     private LayerMask groundLayer;
@@ -14,7 +15,8 @@ public class EnemyDirector : MonoBehaviour
     private Transform player;
 
     private int desiredEnemies = 10;
-    private int maxDesiredEnemies = 30;
+    private int maxDesiredEnemies = 50;
+    private float difficultyMultiplier = 1;
 
     private void OnEnable() {
         groundLayer = LayerMask.GetMask("Ground");
@@ -22,10 +24,12 @@ public class EnemyDirector : MonoBehaviour
         player = FindObjectOfType<PlayerController>().transform;
 
         enemyKilled.killed += OnEnemyKilled;
+        experience.change += OnExperienceGain;
     }
 
     private void OnDisable() {
         enemyKilled.killed -= OnEnemyKilled;
+        experience.change -= OnExperienceGain;
     }
 
     private void OnEnemyKilled(int remaining, int total) {
@@ -44,7 +48,8 @@ public class EnemyDirector : MonoBehaviour
         }
     }
 
-    private void SpawnEnemy(GameObject[] prefabs) {
+    private void SpawnEnemy(Enemy[] prefabs) {
+        if (prefabs.Length == 0) return;
         for (var i = 0; i < 10; i++) {
             var offset = spawnDistanceMinMax.y.RandomPointInCircle(spawnDistanceMinMax.x);
             var position = new Vector3(
@@ -56,8 +61,15 @@ public class EnemyDirector : MonoBehaviour
                 continue;
             }
             position.y = 0;
-            Instantiate(prefabs[Random.Range(0, prefabs.Length)], position, transform.rotation, transform);
+            var enemy = Instantiate(prefabs[Random.Range(0, prefabs.Length)], position, transform.rotation, transform);
+            enemy.SetMultiplier(difficultyMultiplier);
             break;
+        }
+    }
+
+    private void OnExperienceGain(int level, bool levelUp, int current, int required) {
+        if (levelUp) {
+            difficultyMultiplier += 0.1f;
         }
     }
 }

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4776e97b6222f3a4f986c3da2e4be634, type: 3}
   m_Name: Thunderbolt
   m_EditorClassIdentifier: 
-  sprite: {fileID: -2013206964, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
+  sprite: {fileID: 515663394, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
+  secondarySprite: {fileID: 0}
   displayName: Thunder Bolt
   tooltip: 
   spawnOnPlayer: 0

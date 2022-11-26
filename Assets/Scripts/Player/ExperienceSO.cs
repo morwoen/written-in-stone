@@ -19,7 +19,10 @@ public class ExperienceSO : ScriptableObject
     }
 
     private int RequiredExperience(int level) {
-        return 100 + (level - 1) ^ 2;
+        if (level < 50) {
+            return 100 + level * 50;
+        }
+        return 100 + Mathf.CeilToInt(Mathf.Pow(level, 2));
     }
 
     public void AddExperience(int experience) {
