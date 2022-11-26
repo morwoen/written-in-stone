@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5947291767703740866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0, z: 4.98}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -93,6 +93,7 @@ MonoBehaviour:
   attackPrefab: {fileID: 0}
   deathEffect: {fileID: 3825455922101144633, guid: d41045928ffb47049910a6d4e3fdb02d,
     type: 3}
+  deathEffectScale: 0
 --- !u!1001 &7885274017792534795
 PrefabInstance:
   m_ObjectHideFlags: 0
