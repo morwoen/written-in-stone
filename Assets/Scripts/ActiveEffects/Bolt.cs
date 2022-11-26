@@ -26,7 +26,9 @@ public class Bolt : ActiveEffect
     Vector3 direction = Vector3.forward;
 
     public override void UpdateGameObject() {
+        BoxCollider collider = GetComponent<BoxCollider>();
         transform.localScale *= areaMultiplier;
+        collider.size = collider.size.WithY(collider.size.y / areaMultiplier);
     }
 
     void Explode() {
