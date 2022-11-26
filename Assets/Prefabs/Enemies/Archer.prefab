@@ -92,10 +92,11 @@ MonoBehaviour:
   attackRecovery: 1
   attackAngle: 20
   attackDamage: 15
-  attackPrefab: {fileID: 0}
+  attackPrefab: {fileID: 7404225859638616959, guid: 519d21d2c4b9140409f999a845327905,
+    type: 3}
   deathEffect: {fileID: 3825455922101144633, guid: d41045928ffb47049910a6d4e3fdb02d,
     type: 3}
-  deathEffectScale: 0
+  deathEffectScale: 1
 --- !u!1001 &1420035135809131875
 PrefabInstance:
   m_ObjectHideFlags: 0

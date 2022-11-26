@@ -54,6 +54,7 @@ public class Enemy : MonoBehaviour
     }
 
     private void Update() {
+        animator.SetFloat("Speed", agent.velocity.magnitude);
         switch (state) {
             case State.Chasing:
                 var angle = Vector3.Angle(transform.forward, player.position - transform.position);
