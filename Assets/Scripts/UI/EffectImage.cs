@@ -43,11 +43,11 @@ public class EffectImage : MonoBehaviour
     }
 
     public bool Is(ActiveEffectSO effect) {
-        return effect == activeSlot.effect;
+        return effect == activeSlot?.effect;
     }
 
     public bool Is(PassiveEffectSO effect) {
-        return effect == passiveSlot.effect;
+        return effect == passiveSlot?.effect;
     }
 
     public void Apply(InventorySO.ActiveInventorySlot slot) {

@@ -970,7 +970,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1203
-        y: 637
+        y: 638
         width: 80
         height: 80
       alignment: 0
@@ -995,7 +995,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1016,7 +1016,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1037,7 +1037,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1058,7 +1058,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1079,7 +1079,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1100,7 +1100,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1121,7 +1121,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1142,7 +1142,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1163,7 +1163,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1171,6 +1171,69 @@ TextureImporter:
       bones: []
       spriteID: 7884dc7cd8aab40feb3b39062c7f54db
       internalID: 515663394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Whirl_Secondary
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 397
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03ecae74304c41249c760b3c0a77450
+      internalID: 1576242693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Bash_Secondary
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 399
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9b99204a32b4b9691dfc2351bc18aa
+      internalID: 737089954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIS_Stab_Secondary
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 397
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b658451c0ea437290830705be8659d
+      internalID: -1857870193
       vertices: []
       indices: 
       edges: []
@@ -1225,8 +1288,9 @@ TextureImporter:
       WIS_Button_Press: 929040472
       WrittenInStoneSprites_15: -1727747230
       WrittenInStoneSprites_127: -460398779
-      WrittenInStoneSprites_92: -271984076
       WIS_Sword_Secondary: -2091234472
+      WrittenInStoneSprites_92: -271984076
+      WIS_Whirl_Secondary: 1576242693
       WrittenInStoneSprites_167: -1488781293
       WrittenInStoneSprites_113: -1434768371
       WrittenInStoneSprites_159: -651340758
@@ -1304,6 +1368,7 @@ TextureImporter:
       WrittenInStoneSprites_153: 1678076097
       WIS_Axe_Secondary: 370979788
       WrittenInStoneSprites_171: -366846793
+      WIS_Stab_Secondary: -1857870193
       WrittenInStoneSprites_67: 265592847
       WIS_Passive_Health: -1235471943
       WrittenInStoneSprites_27: -303979400
@@ -1324,6 +1389,7 @@ TextureImporter:
       WrittenInStoneSprites_182: 78182099
       WrittenInStoneSprites_152: 1808879411
       WIS_Sword: 593659216
+      WIS_Bash_Secondary: 737089954
       WrittenInStoneSprites_83: -1471523768
       WIS_Projectile_Ice: -2143283472
       WIS_Button_Hover: 1230845216
