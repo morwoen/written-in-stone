@@ -85,11 +85,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyKilled: {fileID: 11400000, guid: fa1f99320db969b4e930030d0772d9df, type: 2}
   range: 5
-  maxHealth: 100
+  maxHealth: 200
   experiencePrefab: {fileID: 3905952768875748400, guid: 2a81ecaf2aab90343bbe209b411484e7,
     type: 3}
   attackDelay: 0.5
   attackRecovery: 2
+  attackAngle: 20
+  attackDamage: 50
   attackPrefab: {fileID: 7404225859638616959, guid: 2a1a671409c735e48ada254567ce5ae7,
     type: 3}
   deathEffect: {fileID: 3825455922101144633, guid: d41045928ffb47049910a6d4e3fdb02d,

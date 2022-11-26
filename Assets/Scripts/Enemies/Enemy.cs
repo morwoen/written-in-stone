@@ -18,15 +18,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject experiencePrefab;
     [SerializeField] private float attackDelay = 1;
     [SerializeField] private float attackRecovery= 1;
+    [SerializeField] private float attackAngle = 20;
+    [SerializeField] private int attackDamage = 10;
     [SerializeField] private EnemyAttack attackPrefab;
     [SerializeField] private GameObject deathEffect;
     [SerializeField] private float deathEffectScale;
 
-
     private Cooldown cooldown;
 
     private int health;
-    private int damage = 10;
 
     private NavMeshAgent agent;
     private Transform player;
@@ -56,10 +56,15 @@ public class Enemy : MonoBehaviour
     private void Update() {
         switch (state) {
             case State.Chasing:
-                if (Vector3.Distance(transform.position, player.position) < range) {
+                var angle = Vector3.Angle(transform.forward, player.position - transform.position);
+                var distance = Vector3.Distance(transform.position, player.position);
+
+                if (distance < range && angle <= attackAngle) {
                     SwitchState(State.Attacking);
-                } else {
+                } else if (distance > range) {
                     agent.SetDestination(player.position);
+                } else {
+                    RotateTowards(player);
                 }
                 break;
         }
@@ -76,7 +81,7 @@ public class Enemy : MonoBehaviour
                     .OnComplete(() => {
                         animator.SetTrigger("Attack");
                         var attack = Instantiate(attackPrefab, transform.position, transform.rotation, transform);
-                        attack.SetDamage(damage);
+                        attack.SetDamage(attackDamage);
 
                         cooldown = Cooldown.Wait(attackRecovery)
                             .OnComplete(() => {
@@ -101,8 +106,14 @@ public class Enemy : MonoBehaviour
     }
 
     public void SetMultiplier(float multi) {
-        this.damage = Mathf.FloorToInt(this.damage * multi);
+        this.attackDamage = Mathf.FloorToInt(this.attackDamage * multi);
         this.maxHealth = Mathf.FloorToInt(maxHealth * multi);
         this.health = Mathf.FloorToInt(maxHealth * multi);
+    }
+
+    private void RotateTowards(Transform target) {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(direction.WithY(0));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 8);
     }
 }

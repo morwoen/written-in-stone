@@ -90,6 +90,8 @@ MonoBehaviour:
     type: 3}
   attackDelay: 0.5
   attackRecovery: 3
+  attackAngle: 20
+  attackDamage: 50
   attackPrefab: {fileID: 572141818072440962, guid: 09415ebb93c0b6e46823081be43d9b35,
     type: 3}
   deathEffect: {fileID: 3825455922101144633, guid: d41045928ffb47049910a6d4e3fdb02d,
