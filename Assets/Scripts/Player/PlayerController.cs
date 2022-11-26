@@ -207,7 +207,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
 
                         //animator.SetFloat("Locomotion", forwardVelocity);
                         //animator.SetFloat("LocomotionSide", rightVelocity);
-                        //animator.SetFloat("Speed", Mathf.Abs(currentVelocity.magnitude));
+                        animator.SetFloat("Speed", Mathf.Abs(currentVelocity.magnitude));
                     }
                     // Air movement
                     else {
