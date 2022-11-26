@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyAttack attackPrefab;
     [SerializeField] private GameObject deathEffect;
     [SerializeField] private float deathEffectScale;
+    [SerializeField] private EnemyHealthBar healthBar;
 
     private Cooldown cooldown;
 
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
     private void Start() {
         SwitchState(State.Chasing);
         health = maxHealth;
+        healthBar.gameObject.SetActive(false);
     }
 
     private void OnEnable() {
@@ -95,6 +97,10 @@ public class Enemy : MonoBehaviour
 
     public void Damage(int damage) {
         health = Mathf.Clamp(health - damage, 0, maxHealth);
+
+        healthBar.gameObject.SetActive(true);
+        healthBar.SetValue(health / (float)maxHealth);
+
         if (health == 0) {
             SwitchState(State.Stunned);
             enemyKilled.Kill();

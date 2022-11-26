@@ -15,7 +15,7 @@ PlayerSettings:
   companyName: Noxdew
   productName: Written In Stone
   defaultCursor: {fileID: 2800000, guid: e5d910c9ef62544709c1f8300d8fc4c4, type: 3}
-  cursorHotspot: {x: 110, y: 80}
+  cursorHotspot: {x: 7, y: 4}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1

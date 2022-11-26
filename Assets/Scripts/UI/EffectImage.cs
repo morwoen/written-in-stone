@@ -31,9 +31,12 @@ public class EffectImage : MonoBehaviour
         var secondaryTransform = secondary.GetComponent<RectTransform>();
         var iconTransform = GetComponent<RectTransform>();
 
-        var width = iconTransform.sizeDelta.x;
-        if (width == 0) {
-            width = GetComponentInParent<GridLayoutGroup>().cellSize.x;
+        float width;
+        var grid = GetComponentInParent<GridLayoutGroup>();
+        if (grid) {
+            width = grid.cellSize.x;
+        } else {
+            width = iconTransform.sizeDelta.x;
         }
 
         var secondarySize = width / 2 - raritySize;
