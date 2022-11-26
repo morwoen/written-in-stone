@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stabmulticast
   m_EditorClassIdentifier: 
   sprite: {fileID: -1023107760, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
-  secondarySprite: {fileID: -1656314099, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
+  secondarySprite: {fileID: -1857870193, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
   displayName: Stab Multicast
   tooltip: 
   traits: 03000000
