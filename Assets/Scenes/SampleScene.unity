@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42117673, g: 0.5159463, b: 0.63333476, a: 1}
+  m_IndirectSpecularColor: {r: 0.42117676, g: 0.5159463, b: 0.63333476, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -283,7 +283,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh54710
+  m_Name: pb_Mesh31190
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -810,6 +810,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 669973443361258153, guid: 15ee22a39d248e544a24bec348a6117e, type: 3}
   - {fileID: 669973443361258153, guid: fb385f15d021b0045b2c870c64419c47, type: 3}
+  - {fileID: 669973443361258153, guid: 0d20a5bc38391614aad65e14148798df, type: 3}
   bossPrefabs:
   - {fileID: 3996579319005014529, guid: fe70318e371d6e74abec2fb640a0794b, type: 3}
   - {fileID: 3996579319005014529, guid: 0dda2645506197c43ab5ce459af66434, type: 3}
