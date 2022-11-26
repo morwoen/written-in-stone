@@ -14,10 +14,4 @@ public class EnemyAttack : MonoBehaviour
         var player = collider.GetComponent<PlayerController>();
         player.Damage(damage);
     }
-
-    private void OnDrawGizmos() {
-        var coll = GetComponent<BoxCollider>();
-        Gizmos.color = Color.red;
-        Gizmos.DrawCube(transform.position + coll.center, coll.size);
-    }
 }
