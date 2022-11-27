@@ -22,6 +22,8 @@ public class Bolt : ActiveEffect
     [SerializeField]
     GameObject explosion;
 
+    private bool exploded = false;
+
     Vector3 initialPosition;
     Vector3 direction = Vector3.forward;
 
@@ -32,6 +34,7 @@ public class Bolt : ActiveEffect
     }
 
     void Explode() {
+        exploded = true;
         GameObject explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity);
         explosionInstance.transform.localScale *= explosionScale * areaMultiplier;
         Destroy(explosionInstance, explosionDuration);
@@ -51,7 +54,8 @@ public class Bolt : ActiveEffect
     }
 
     void OnTriggerEnter(Collider other) {
-        
+        if (exploded) return;
+
         Enemy enemy = other.GetComponent<Enemy>();
 
         if (enemy) {

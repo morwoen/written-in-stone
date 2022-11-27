@@ -37,7 +37,7 @@ public class EnemyDirector : MonoBehaviour
             desiredEnemies = Mathf.Clamp(desiredEnemies + 1, 1, maxDesiredEnemies);
         }
 
-        if (total % 100 == 0) {
+        if (total % 101 == 0) {
             SpawnEnemy(bossPrefabs);
         }
     }
