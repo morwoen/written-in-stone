@@ -13,6 +13,10 @@ public class ExperienceSO : ScriptableObject
     public event ExperienceChanged change;
 
     private void OnEnable() {
+        Restart();
+    }
+
+    public void Restart() {
         level = 1;
         currentExperience = 0;
         requiredExperience = RequiredExperience(level);

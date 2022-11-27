@@ -13,11 +13,17 @@ public class DashSO : ScriptableObject
     public event MaxDashChargesChanged maxChargesChanged;
 
     [SerializeField] private float cooldown = 1f;
-    [field: SerializeField] public int MaxCharges { get; private set; } = 1;
+    [SerializeField] private int maxCharges = 1;
+    public int MaxCharges { get; private set; } = 1;
     public int Charges { get; private set; }
 
 
     private void OnEnable() {
+        Restart();
+    }
+
+    public void Restart() {
+        MaxCharges = maxCharges;
         Charges = MaxCharges;
     }
 

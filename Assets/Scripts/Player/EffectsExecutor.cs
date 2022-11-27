@@ -10,6 +10,7 @@ public class EffectsExecutor : MonoBehaviour
     [SerializeField] private InventorySO inventory;
     [SerializeField] private Vector3 spawnPointOffset;
     [SerializeField] private EffectCooldownsTrackerSO cooldownsTracker;
+    [SerializeField] private HealthSO playerHealth;
 
     private float multicast = 0;
 
@@ -17,12 +18,19 @@ public class EffectsExecutor : MonoBehaviour
         inventory.effectAdded += OnEffectAdded;
         inventory.effectRemoved += OnEffectRemoved;
         inventory.effectsChange += OnEffectsChange;
+        playerHealth.death += OnPlayerDeath;
     }
 
     private void OnDisable() {
         inventory.effectAdded -= OnEffectAdded;
         inventory.effectRemoved -= OnEffectRemoved;
         inventory.effectsChange -= OnEffectsChange;
+        playerHealth.death -= OnPlayerDeath;
+    }
+
+    private void OnPlayerDeath() {
+        cooldownsTracker.StopAll();
+        this.enabled = false;
     }
 
     private void OnEffectRemoved(ActiveEffectSO active, PassiveEffectSO passive) {

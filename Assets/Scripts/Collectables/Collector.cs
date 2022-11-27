@@ -9,7 +9,7 @@ public class Collector : MonoBehaviour
     private float baseRadius;
     private new SphereCollider collider;
 
-    private void Start() {
+    private void Awake() {
         collider = GetComponent<SphereCollider>();
         baseRadius = collider.radius;
     }

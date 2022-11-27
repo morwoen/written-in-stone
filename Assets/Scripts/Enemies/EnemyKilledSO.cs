@@ -12,8 +12,19 @@ public class EnemyKilledSO : ScriptableObject
     public delegate void EnemyKilled(int remaining, int total);
     public event EnemyKilled killed;
 
+    public int TotalKills {
+        get {
+            return total;
+        }
+    }
+
     private void OnEnable() {
+        Restart();
+    }
+
+    public void Restart() {
         remaining = killsUntilEffectsSwap;
+        total = 0;
     }
 
     public void Kill() {

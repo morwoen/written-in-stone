@@ -99,6 +99,7 @@ MonoBehaviour:
     type: 3}
   deathEffectScale: 1.5
   healthBar: {fileID: 897946179858965884}
+  playerHealth: {fileID: 11400000, guid: 5f02437a6e5627b4ba5aee6d4a7d0d01, type: 2}
 --- !u!1001 &7008527372099045567
 PrefabInstance:
   m_ObjectHideFlags: 0

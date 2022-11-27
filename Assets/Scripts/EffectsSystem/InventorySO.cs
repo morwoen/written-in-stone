@@ -26,8 +26,12 @@ public class InventorySO : ScriptableObject
     public event EffectAdded effectAdded;
 
     private void OnEnable() {
-        active.RemoveAll(x => true);
-        passive.RemoveAll(x => true);
+        Restart();
+    }
+
+    public void Restart() {
+        active.Clear();
+        passive.Clear();
         stones = 0;
         rocks = 0;
     }

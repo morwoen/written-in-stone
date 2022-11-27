@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject deathEffect;
     [SerializeField] private float deathEffectScale;
     [SerializeField] private EnemyHealthBar healthBar;
+    [SerializeField] private HealthSO playerHealth;
 
     private Cooldown cooldown;
 
@@ -49,6 +50,17 @@ public class Enemy : MonoBehaviour
 
         agent.avoidancePriority = Random.Range(1, 500);
         agent.stoppingDistance = range;
+
+        playerHealth.death += OnPlayerDeath;
+    }
+
+    private void OnDisable() {
+        playerHealth.death -= OnPlayerDeath;
+    }
+
+    private void OnPlayerDeath() {
+        cooldown?.Stop();
+        SwitchState(State.Stunned);
     }
 
     private void OnDestroy() {
@@ -76,7 +88,8 @@ public class Enemy : MonoBehaviour
     private void SwitchState(State newState) {
         state = newState;
         switch (newState) {
-            case State.Chasing:
+            case State.Stunned:
+                agent.SetDestination(transform.position);
                 break;
             case State.Attacking:
                 agent.SetDestination(transform.position);

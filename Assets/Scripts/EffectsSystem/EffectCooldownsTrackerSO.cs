@@ -34,4 +34,11 @@ public class EffectCooldownsTrackerSO : ScriptableObject
     public Cooldown GetCooldown(ActiveEffectSO effect) {
         return tracker.GetValueOrDefault(effect);
     }
+
+    public void StopAll() {
+        foreach (var cd in tracker.Values) {
+            cd?.Stop();
+        }
+        tracker.Clear();
+    }
 }

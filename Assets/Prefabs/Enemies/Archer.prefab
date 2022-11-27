@@ -82,8 +82,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a165784a6a7d44afbb1dc30f3f685ef4, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   enemyKilled: {fileID: 11400000, guid: fa1f99320db969b4e930030d0772d9df, type: 2}
   range: 15
   maxHealth: 10
@@ -99,6 +99,7 @@ MonoBehaviour:
     type: 3}
   deathEffectScale: 1.4
   healthBar: {fileID: 2021771705494667824}
+  playerHealth: {fileID: 11400000, guid: 5f02437a6e5627b4ba5aee6d4a7d0d01, type: 2}
 --- !u!1001 &1420035135809131875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -184,7 +185,7 @@ PrefabInstance:
     - target: {fileID: 2946534596830978053, guid: a07e7084b2be20e4782feceab8920e9d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value:
+      value: 
       objectReference: {fileID: 2100000, guid: 106eb89e31f67d045b40b5b88907f4e0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a07e7084b2be20e4782feceab8920e9d, type: 3}
@@ -216,7 +217,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -305,5 +306,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcfa8f983eb774776b063b332d891e5e, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 

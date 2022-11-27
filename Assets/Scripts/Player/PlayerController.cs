@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
     [Header("Health")]
     [SerializeField] public HealthSO health;
     //[SerializeField] private GameObject healEffect;
-    //[SerializeField] private GameObject deathEffect;
+    [SerializeField] private GameObject deathEffect;
 
     [Header("Fighting")]
     [SerializeField] private Transform castingPoint;
@@ -81,6 +81,9 @@ public class PlayerController : MonoBehaviour, ICharacterController
         TransitionToState(CharacterState.Grounded);
         Motor.CharacterController = this;
         health.Respawn();
+        dashEffect?.Stop();
+
+        InputManager.Instance.SwitchTo(InputManager.Instance.Player);
 
         Application.targetFrameRate = 60;
     }
@@ -279,12 +282,14 @@ public class PlayerController : MonoBehaviour, ICharacterController
                         TransitionToState(CharacterState.Dashing);
                         input.DashPerformed();
                         dash.Dash();
-                        //dashEffect?.Play();
+                        dashEffect?.Play();
                         //dashEffect?.GetComponent<PolygonSoundSpawn>().Execute();
                         //animator?.SetTrigger("Dash");
                         Cooldown.Wait(dashDuration)
                             .OnComplete(() => {
-                                //dashEffect?.Stop();
+                                Cooldown.Wait(.2f).OnComplete(() => {
+                                    dashEffect?.Stop();
+                                });
                                 TransitionToState(CharacterState.Grounded);
                             });
                     }
@@ -311,24 +316,29 @@ public class PlayerController : MonoBehaviour, ICharacterController
         if (CurrentCharacterState == CharacterState.Dashing || invulnerable || health.CurrentHealth <= 0) return;
         var screenShakeMultiplier = 1 - PlayerPrefs.GetInt("NoScreenShake", 0);
         //GetComponent<Cinemachine.CinemachineImpulseSource>().GenerateImpulseAt(transform.position, impulse * screenShakeMultiplier);
-        print("damaged!!!==================");
+
         var dead = health.Damage(damage);
         if (dead) {
-            animator.SetTrigger("Die");
+            //animator.SetTrigger("Die");
+
+            meshRenderer.gameObject.SetActive(false);
+            Instantiate(deathEffect, transform.position, deathEffect.transform.rotation, transform);
+
             input.enabled = false;
-            //Cooldowns.Wait(respawnTime)
-            //  .OnComplete(() => {
-            //  });
+            Cooldown.Wait(respawnTime)
+              .OnComplete(() => {
+                  FindObjectOfType<EndingScreen>().Show();
+              });
         } else {
             //Instantiate(hitEffectPrefab, transform.position, hitEffectPrefab.transform.rotation, transform);
 
-            //invulnerable = true;
+            invulnerable = true;
             meshRenderer.material.SetColor("_BaseColor", hitColor);
-            //Cooldowns.Wait(invulnerabilityTime)
-            //  .OnComplete(() => {
-            //      invulnerable = false;
-            //      meshRenderer.material.SetColor("_BaseColor", Color.white);
-            //  });
+            Cooldown.Wait(invulnerabilityTime)
+              .OnComplete(() => {
+                  invulnerable = false;
+                  meshRenderer.material.SetColor("_BaseColor", Color.white);
+              });
         }
     }
 

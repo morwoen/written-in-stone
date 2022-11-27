@@ -20,7 +20,7 @@ public class Whirl : ActiveEffect
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, transform.localScale.x * rangeMultiplier, mask);
 
         foreach (Collider hitCollider in hitColliders) {
-            hitCollider.GetComponent<Enemy>()?.Damage(damage);
+            hitCollider.GetComponent<Enemy>().Damage(damage);
         }
     }
 

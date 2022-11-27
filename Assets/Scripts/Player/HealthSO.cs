@@ -5,6 +5,10 @@ public class HealthSO : ScriptableObject
 {
     public delegate void HealthChange(int current, int max);
     public event HealthChange change;
+    public delegate void PlayerDied();
+    public event PlayerDied death;
+    public delegate void PlayerRespawned();
+    public event PlayerRespawned respawn;
 
     public int MaxHealth = 100;
     public int CurrentHealth { get; private set; } = 0;
@@ -21,6 +25,9 @@ public class HealthSO : ScriptableObject
             CurrentHealth = Mathf.Clamp(newValue, 0, MaxHealth);
         }
         change?.Invoke(CurrentHealth, MaxHealth);
+        if (CurrentHealth <= 0) {
+            death?.Invoke();
+        }
         return CurrentHealth <= 0;
     }
 
@@ -32,5 +39,6 @@ public class HealthSO : ScriptableObject
     public void Respawn() {
         CurrentHealth = MaxHealth;
         change?.Invoke(CurrentHealth, MaxHealth);
+        respawn?.Invoke();
     }
 }
