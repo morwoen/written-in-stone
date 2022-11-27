@@ -3,7 +3,12 @@ guid: b0e8a0e7002ff374d91f3d515f7331a7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: atlas_retroForest_A
+    second: {fileID: 2100000, guid: a936279bdc1bfb64f9cacbd61fa6a4c3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
