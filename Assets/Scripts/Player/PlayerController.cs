@@ -4,7 +4,6 @@ using UnityEngine;
 using KinematicCharacterController;
 using UnityEngine.InputSystem;
 using CooldownManagement;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerController : MonoBehaviour, ICharacterController
 {
