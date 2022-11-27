@@ -371,7 +371,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -806,8 +806,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a165784a6a7d44afbb1dc30f3f685ef4, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   enemyKilled: {fileID: 11400000, guid: fa1f99320db969b4e930030d0772d9df, type: 2}
   range: 15
   maxHealth: 10
@@ -823,6 +823,7 @@ MonoBehaviour:
     type: 3}
   deathEffectScale: 1.4
   healthBar: {fileID: 568619040872163047}
+  playerHealth: {fileID: 11400000, guid: 5f02437a6e5627b4ba5aee6d4a7d0d01, type: 2}
 --- !u!1 &4289780002577015075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,8 +1754,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcfa8f983eb774776b063b332d891e5e, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2011669390368280181 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8159301446880298321, guid: 9e3bbdc05134e43519c52aca824c8a56,
