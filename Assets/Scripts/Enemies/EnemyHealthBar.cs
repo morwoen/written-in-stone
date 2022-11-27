@@ -11,7 +11,7 @@ public class EnemyHealthBar : MonoBehaviour
     private Camera cam;
 
     private void Awake() {
-        mat = GetComponent<Renderer>().sharedMaterial;
+        mat = GetComponent<Renderer>().material;
         cam = Camera.main;
     }
 
