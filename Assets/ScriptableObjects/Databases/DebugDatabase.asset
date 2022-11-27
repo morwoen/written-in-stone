@@ -13,15 +13,7 @@ MonoBehaviour:
   m_Name: DebugDatabase
   m_EditorClassIdentifier: 
   active:
-  - {fileID: 11400000, guid: 6016cc75efe57c3408291152accc6ecf, type: 2}
-  - {fileID: 11400000, guid: f5ec656178749334d97fa1bd03b45bce, type: 2}
-  - {fileID: 11400000, guid: a484ce233bc6e5646a54201f2ac5f81c, type: 2}
-  - {fileID: 11400000, guid: 425261674d456824ba01ddb24fc09c32, type: 2}
-  - {fileID: 11400000, guid: fbf10c45347bcf845b0f14931c2652f9, type: 2}
-  - {fileID: 11400000, guid: c778bbf7e3b08b54fbff86dd4f6a6a3c, type: 2}
-  - {fileID: 11400000, guid: 38d309758c27379478150011d8992df3, type: 2}
-  - {fileID: 11400000, guid: 4e09ef4b97aefbc489cbf2c4e9f3ab42, type: 2}
-  - {fileID: 11400000, guid: 2790092758e2d514ab03c91ad17f6350, type: 2}
+  - {fileID: 11400000, guid: 5e8ed7dcda6841e4baa76bacdcde8660, type: 2}
   passive:
   - {fileID: 11400000, guid: 211a808da3b8c41479e192535b07bbdd, type: 2}
   - {fileID: 11400000, guid: 465dd781ae8b99f4b823a778ce28bf85, type: 2}

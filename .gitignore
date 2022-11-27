@@ -80,4 +80,7 @@ PluginMaster*
 Heureka*
 SerializedBuildInfo*
 
+com.heurekagames.utils
+com.heurekagames.assethunterpro
+
 .DS_Store
