@@ -32,7 +32,7 @@ public class Stab : ActiveEffect
         Enemy enemy = other.GetComponent<Enemy>();
 
         if (enemy) {
-            enemy.GetComponent<Enemy>().Damage(damage);
+            enemy.Damage(damage);
         }
     }
 }

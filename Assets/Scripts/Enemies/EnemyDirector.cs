@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyDirector : MonoBehaviour
 {
@@ -14,8 +15,8 @@ public class EnemyDirector : MonoBehaviour
 
     private Transform player;
 
-    private int desiredEnemies = 10;
-    private int maxDesiredEnemies = 50;
+    private int desiredEnemies = 20;
+    private int maxDesiredEnemies = 100;
     private float difficultyMultiplier = 1;
 
     private void OnEnable() {
@@ -54,10 +55,10 @@ public class EnemyDirector : MonoBehaviour
             var offset = spawnDistanceMinMax.y.RandomPointInCircle(spawnDistanceMinMax.x);
             var position = new Vector3(
                 player.transform.position.x + offset.x,
-                100,
+                player.transform.position.y,
                 player.transform.position.z + offset.y
             );
-            if (!Physics.Raycast(position, Vector3.down, 101, groundLayer)) {
+            if (!NavMesh.SamplePosition(position, out NavMeshHit hit, 0.5f, 1)) {
                 continue;
             }
             position.y = 0;

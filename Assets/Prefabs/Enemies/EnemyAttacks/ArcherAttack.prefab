@@ -155,6 +155,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6753952968040281554}
     m_Modifications:
+    - target: {fileID: 1914130264084524768, guid: 578eb3f250e4980428a8f7afa7b9e89b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8179759042634337845, guid: 578eb3f250e4980428a8f7afa7b9e89b,
         type: 3}
       propertyPath: m_RootOrder
@@ -232,8 +237,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8183044981041906925, guid: 578eb3f250e4980428a8f7afa7b9e89b,
         type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183044981041906925, guid: 578eb3f250e4980428a8f7afa7b9e89b,
+        type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183209864155346327, guid: 578eb3f250e4980428a8f7afa7b9e89b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183599595229030085, guid: 578eb3f250e4980428a8f7afa7b9e89b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8309169032411838227, guid: 578eb3f250e4980428a8f7afa7b9e89b,
         type: 3}

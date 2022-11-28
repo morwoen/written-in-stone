@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7284410442836882198}
   - component: {fileID: 5489047816215539660}
   - component: {fileID: 2475893106823363062}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Axe Whirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,10 +73,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7284410442836882198}
     m_Modifications:
+    - target: {fileID: 338757935216046137, guid: afa39c26258713b4d9c32c9e3f45656a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363519381110207297, guid: afa39c26258713b4d9c32c9e3f45656a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578795205228333415, guid: afa39c26258713b4d9c32c9e3f45656a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5889891477897930062, guid: afa39c26258713b4d9c32c9e3f45656a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7081520872320791097, guid: afa39c26258713b4d9c32c9e3f45656a,
         type: 3}
       propertyPath: m_Name
       value: Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081520872320791097, guid: afa39c26258713b4d9c32c9e3f45656a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7373242523476224183, guid: afa39c26258713b4d9c32c9e3f45656a,
         type: 3}
@@ -194,6 +219,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7284410442836882198}
     m_Modifications:
+    - target: {fileID: 194709286971388787, guid: bf8d5dcb74881ea43974703a801befeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1910742105265960477, guid: bf8d5dcb74881ea43974703a801befeb,
         type: 3}
       propertyPath: m_RootOrder
@@ -269,10 +299,20 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4607316563691371903, guid: bf8d5dcb74881ea43974703a801befeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5335753327985139135, guid: bf8d5dcb74881ea43974703a801befeb,
         type: 3}
       propertyPath: m_Name
       value: SlashFrenzyBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335753327985139135, guid: bf8d5dcb74881ea43974703a801befeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5497017101665512060, guid: bf8d5dcb74881ea43974703a801befeb,
         type: 3}

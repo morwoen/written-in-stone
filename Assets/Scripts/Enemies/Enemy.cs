@@ -74,6 +74,11 @@ public class Enemy : MonoBehaviour
                 var angle = Vector3.Angle(transform.forward, player.position - transform.position);
                 var distance = Vector3.Distance(transform.position, player.position);
 
+                if (distance > 40) {
+                    Destroy(gameObject);
+                    return;
+                }
+
                 if (distance < range && angle <= attackAngle) {
                     SwitchState(State.Attacking);
                 } else if (distance > range) {

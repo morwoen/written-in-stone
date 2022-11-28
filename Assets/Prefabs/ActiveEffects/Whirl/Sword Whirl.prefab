@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7284410442836882198}
   - component: {fileID: 5489047816215539660}
   - component: {fileID: 2475893106823363062}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sword Whirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,6 +73,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7284410442836882198}
     m_Modifications:
+    - target: {fileID: 194709286971388787, guid: bf8d5dcb74881ea43974703a801befeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1910742105265960477, guid: bf8d5dcb74881ea43974703a801befeb,
         type: 3}
       propertyPath: m_RootOrder
@@ -148,10 +153,20 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4607316563691371903, guid: bf8d5dcb74881ea43974703a801befeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5335753327985139135, guid: bf8d5dcb74881ea43974703a801befeb,
         type: 3}
       propertyPath: m_Name
       value: SlashFrenzyBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335753327985139135, guid: bf8d5dcb74881ea43974703a801befeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5497017101665512060, guid: bf8d5dcb74881ea43974703a801befeb,
         type: 3}
@@ -183,6 +198,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7284410442836882198}
     m_Modifications:
+    - target: {fileID: 996013278297450535, guid: 9a841d826496d654bbc8726dcb72d5b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504203768769815807, guid: 9a841d826496d654bbc8726dcb72d5b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214260610826205125, guid: 9a841d826496d654bbc8726dcb72d5b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6257283194832867869, guid: 9a841d826496d654bbc8726dcb72d5b2,
         type: 3}
       propertyPath: m_RootOrder
@@ -262,6 +292,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477998702233103274, guid: 9a841d826496d654bbc8726dcb72d5b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a841d826496d654bbc8726dcb72d5b2, type: 3}

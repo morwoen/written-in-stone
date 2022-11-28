@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1995588241161226172}
   - component: {fileID: -2451551444869309912}
   - component: {fileID: 6321708875176704199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sword Bash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,6 +89,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1995588241161226172}
     m_Modifications:
+    - target: {fileID: 996013278297450535, guid: 9a841d826496d654bbc8726dcb72d5b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504203768769815807, guid: 9a841d826496d654bbc8726dcb72d5b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214260610826205125, guid: 9a841d826496d654bbc8726dcb72d5b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6257283194832867869, guid: 9a841d826496d654bbc8726dcb72d5b2,
         type: 3}
       propertyPath: m_RootOrder
@@ -168,6 +183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477998702233103274, guid: 9a841d826496d654bbc8726dcb72d5b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a841d826496d654bbc8726dcb72d5b2, type: 3}

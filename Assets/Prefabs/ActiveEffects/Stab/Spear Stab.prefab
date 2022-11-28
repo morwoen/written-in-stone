@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 710795704704728518}
   - component: {fileID: 2494383772571956574}
   - component: {fileID: 8028367415636005530}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spear Stab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,10 +86,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5137642637033151192}
     m_Modifications:
+    - target: {fileID: 1465106280588465618, guid: 3fd64abaeb6db0843965bea91395b747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536269059476560151, guid: 3fd64abaeb6db0843965bea91395b747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4083206338189232989, guid: 3fd64abaeb6db0843965bea91395b747,
         type: 3}
       propertyPath: m_Name
       value: Spear
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083206338189232989, guid: 3fd64abaeb6db0843965bea91395b747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5829202095984629067, guid: 3fd64abaeb6db0843965bea91395b747,
         type: 3}
@@ -166,10 +181,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1084222060248686998, guid: 654add865aea1044cb20a3b8af49c896,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9056712413466336842, guid: 654add865aea1044cb20a3b8af49c896,
         type: 3}
       propertyPath: m_Name
       value: SwordTrailMagicBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 9056712413466336842, guid: 654add865aea1044cb20a3b8af49c896,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9056712413466336843, guid: 654add865aea1044cb20a3b8af49c896,
         type: 3}

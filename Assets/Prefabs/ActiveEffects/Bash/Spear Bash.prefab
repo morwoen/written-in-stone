@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1995588241161226172}
   - component: {fileID: -2451551444869309912}
   - component: {fileID: 6321708875176704199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spear Bash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,10 +89,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1995588241161226172}
     m_Modifications:
+    - target: {fileID: 1465106280588465618, guid: 3fd64abaeb6db0843965bea91395b747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536269059476560151, guid: 3fd64abaeb6db0843965bea91395b747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4083206338189232989, guid: 3fd64abaeb6db0843965bea91395b747,
         type: 3}
       propertyPath: m_Name
       value: Spear
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083206338189232989, guid: 3fd64abaeb6db0843965bea91395b747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5829202095984629067, guid: 3fd64abaeb6db0843965bea91395b747,
         type: 3}
