@@ -224,5 +224,9 @@ public class InventorySO : ScriptableObject
             this.details = effect.rarities.FirstOrDefault(e => e.rarity == rarity);
             this.properties = this.details.effectedProperties.Select(p => p.property).ToArray();
         }
+
+        public override string ToString() {
+            return details.effectedProperties.Aggregate("", (acc, props) => acc += $"{props.modifier}{(effect.isPercentage ? "%" : "")} {props.property.ToString().CamelToWords()}\n").TrimEnd();
+        }
     }
 }

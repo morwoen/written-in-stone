@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public static class ExtensionMethods
@@ -35,5 +36,9 @@ public static class ExtensionMethods
         for (int i = transform.childCount - 1; i >= 0; i --) {
             Object.Destroy(transform.GetChild(i).gameObject);
         }
+    }
+
+    public static string CamelToWords(this string str) {
+        return Regex.Replace(str, "(\\B[A-Z])", " $1");
     }
 }

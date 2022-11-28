@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class AbilityUICard : MonoBehaviour, ISelectHandler, IDeselectHandler, IP
     [SerializeField] private EffectImage image;
     [SerializeField] private TextMeshProUGUI title;
     [SerializeField] private TextMeshProUGUI description;
+    [SerializeField] private TextMeshProUGUI valueText;
     [SerializeField] private Animator animator;
 
     [NonSerialized] public ActiveEffectSO activeEffect;
@@ -23,6 +25,7 @@ public class AbilityUICard : MonoBehaviour, ISelectHandler, IDeselectHandler, IP
         description.SetText(slot.effect.tooltip);
         activeEffect = slot.effect;
         passiveEffect = null;
+        valueText.SetText("Active Ability");
     }
 
     public void Assign(InventorySO.PassiveInventorySlot slot) {
@@ -32,6 +35,8 @@ public class AbilityUICard : MonoBehaviour, ISelectHandler, IDeselectHandler, IP
         activeEffect = null;
         passiveEffect = slot.effect;
         passiveRarity = slot.rarity;
+
+        valueText.SetText(slot.ToString());
     }
 
     public void OnPointerEnter(PointerEventData eventData) {

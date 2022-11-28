@@ -35,6 +35,7 @@ public class PassiveEffectSO : ScriptableObject
     public Sprite secondarySprite;
     public string displayName;
     public string tooltip;
+    public bool isPercentage = true;
     public ActiveEffectSO.EffectTrait[] traits;
 
     public EffectDetails[] rarities = new[] {

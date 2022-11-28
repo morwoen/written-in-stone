@@ -35,7 +35,9 @@ public class PauseMenu : MonoBehaviour
 
         Cooldown.WaitUnscaled(1).OnComplete(() => {
             foreach (var passive in inventory.passive) {
-                Instantiate(effectImagePrefab, passivesParent).Apply(passive);
+                var el = Instantiate(effectImagePrefab, passivesParent);
+                el.Apply(passive, true);
+                el.SetTooltip(true, EffectImage.TooltipSide.BottomLeft);
             }
         });
     }

@@ -48,6 +48,7 @@ public class ActiveEffectsPanel : MonoBehaviour
         if (active == null) return;
         var el = Instantiate(effectImagePrefab, transform);
         el.Apply(inventory.GetSlot(active));
+        el.SetTooltip(true, EffectImage.TooltipSide.BottomRight);
         elements.Add(el);
         el.GetComponent<CooldownUIOverlay>().ShowCooldown(cooldownsTracker.GetCooldown(active));
     }

@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01086e7b815cbbf408193931397c8cbd, type: 3}
-  m_Name: Dodge
+  m_Name: Dash
   m_EditorClassIdentifier: 
   sprite: {fileID: 1609935146, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
   secondarySprite: {fileID: 0}
   displayName: Dash
   tooltip: 
+  isPercentage: 0
   traits: 
   rarities:
   - rarity: 4

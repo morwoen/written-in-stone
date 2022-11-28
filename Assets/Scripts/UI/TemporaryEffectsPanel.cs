@@ -16,6 +16,10 @@ public class TemporaryEffectsPanel : MonoBehaviour
     private Cooldown image3Cooldown;
 
     private void OnEnable() {
+        image1.SetTooltip(true, EffectImage.TooltipSide.TopRight);
+        image2.SetTooltip(true, EffectImage.TooltipSide.TopRight);
+        image3.SetTooltip(true, EffectImage.TooltipSide.TopRight);
+
         inventory.effectsChange += OnEffectsChange;
     }
 

@@ -615,75 +615,6 @@ MonoBehaviour:
   levelText: {fileID: 932957414}
   slider: {fileID: 318551444}
   experience: {fileID: 11400000, guid: cea5121e2eb5d4b3890598757cd2b837, type: 2}
---- !u!1001 &162637908
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1514547027012298823, guid: 0d20a5bc38391614aad65e14148798df,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514547027012298823, guid: 0d20a5bc38391614aad65e14148798df,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514547027012298823, guid: 0d20a5bc38391614aad65e14148798df,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514547027012298823, guid: 0d20a5bc38391614aad65e14148798df,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514547027012298823, guid: 0d20a5bc38391614aad65e14148798df,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514547027012298823, guid: 0d20a5bc38391614aad65e14148798df,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514547027012298823, guid: 0d20a5bc38391614aad65e14148798df,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514547027012298823, guid: 0d20a5bc38391614aad65e14148798df,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514547027012298823, guid: 0d20a5bc38391614aad65e14148798df,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514547027012298823, guid: 0d20a5bc38391614aad65e14148798df,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514547027012298823, guid: 0d20a5bc38391614aad65e14148798df,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284517310661388776, guid: 0d20a5bc38391614aad65e14148798df,
-        type: 3}
-      propertyPath: m_Name
-      value: Archer
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0d20a5bc38391614aad65e14148798df, type: 3}
 --- !u!1 &172805513
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +673,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172805513}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bafa9b9885d0444149e4cc6950a0edca, type: 3}
   m_Name: 
@@ -750,6 +681,8 @@ MonoBehaviour:
   enemyKilled: {fileID: 11400000, guid: fa1f99320db969b4e930030d0772d9df, type: 2}
   experience: {fileID: 11400000, guid: cea5121e2eb5d4b3890598757cd2b837, type: 2}
   enemyPrefabs:
+  - {fileID: 669973443361258153, guid: 15ee22a39d248e544a24bec348a6117e, type: 3}
+  - {fileID: 669973443361258153, guid: fb385f15d021b0045b2c870c64419c47, type: 3}
   - {fileID: 669973443361258153, guid: 0d20a5bc38391614aad65e14148798df, type: 3}
   bossPrefabs:
   - {fileID: 3996579319005014529, guid: fe70318e371d6e74abec2fb640a0794b, type: 3}
@@ -3399,7 +3332,7 @@ MonoBehaviour:
   m_StartCorner: 1
   m_StartAxis: 1
   m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 25, y: 25}
+  m_Spacing: {x: 25, y: 50}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &905026617
@@ -5912,6 +5845,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EffectImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585152838902887910, guid: 0491b4626b5474c27b3d23d2441d90dd,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585152838902887910, guid: 0491b4626b5474c27b3d23d2441d90dd,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0491b4626b5474c27b3d23d2441d90dd, type: 3}

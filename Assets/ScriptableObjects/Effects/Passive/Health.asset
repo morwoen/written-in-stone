@@ -16,6 +16,7 @@ MonoBehaviour:
   secondarySprite: {fileID: 0}
   displayName: Health
   tooltip: 
+  isPercentage: 0
   traits: 
   rarities:
   - rarity: 2
