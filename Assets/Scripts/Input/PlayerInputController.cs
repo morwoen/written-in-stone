@@ -21,7 +21,14 @@ public class PlayerInputController : MonoBehaviour
 
     private Cooldown dashCooldown;
 
+    // Mouse movement transformation into controller input
+    private int width, height;
+    private float mouseMoveRadius;
+    private Vector2 halfScreenSize;
+
     private void OnEnable() {
+        UpdateScreenSizeValues();
+
         input = InputManager.Instance;
 
         input.Player.Move.performed += OnMove;
@@ -44,6 +51,19 @@ public class PlayerInputController : MonoBehaviour
         Attack = false;
     }
 
+    private void UpdateScreenSizeValues() {
+        width = Screen.width;
+        height = Screen.height;
+        halfScreenSize = new Vector2(width / 2f, height / 2f);
+        mouseMoveRadius = Mathf.Min(halfScreenSize.x, halfScreenSize.y) / 2f;
+    }
+
+    private void Update() {
+        if (width != Screen.width || height != Screen.height) {
+            UpdateScreenSizeValues();
+        }
+    }
+
     void OnMove(InputAction.CallbackContext ctx) {
         var inp = ctx.ReadValue<Vector2>();
         Movement = new Vector3(inp.x, 0, inp.y);
@@ -55,7 +75,18 @@ public class PlayerInputController : MonoBehaviour
     void OnLook(InputAction.CallbackContext ctx) {
         LookDirection = ctx.ReadValue<Vector2>();
         if (input.CurrentControlScheme == InputManager.ControlScheme.Keyboard) {
-            LookDirection = new Vector2(LookDirection.x.Remap(0, Screen.width, -1, 1), LookDirection.y.Remap(0, Screen.height, -1, 1));
+            // Move the vector to origin being the centre of the screen
+            var vec = LookDirection - halfScreenSize;
+            var normalisedVec = vec.normalized;
+            if (vec.magnitude > mouseMoveRadius) {
+                // If ourside of the radius just return the normalised vector
+                LookDirection = normalisedVec;
+            } else {
+                // When inside the radius, remap the vector to be inside the unit circle
+                var absoluteNormalisedVec = normalisedVec.Abs();
+                var maxValuesInDirectionOfVec = (absoluteNormalisedVec * mouseMoveRadius);
+                LookDirection = vec.Remap(-maxValuesInDirectionOfVec, maxValuesInDirectionOfVec, -absoluteNormalisedVec, absoluteNormalisedVec);
+            }
         }
     }
 

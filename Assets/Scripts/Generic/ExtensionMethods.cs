@@ -6,6 +6,10 @@ public static class ExtensionMethods
         return toRangeStart + (value - fromRangeStart) * (toRangeEnd - toRangeStart) / (fromRangeEnd - fromRangeStart);
     }
 
+    public static Vector2 Remap(this Vector2 value, Vector2 fromRangeStart, Vector2 fromRangeEnd, Vector2 toRangeStart, Vector2 toRangeEnd) {
+        return toRangeStart + (value - fromRangeStart) * (toRangeEnd - toRangeStart) / (fromRangeEnd - fromRangeStart);
+    }
+
     public static Vector3 RandomPointInCircle(this float maxDistance, float minimumDistance = 0, float y = 0) {
         return (maxDistance.RandomPointInCircle(minimumDistance)).ToV3(y);
     }
