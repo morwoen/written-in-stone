@@ -5846,16 +5846,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EffectImage
       objectReference: {fileID: 0}
-    - target: {fileID: 8585152838902887910, guid: 0491b4626b5474c27b3d23d2441d90dd,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 8585152838902887910, guid: 0491b4626b5474c27b3d23d2441d90dd,
-        type: 3}
-      propertyPath: m_fontSizeMax
-      value: 36
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0491b4626b5474c27b3d23d2441d90dd, type: 3}
 --- !u!224 &1381488547 stripped
