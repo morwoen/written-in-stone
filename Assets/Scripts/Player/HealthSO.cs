@@ -12,6 +12,9 @@ public class HealthSO : ScriptableObject
 
     public int MaxHealth = 100;
     public int CurrentHealth { get; private set; } = 0;
+    public int BonusHealth = 0;
+
+    private int healthWhenIncreased = 0;
 
     private void OnEnable() {
         Respawn();
@@ -22,9 +25,9 @@ public class HealthSO : ScriptableObject
         if (newValue < 0 && CurrentHealth > 1) {
             CurrentHealth = 1;
         } else {
-            CurrentHealth = Mathf.Clamp(newValue, 0, MaxHealth);
+            CurrentHealth = Mathf.Clamp(newValue, 0, MaxHealth + BonusHealth);
         }
-        change?.Invoke(CurrentHealth, MaxHealth);
+        change?.Invoke(CurrentHealth, MaxHealth + BonusHealth);
         if (CurrentHealth <= 0) {
             death?.Invoke();
         }
@@ -32,13 +35,32 @@ public class HealthSO : ScriptableObject
     }
 
     public void Heal(int damage) {
-        CurrentHealth = Mathf.Clamp(CurrentHealth + damage, 0, MaxHealth);
-        change?.Invoke(CurrentHealth, MaxHealth);
+        CurrentHealth = Mathf.Clamp(CurrentHealth + damage, 0, MaxHealth + BonusHealth);
+        change?.Invoke(CurrentHealth, MaxHealth + BonusHealth);
     }
 
     public void Respawn() {
         CurrentHealth = MaxHealth;
+        BonusHealth = 0;
+        healthWhenIncreased = 0;
         change?.Invoke(CurrentHealth, MaxHealth);
         respawn?.Invoke();
+    }
+
+    public void SetBonusHealth(int bonus) {
+        var diff = bonus - BonusHealth;
+
+        BonusHealth = bonus;
+        if (diff > 0) {
+            healthWhenIncreased = CurrentHealth;
+            CurrentHealth = Mathf.Clamp(CurrentHealth + diff, 0, MaxHealth + BonusHealth);
+        } else if (diff < 0) {
+            if (healthWhenIncreased < CurrentHealth) {
+                CurrentHealth = healthWhenIncreased;
+                healthWhenIncreased = 0;
+            }
+            CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth + BonusHealth);
+        }
+        change?.Invoke(CurrentHealth, MaxHealth + BonusHealth);
     }
 }

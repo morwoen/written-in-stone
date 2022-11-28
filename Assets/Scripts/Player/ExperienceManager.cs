@@ -10,10 +10,12 @@ public class ExperienceManager : MonoBehaviour
 
     private void OnEnable() {
         playerExperience.change += OnExperienceChange;
+        playerInventory.effectsChange += OnEffectsChange;
     }
 
     private void OnDisable() {
         playerExperience.change -= OnExperienceChange;
+        playerInventory.effectsChange -= OnEffectsChange;
     }
 
     private void OnExperienceChange(int level, bool levelUp, int current, int required) {
@@ -21,5 +23,9 @@ public class ExperienceManager : MonoBehaviour
             Instantiate(levelUpPrefab, transform);
             playerInventory.AddStone();
         }
+    }
+
+    private void OnEffectsChange(List<InventorySO.ActiveInventorySlot> active, List<InventorySO.PassiveInventorySlot> passive) {
+        playerExperience.SetMultiplier(1 + playerInventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.Experience) / 100f);
     }
 }

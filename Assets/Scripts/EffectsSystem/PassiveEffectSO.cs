@@ -17,7 +17,7 @@ public class PassiveEffectSO : ScriptableObject
     public enum EffectProperty
     {
         MovementSpeed,
-        DodgeCount,
+        Dash,
         Defence,
         Health,
         PickupRange,
