@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
     [SerializeField] private float maxStableMoveSpeed = 10f;
     [SerializeField] private float stableMovementSharpness = 15f;
     [SerializeField] private float rotationSharpness = 20f;
+    private float speedMultiplier = 1f;
 
     [Header("Air Movement")]
     [SerializeField] private float maxAirMoveSpeed = 15f;
@@ -51,6 +52,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
     [SerializeField] public HealthSO health;
     //[SerializeField] private GameObject healEffect;
     [SerializeField] private GameObject deathEffect;
+    private int damageReduction = 0;
 
     [Header("Fighting")]
     [SerializeField] private Transform castingPoint;
@@ -195,7 +197,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
                         // Calculate target velocity
                         Vector3 inputRight = Vector3.Cross(input.Movement, Motor.CharacterUp);
                         Vector3 reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized * input.Movement.magnitude;
-                        var maxVelocity = maxStableMoveSpeed;
+                        var maxVelocity = maxStableMoveSpeed * speedMultiplier;
                         Vector3 targetMovementVelocity = reorientedInput * maxVelocity;
 
                         // Smooth movement Velocity
@@ -316,7 +318,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
         var screenShakeMultiplier = 1 - PlayerPrefs.GetInt("NoScreenShake", 0);
         //GetComponent<Cinemachine.CinemachineImpulseSource>().GenerateImpulseAt(transform.position, impulse * screenShakeMultiplier);
 
-        var dead = health.Damage(damage);
+        var dead = health.Damage(Mathf.Clamp(damage - damageReduction, 0, damage));
         if (dead) {
             //animator.SetTrigger("Die");
 
@@ -356,5 +358,13 @@ public class PlayerController : MonoBehaviour, ICharacterController
         } else {
             ignoredColliders.Remove(col);
         }
+    }
+
+    public void SetSpeedMultiplier(float multiplier) {
+        this.speedMultiplier = multiplier;
+    }
+
+    public void SetDamageReduction(int damageReduction) {
+        this.damageReduction = damageReduction;
     }
 }

@@ -14,27 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 1609935146, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
   secondarySprite: {fileID: 0}
-  displayName: Dodge
+  displayName: Dash
   tooltip: 
   traits: 
   rarities:
-  - rarity: 0
-    effectedProperties:
-    - property: 1
-      modifier: 5
-  - rarity: 1
-    effectedProperties:
-    - property: 1
-      modifier: 10
-  - rarity: 2
-    effectedProperties:
-    - property: 1
-      modifier: 20
-  - rarity: 3
-    effectedProperties:
-    - property: 1
-      modifier: 40
   - rarity: 4
     effectedProperties:
     - property: 1
-      modifier: 60
+      modifier: 1

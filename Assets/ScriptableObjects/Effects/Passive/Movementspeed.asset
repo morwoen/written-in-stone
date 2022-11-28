@@ -30,11 +30,3 @@ MonoBehaviour:
     effectedProperties:
     - property: 0
       modifier: 20
-  - rarity: 3
-    effectedProperties:
-    - property: 0
-      modifier: 40
-  - rarity: 4
-    effectedProperties:
-    - property: 0
-      modifier: 60

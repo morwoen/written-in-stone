@@ -16,6 +16,11 @@ public class DashSO : ScriptableObject
     [SerializeField] private int maxCharges = 1;
     public int MaxCharges { get; private set; } = 1;
     public int Charges { get; private set; }
+    public int StartingCharges {
+        get {
+            return maxCharges;
+        }
+    }
 
 
     private void OnEnable() {

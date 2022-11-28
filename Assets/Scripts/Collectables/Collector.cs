@@ -23,7 +23,7 @@ public class Collector : MonoBehaviour
     }
     
     private void OnEffectsChanged(List<InventorySO.ActiveInventorySlot> active, List<InventorySO.PassiveInventorySlot> passive) {
-        collider.radius = baseRadius * (1 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.PickupRange) / 100);
+        collider.radius = baseRadius * (1 + inventory.GetPassiveMultiplier(PassiveEffectSO.EffectProperty.PickupRange) / 100f);
     }
 
     private void OnTriggerEnter(Collider other) {

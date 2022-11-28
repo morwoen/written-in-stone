@@ -18,14 +18,6 @@ MonoBehaviour:
   tooltip: 
   traits: 
   rarities:
-  - rarity: 0
-    effectedProperties:
-    - property: 3
-      modifier: 5
-  - rarity: 1
-    effectedProperties:
-    - property: 3
-      modifier: 10
   - rarity: 2
     effectedProperties:
     - property: 3

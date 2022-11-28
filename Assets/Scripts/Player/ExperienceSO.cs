@@ -8,6 +8,7 @@ public class ExperienceSO : ScriptableObject
     private int level = 1;
     private int requiredExperience;
     private int currentExperience;
+    private float multiplier = 1;
 
     public delegate void ExperienceChanged(int level, bool levelUp, int current, int required);
     public event ExperienceChanged change;
@@ -20,6 +21,7 @@ public class ExperienceSO : ScriptableObject
         level = 1;
         currentExperience = 0;
         requiredExperience = RequiredExperience(level);
+        multiplier = 1;
     }
 
     private int RequiredExperience(int level) {
@@ -30,7 +32,7 @@ public class ExperienceSO : ScriptableObject
     }
 
     public void AddExperience(int experience) {
-        currentExperience += experience;
+        currentExperience += Mathf.FloorToInt(experience * multiplier);
 
         var levelUp = false;
 
@@ -42,5 +44,9 @@ public class ExperienceSO : ScriptableObject
         }
 
         change?.Invoke(level, levelUp, currentExperience, requiredExperience);
+    }
+
+    public void SetMultiplier(float multiplier) {
+        this.multiplier = multiplier;
     }
 }
