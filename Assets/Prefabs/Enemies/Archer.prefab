@@ -774,7 +774,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 3
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -824,6 +824,9 @@ MonoBehaviour:
   deathEffectScale: 1.4
   healthBar: {fileID: 568619040872163047}
   playerHealth: {fileID: 11400000, guid: 5f02437a6e5627b4ba5aee6d4a7d0d01, type: 2}
+  losMask:
+    serializedVersion: 2
+    m_Bits: 520
 --- !u!1 &4289780002577015075
 GameObject:
   m_ObjectHideFlags: 0

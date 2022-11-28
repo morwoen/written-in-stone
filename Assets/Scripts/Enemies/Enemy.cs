@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float deathEffectScale;
     [SerializeField] private EnemyHealthBar healthBar;
     [SerializeField] private HealthSO playerHealth;
+    [SerializeField] private LayerMask losMask;
 
     private Cooldown cooldown;
 
@@ -49,7 +50,6 @@ public class Enemy : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
 
         agent.avoidancePriority = Random.Range(1, 500);
-        agent.stoppingDistance = range;
 
         playerHealth.death += OnPlayerDeath;
     }
@@ -76,13 +76,23 @@ public class Enemy : MonoBehaviour
 
                 if (distance > 40) {
                     Destroy(gameObject);
-                    return;
+                    break;
                 }
 
-                if (distance < range && angle <= attackAngle) {
-                    SwitchState(State.Attacking);
-                } else if (distance > range) {
+                if (distance > range) {
                     agent.SetDestination(player.position);
+                    break;
+                }
+
+                if (Physics.Linecast(transform.position.WithY(1), player.position.WithY(1), out RaycastHit hit, losMask)) {
+                    if (hit.collider.transform != player) {
+                        agent.SetDestination(player.position);
+                        break;
+                    }
+                }
+
+                if (angle <= attackAngle) {
+                    SwitchState(State.Attacking);
                 } else {
                     RotateTowards(player);
                 }
