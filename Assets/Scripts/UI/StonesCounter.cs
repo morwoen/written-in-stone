@@ -15,6 +15,9 @@ public class StonesCounter : MonoBehaviour
     [SerializeField] private Animator rock1;
     [SerializeField] private Animator rock2;
     [SerializeField] private Animator rock3;
+    [SerializeField] private Animator stone;
+
+    private int previousStones = 0;
 
     private void OnEnable() {
         inventory.stonesChange += OnStonesChanged;
@@ -50,8 +53,11 @@ public class StonesCounter : MonoBehaviour
                 rock2.gameObject.SetActive(false);
                 rock3.gameObject.SetActive(false);
             });
+        } else if (stones == previousStones + 1) {
+            stone.SetTrigger("Gained");
         }
 
+        previousStones = stones;
         prompt.SetActive(stones > 0);
     }
 }

@@ -664,7 +664,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &172805516
 MonoBehaviour:
@@ -702,7 +702,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockPrefab: {fileID: 5028851243161712443, guid: 0294eec83c3954b23bec27ac14fe2972,
     type: 3}
-  areaSize: {x: 47.5, y: 47.5}
+  areaSize: {x: 205, y: 205}
+  firstSpawn: {fileID: 1410127149}
+  delay: 10
 --- !u!82 &172805521
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1695,7 +1697,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.6040462, y: 0.000000008728001, z: -0.0000000066153722, w: 0.7969493}
+  m_LocalRotation: {x: 0.6040462, y: 0.000000008728007, z: -0.0000000066153776, w: 0.7969493}
   m_LocalPosition: {x: 0, y: 30, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2247,6 +2249,7 @@ GameObject:
   - component: {fileID: 418740056}
   - component: {fileID: 418740058}
   - component: {fileID: 418740057}
+  - component: {fileID: 418740059}
   m_Layer: 5
   m_Name: Stone
   m_TagString: Untagged
@@ -2264,7 +2267,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1002049737}
   m_Father: {fileID: 1012530863}
@@ -2313,6 +2316,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418740055}
   m_CullTransparentMesh: 1
+--- !u!95 &418740059
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418740055}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e9bcbcee6d4b4858971230fe8487e84, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &435725508
 GameObject:
   m_ObjectHideFlags: 0
@@ -3042,7 +3065,7 @@ PrefabInstance:
     - target: {fileID: 4756842885400806608, guid: eaafbf1d6e35c4b48aeca29f962b5f49,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4756842885400806608, guid: eaafbf1d6e35c4b48aeca29f962b5f49,
         type: 3}
@@ -3818,7 +3841,7 @@ RectTransform:
   - {fileID: 435725509}
   - {fileID: 124281667}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4116,6 +4139,7 @@ MonoBehaviour:
   rock1: {fileID: 1909427112}
   rock2: {fileID: 219469160}
   rock3: {fileID: 1080804895}
+  stone: {fileID: 418740059}
 --- !u!1 &1027332883
 GameObject:
   m_ObjectHideFlags: 0
@@ -5905,6 +5929,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1410127148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1410127149}
+  m_Layer: 0
+  m_Name: FirstRockSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1410127149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410127148}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.03, y: 0, z: 1.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489800322
 GameObject:
   m_ObjectHideFlags: 0
@@ -6258,7 +6313,7 @@ RectTransform:
   - {fileID: 1862494726}
   - {fileID: 1746177868}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8328,7 +8383,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2096819325
 MonoBehaviour:
@@ -8562,12 +8617,12 @@ PrefabInstance:
     - target: {fileID: 784000806140523871, guid: 0db35c06f1b59df4594a0fc13bd5c07c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008728001
+      value: 0.000000008728007
       objectReference: {fileID: 0}
     - target: {fileID: 784000806140523871, guid: 0db35c06f1b59df4594a0fc13bd5c07c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000066153722
+      value: -0.0000000066153776
       objectReference: {fileID: 0}
     - target: {fileID: 784000806140523871, guid: 0db35c06f1b59df4594a0fc13bd5c07c,
         type: 3}

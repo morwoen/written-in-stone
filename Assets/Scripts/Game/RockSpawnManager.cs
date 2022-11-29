@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class RockSpawnManager : MonoBehaviour
 {
@@ -8,17 +9,30 @@ public class RockSpawnManager : MonoBehaviour
 
     [SerializeField] private Vector2 areaSize;
 
+    [SerializeField] private Transform firstSpawn;
+
+    [SerializeField] private float delay = 40;
+
     private GameObject spawnedRock;
 
     private IEnumerator Start() {
+        spawnedRock = Instantiate(rockPrefab, firstSpawn.position.WithY(0), Quaternion.identity);
+
+        yield return new WaitForSeconds(delay);
+
         while (true) {
             if (!spawnedRock) {
                 var x = Random.Range(-areaSize.x / 2, areaSize.x / 2);
                 var y = Random.Range(-areaSize.y / 2, areaSize.y / 2);
-                spawnedRock = Instantiate(rockPrefab, new Vector3(x, transform.position.y, y), Quaternion.identity);
+                var pos = new Vector3(x, 0, y);
+
+                if (!NavMesh.SamplePosition(pos, out NavMeshHit hit, 0.5f, 1)) {
+                    continue;
+                }
+                spawnedRock = Instantiate(rockPrefab, pos, Quaternion.identity);
             }
 
-            yield return new WaitForSeconds(40);
+            yield return new WaitForSeconds(delay);
         }
     }
 
