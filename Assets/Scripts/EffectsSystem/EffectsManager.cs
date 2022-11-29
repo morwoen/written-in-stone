@@ -61,9 +61,16 @@ public class EffectsManager : MonoBehaviour
             }
         }
 
-        var enemyTypeRandom = Random.Range(0, 2);
-        if (enemyTypeRandom == 0 && database.enemyActive.Length > 0) {
-            enemyInventory.AddTemporary(database.enemyActive[Random.Range(0, database.enemyActive.Length)]);
+        //var enemyTypeRandom = Random.Range(0, 2);
+        if (/*enemyTypeRandom == 0 &&*/ database.enemyActive.Length > 0 && database.enemyActive.Length > enemyInventory.active.Count) {
+            for (var i = 0; i < 5; i++) {
+                var active = database.enemyActive[Random.Range(0, database.enemyActive.Length)];
+                var slot = enemyInventory.GetSlot(active);
+                if (slot != null) {
+                    continue;
+                }
+                enemyInventory.AddTemporary(active);
+            }
         } else if (database.enemyPassive.Length > 0) {
             var passive = database.enemyPassive[Random.Range(0, database.enemyPassive.Length)];
             enemyInventory.AddTemporary(passive, passive.rarities[Random.Range(0, passive.rarities.Length)].rarity);

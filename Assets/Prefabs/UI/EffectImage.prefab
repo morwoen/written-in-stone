@@ -459,10 +459,10 @@ MonoBehaviour:
   quantityText: {fileID: 7144818758485525002}
   tooltipText: {fileID: 8585152838902887910}
   tooltipObject: {fileID: 266476017549083852}
-  activeEffectRarity: {r: 0.735849, g: 0.19090424, b: 0.19090424, a: 1}
+  activeEffectRarity: {r: 0.19215687, g: 0.3270283, b: 0.7372549, a: 1}
   commonRarity: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
   uncommonRarity: {r: 0.3506903, g: 0.8018868, b: 0.17021184, a: 1}
-  rareRarity: {r: 0.19339623, g: 0.46550795, b: 0.7735849, a: 1}
+  rareRarity: {r: 0.19215687, g: 0.71916556, b: 0.77254903, a: 1}
   epicRarity: {r: 0.8396226, g: 0.52002895, b: 0.2732734, a: 1}
   legendaryRarity: {r: 0.56758, g: 0.20630117, b: 0.7169812, a: 1}
 --- !u!114 &3548508172526459046

@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +24,7 @@ public class EffectImage : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     [SerializeField] private RectTransform tooltipObject;
 
     [SerializeField] private Color activeEffectRarity;
+    [SerializeField] private Color enemyActiveEffectRarity;
     [SerializeField] private Color commonRarity;
     [SerializeField] private Color uncommonRarity;
     [SerializeField] private Color rareRarity;
@@ -84,7 +86,9 @@ public class EffectImage : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (activeSlot != null) {
             secondary.color = transparent;
             primary.sprite = activeSlot.effect.sprite;
-            rarity.color = activeEffectRarity;
+
+            var isEnemy = activeSlot.effect.traits.Contains(ActiveEffectSO.EffectTrait.Enemy);
+            rarity.color = isEnemy ? enemyActiveEffectRarity : activeEffectRarity;
             quantityText.SetText("");
             tooltipText.SetText(activeSlot.effect.displayName);
 

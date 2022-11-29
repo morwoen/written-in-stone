@@ -23,6 +23,8 @@ public class ActiveEffectSO : ScriptableObject
         Axe,
         Spear,
         Sword,
+
+        Enemy,
     }
 
     public Sprite sprite;
