@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42117676, g: 0.5159463, b: 0.63333476, a: 1}
+  m_IndirectSpecularColor: {r: 0.42117673, g: 0.5159463, b: 0.63333476, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1695,7 +1695,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.60404617, y: -0.000000027951954, z: 0.00000002118613, w: 0.7969493}
+  m_LocalRotation: {x: 0.6040462, y: 0.000000008728001, z: -0.0000000066153722, w: 0.7969493}
   m_LocalPosition: {x: 0, y: 30, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2866,7 +2866,19 @@ MonoBehaviour:
   m_Value: 0.537
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 139515455}
+        m_TargetAssemblyTypeName: VolumeManager, Assembly-CSharp
+        m_MethodName: UpdateVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &777985551
 GameObject:
   m_ObjectHideFlags: 0
@@ -8545,17 +8557,17 @@ PrefabInstance:
     - target: {fileID: 784000806140523871, guid: 0db35c06f1b59df4594a0fc13bd5c07c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.60404617
+      value: 0.6040462
       objectReference: {fileID: 0}
     - target: {fileID: 784000806140523871, guid: 0db35c06f1b59df4594a0fc13bd5c07c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000027951954
+      value: 0.000000008728001
       objectReference: {fileID: 0}
     - target: {fileID: 784000806140523871, guid: 0db35c06f1b59df4594a0fc13bd5c07c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00000002118613
+      value: -0.0000000066153722
       objectReference: {fileID: 0}
     - target: {fileID: 784000806140523871, guid: 0db35c06f1b59df4594a0fc13bd5c07c,
         type: 3}
