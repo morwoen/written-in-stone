@@ -61,6 +61,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   experience: {fileID: 11400000, guid: cea5121e2eb5d4b3890598757cd2b837, type: 2}
   animationDuration: 0.3
+  pickupSound: {fileID: 8212680933248443621, guid: b0c8ea5ca32206e4c96797a7f32d6d27,
+    type: 3}
 --- !u!1001 &77729319075131431
 PrefabInstance:
   m_ObjectHideFlags: 0

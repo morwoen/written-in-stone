@@ -7,6 +7,7 @@ public class ExperiencePickupCollectable : MonoBehaviour, ICollectable
 {
     [SerializeField] private ExperienceSO experience;
     [SerializeField] private float animationDuration;
+    [SerializeField] private GameObject pickupSound;
 
     public void Collect(Transform player) {
         var pos = transform.position;
@@ -19,6 +20,7 @@ public class ExperiencePickupCollectable : MonoBehaviour, ICollectable
             })
             .OnComplete(() => {
                 experience.AddExperience(10);
+                Instantiate(pickupSound, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             });
     }
