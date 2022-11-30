@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour, ICharacterController
     [SerializeField] private float respawnTime = 5;
     [SerializeField] private Color hitColor;
     private bool invulnerable = false;
-    private AudioSource source;
 
     [Header("Misc")]
     [SerializeField] private List<Collider> ignoredColliders = new List<Collider>();
@@ -71,8 +70,9 @@ public class PlayerController : MonoBehaviour, ICharacterController
     [SerializeField] private LayerMask enemyLayerMask;
 
     [Header("SoundFX")]
-    [SerializeField] private AudioClip damagedSound;
-    [SerializeField] private AudioClip deadSound;
+    [SerializeField] private AudioSource damagedSound;
+    [SerializeField] private AudioSource deadSound;
+    [SerializeField] private AudioSource dashSound;
 
     public CharacterState CurrentCharacterState { get; private set; }
 
@@ -82,7 +82,6 @@ public class PlayerController : MonoBehaviour, ICharacterController
         raycastMask = ~LayerMask.GetMask("EnemyIgnoreRaycast", "Ignore Raycast");
         Motor = GetComponent<KinematicCharacterMotor>();
         input = GetComponent<PlayerInputController>();
-        source = GetComponent<AudioSource>();
         TransitionToState(CharacterState.Grounded);
         Motor.CharacterController = this;
         health.Respawn();
@@ -285,9 +284,11 @@ public class PlayerController : MonoBehaviour, ICharacterController
 
                     if (input.Dash && dash.Charges > 0) {
                         TransitionToState(CharacterState.Dashing);
+                        // TODO: Move these to on enter state!
                         input.DashPerformed();
                         dash.Dash();
                         dashEffect?.Play();
+                        Instantiate(dashSound, transform.position, Quaternion.identity);
                         //dashEffect?.GetComponent<PolygonSoundSpawn>().Execute();
                         //animator?.SetTrigger("Dash");
                         Cooldown.Wait(dashDuration)
@@ -326,7 +327,8 @@ public class PlayerController : MonoBehaviour, ICharacterController
         if (dead) {
             //animator.SetTrigger("Die");
 
-            source.PlayOneShot(deadSound);
+            Instantiate(deadSound, transform.position, Quaternion.identity);
+
             meshRenderer.gameObject.SetActive(false);
             Instantiate(deathEffect, transform.position, deathEffect.transform.rotation, transform);
 
@@ -338,7 +340,8 @@ public class PlayerController : MonoBehaviour, ICharacterController
         } else {
             //Instantiate(hitEffectPrefab, transform.position, hitEffectPrefab.transform.rotation, transform);
 
-            source.PlayOneShot(damagedSound);
+            Instantiate(damagedSound, transform.position, Quaternion.identity);
+
             invulnerable = true;
             meshRenderer.material.SetColor("_BaseColor", hitColor);
             Cooldown.Wait(invulnerabilityTime)
