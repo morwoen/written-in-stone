@@ -4,6 +4,8 @@ A survival game where your abilities change after every 10 enemies are killed. Y
 
 Explore the map and try to survive while building your arsenal of active and passive abilities. Beware the enemies! They are getting some special abilities as well!
 
+[Play on Itch](https://morwoen.itch.io/written-in-stone)
+
 # Controls
 
 Use **W A S D** to move
