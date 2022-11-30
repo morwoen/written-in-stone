@@ -13,9 +13,6 @@ public class CircleOfDeathMissile : MonoBehaviour
         transform.Translate(velocity * Time.deltaTime * transform.forward, Space.World);
     }
 
-    private void OnCollisionEnter(Collision collision) {
-    }
-
     private void OnTriggerEnter(Collider other) {
         PlayerController player = other.GetComponent<PlayerController>();
 
