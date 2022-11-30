@@ -30,11 +30,9 @@ public class EnemyFlameWall : ActiveEffect
 
     private void OnTriggerEnter() {
         playerInColliders += 1;
-        Debug.Log(playerInColliders);
     }
 
     private void OnTriggerExit() {
         playerInColliders -= 1;
-        Debug.Log(playerInColliders);
     }
 }

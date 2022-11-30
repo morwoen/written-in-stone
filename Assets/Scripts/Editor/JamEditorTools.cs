@@ -21,7 +21,7 @@ public class JamEditorTools
 
         var dups = transforms
             .Where(t => t.gameObject.GetComponent<T>() != null)
-            .GroupBy(t => t.position)
+            .GroupBy(t => t.position.ToString() + t.name.Split(" ")[0])
             .Where(g => g.Count() > 1)
             .Select(y => y.ToList())
             .ToList();
