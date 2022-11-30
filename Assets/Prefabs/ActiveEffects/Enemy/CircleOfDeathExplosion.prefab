@@ -95,7 +95,7 @@ PrefabInstance:
     - target: {fileID: 6160751335568118249, guid: b0599c0d4c6dbf444b6180fa1666d53b,
         type: 3}
       propertyPath: m_Name
-      value: CircleOfDeathExplosion Variant
+      value: CircleOfDeathExplosion
       objectReference: {fileID: 0}
     - target: {fileID: 7830487362328785097, guid: b0599c0d4c6dbf444b6180fa1666d53b,
         type: 3}
@@ -109,3 +109,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0599c0d4c6dbf444b6180fa1666d53b, type: 3}
+--- !u!1 &1146831563060650054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6160751335568118249, guid: b0599c0d4c6dbf444b6180fa1666d53b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6527193088952283567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5607273412859307731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146831563060650054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af69e34bc2164ce0a7f10d4c10f76f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7753369155843129093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146831563060650054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774ae0aaf97d23941ba31a5740953e40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions:
+  - delay: 3
+    events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -5607273412859307731}
+          m_TargetAssemblyTypeName: UnityEventUtils, Assembly-CSharp
+          m_MethodName: Destroy
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

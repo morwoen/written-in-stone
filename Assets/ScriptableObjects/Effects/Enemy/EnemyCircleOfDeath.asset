@@ -21,5 +21,5 @@ MonoBehaviour:
   levels:
   - spellPrefab: {fileID: 8517848605057348115, guid: be7b27c64d115bb45889b6e17a7f3625,
       type: 3}
-    cooldown: 5
-    damage: 3
+    cooldown: 13
+    damage: 8

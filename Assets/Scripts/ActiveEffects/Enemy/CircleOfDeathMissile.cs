@@ -14,7 +14,10 @@ public class CircleOfDeathMissile : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision) {
-        PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        PlayerController player = other.GetComponent<PlayerController>();
 
         if (player) {
             player.Damage(damage);
