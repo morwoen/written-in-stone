@@ -5,35 +5,58 @@ using UnityEngine;
 
 public class EffectsManager : MonoBehaviour
 {
-    public InventorySO playerInventory;
-    public InventorySO enemyInventory;
-    public EffectsDatabaseSO database;
-    public EnemyKilledSO enemyKilled;
+    [SerializeField] private InventorySO playerInventory;
+    [SerializeField] private InventorySO enemyInventory;
+    [SerializeField] private EffectsDatabaseSO database;
+    [SerializeField] private EnemyKilledSO enemyKilled;
+    [SerializeField] private ExperienceSO experience;
 
     private void OnEnable() {
         enemyKilled.killed += OnKill;
         playerInventory.stonesChange += OnStonesChanged;
-    }
-
-    private void OnStonesChanged(int stones, int rocks, bool consumed) {
-        if (consumed) {
-            OnKill(0, 0);
-        }
+        experience.change += OnExperienceChange;
     }
 
     private void OnDisable() {
         enemyKilled.killed -= OnKill;
+        playerInventory.stonesChange -= OnStonesChanged;
+        experience.change -= OnExperienceChange;
     }
 
     private void Start() {
         OnKill(0, 0);
     }
 
+    private void OnExperienceChange(int level, bool levelUp, int current, int required) {
+        if (levelUp && level % 10 == 0) {
+            var temp = enemyInventory.active.FirstOrDefault(slot => slot.temporary > 0);
+            if (temp == null) {
+                Debug.LogError("Cannot persist enemy spell");
+                return;
+            }
+
+            enemyInventory.Promote(temp.effect);
+
+            UpdateEnemy();
+        }
+    }
+
+    private void OnStonesChanged(int stones, int rocks, bool consumed) {
+        if (consumed) {
+            UpdatePlayer();
+        }
+    }
+
     private void OnKill(int remaining, int total) {
         if (remaining > 0) return;
 
+        UpdatePlayer();
+
+        UpdateEnemy();
+    }
+
+    private void UpdatePlayer() {
         playerInventory.RemoveTemporary();
-        enemyInventory.RemoveTemporary();
 
         var hasActive = false;
         int added = 0;
@@ -60,20 +83,43 @@ public class EffectsManager : MonoBehaviour
                 added += 1;
             }
         }
+    }
+
+    private void UpdateEnemy() {
+        enemyInventory.RemoveTemporary();
+
+        if (database.enemyActive.Length <= 0) return;
+
+        var effectNumber = Random.Range(0, database.enemyActive.Length - enemyInventory.active.Count);
+
+        var index = 0;
+        foreach (var effect in database.enemyActive) {
+            var slot = enemyInventory.GetSlot(effect);
+
+            if (slot == null) {
+                if (index == effectNumber) {
+                    enemyInventory.AddTemporary(effect);
+                    break;
+                } else {
+                    index += 1;
+                }
+            }
+        }
 
         //var enemyTypeRandom = Random.Range(0, 2);
-        if (/*enemyTypeRandom == 0 &&*/ database.enemyActive.Length > 0 && database.enemyActive.Length > enemyInventory.active.Count) {
-            for (var i = 0; i < 5; i++) {
-                var active = database.enemyActive[Random.Range(0, database.enemyActive.Length)];
-                var slot = enemyInventory.GetSlot(active);
-                if (slot != null) {
-                    continue;
-                }
-                enemyInventory.AddTemporary(active);
-            }
-        } else if (database.enemyPassive.Length > 0) {
-            var passive = database.enemyPassive[Random.Range(0, database.enemyPassive.Length)];
-            enemyInventory.AddTemporary(passive, passive.rarities[Random.Range(0, passive.rarities.Length)].rarity);
-        }
+        //if (/*enemyTypeRandom == 0 &&*/ database.enemyActive.Length > 0 && database.enemyActive.Length > enemyInventory.active.Count) {
+        //    for (var i = 0; i < 5; i++) {
+        //        var active = database.enemyActive[Random.Range(0, database.enemyActive.Length)];
+        //        var slot = enemyInventory.GetSlot(active);
+        //        if (slot != null) {
+        //            continue;
+        //        }
+        //        enemyInventory.AddTemporary(active);
+        //    }
+        //}
+        //} else if (database.enemyPassive.Length > 0) {
+        //    var passive = database.enemyPassive[Random.Range(0, database.enemyPassive.Length)];
+        //    enemyInventory.AddTemporary(passive, passive.rarities[Random.Range(0, passive.rarities.Length)].rarity);
+        //}
     }
 }
