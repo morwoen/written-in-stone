@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class ActiveEffect : MonoBehaviour
 {
-    [SerializeField] private AudioClip effectSound;
+    [SerializeField] protected AudioClip effectSound;
 
     protected int damage = 1;
     protected float areaMultiplier = 1;

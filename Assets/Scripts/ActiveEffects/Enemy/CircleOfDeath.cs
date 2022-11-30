@@ -11,8 +11,13 @@ public class CircleOfDeath : ActiveEffect
 
     private List<CircleOfDeathMissile> missiles;
     private Transform player;
+    private AudioSource audioSource;
 
     public override void UpdateGameObject() {
+    }
+
+    private void Awake() {
+        audioSource = GetComponent<AudioSource>();
     }
 
     private IEnumerator Start() {
@@ -45,6 +50,7 @@ public class CircleOfDeath : ActiveEffect
             if (missile) {
                 missile.transform.parent = null;
                 missile.enabled = true;
+                audioSource.PlayOneShot(effectSound);
             }
 
             yield return new WaitForSeconds(0.5f);
