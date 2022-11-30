@@ -104,8 +104,7 @@ MonoBehaviour:
   losMask:
     serializedVersion: 2
     m_Bits: 520
-  attackClip: {fileID: 8300000, guid: c89fb831ccc21486c8ee8cc28f227f00, type: 3}
-  deathClip: {fileID: 8300000, guid: 77058980ccfc443abaccbcd4a6e96f6a, type: 3}
+  deathSound: {fileID: 8300000, guid: 77058980ccfc443abaccbcd4a6e96f6a, type: 3}
 --- !u!82 &4229216551300401929
 AudioSource:
   m_ObjectHideFlags: 0
