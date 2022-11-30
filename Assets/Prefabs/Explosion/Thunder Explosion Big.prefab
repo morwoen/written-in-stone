@@ -43,7 +43,7 @@ AudioSource:
   m_GameObject: {fileID: 9135538746692676714}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 582139646398218081, guid: 335fe0149b8dd4970ab9e5a4b4621422,
+  OutputAudioMixerGroup: {fileID: 8152298938619613159, guid: 335fe0149b8dd4970ab9e5a4b4621422,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ed7889cfe83d04fb1995fff264b8f76c, type: 3}
   m_PlayOnAwake: 1
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pitchRange: {x: 0.9, y: 1.1}
-  destroyWhenDone: 0
+  destroyWhenDone: 1
 --- !u!1001 &2100532723995216444
 PrefabInstance:
   m_ObjectHideFlags: 0

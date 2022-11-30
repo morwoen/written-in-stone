@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private HealthSO playerHealth;
     [SerializeField] private LayerMask losMask;
     [SerializeField] private AudioClip deathSound;
+    [SerializeField] private InventorySO playerInventory;
+    [SerializeField] private bool isBoss = false;
 
     private Cooldown cooldown;
 
@@ -75,7 +77,7 @@ public class Enemy : MonoBehaviour
                 var angle = Vector3.Angle(transform.forward, player.position - transform.position);
                 var distance = Vector3.Distance(transform.position, player.position);
 
-                if (distance > 40) {
+                if (distance > 40 && !isBoss) {
                     Destroy(gameObject);
                     break;
                 }
@@ -133,6 +135,9 @@ public class Enemy : MonoBehaviour
         if (health == 0) {
             SwitchState(State.Stunned);
             enemyKilled.Kill();
+            if (isBoss) {
+                playerInventory.AddStone();
+            }
             Instantiate(experiencePrefab, transform.position, Quaternion.identity);
             GameObject deathInstance = Instantiate(deathEffect, transform.position, transform.rotation);
             deathInstance.transform.localScale *= deathEffectScale;

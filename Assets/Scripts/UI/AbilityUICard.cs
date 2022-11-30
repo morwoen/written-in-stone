@@ -15,9 +15,22 @@ public class AbilityUICard : MonoBehaviour, ISelectHandler, IDeselectHandler, IP
     [SerializeField] private TextMeshProUGUI valueText;
     [SerializeField] private Animator animator;
 
+    [SerializeField] private AudioClip onHoverClip;
+    [SerializeField] private AudioClip onClickClip;
+
     [NonSerialized] public ActiveEffectSO activeEffect;
     [NonSerialized] public PassiveEffectSO passiveEffect;
     [NonSerialized] public PassiveEffectSO.EffectRarity passiveRarity;
+
+    private AudioSource source;
+
+    private void Awake() {
+        source = GetComponent<AudioSource>();
+
+        GetComponent<Button>().onClick.AddListener(() => {
+            source.PlayOneShot(onClickClip);
+        });
+    }
 
     public void Assign(InventorySO.ActiveInventorySlot slot) {
         image.Apply(slot);
@@ -45,6 +58,7 @@ public class AbilityUICard : MonoBehaviour, ISelectHandler, IDeselectHandler, IP
 
     public void OnSelect(BaseEventData eventData) {
         animator.SetBool("Focus", true);
+        source.PlayOneShot(onHoverClip);
     }
 
     public void OnDeselect(BaseEventData eventData) {

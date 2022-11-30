@@ -44,7 +44,6 @@ public class EnemyMeteor : EnemyAttack
     void Explode() {
         GameObject explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity);
         explosionInstance.transform.localScale *= explosionScale;
-        Destroy(explosionInstance, explosionDuration);
         Destroy(gameObject);
     }
 }

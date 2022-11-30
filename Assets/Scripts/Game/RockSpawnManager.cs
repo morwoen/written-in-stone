@@ -32,6 +32,8 @@ public class RockSpawnManager : MonoBehaviour
     }
 
     private IEnumerator Start() {
+        yield return new WaitForSeconds(2);
+
         spawnedRock = Instantiate(rockPrefab, firstSpawn.position.WithY(0), Quaternion.identity);
 
         yield return new WaitForSeconds(delay);

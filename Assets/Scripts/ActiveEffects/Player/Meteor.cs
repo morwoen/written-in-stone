@@ -32,7 +32,6 @@ public class Meteor : ActiveEffect
     void Explode() {
         GameObject explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity);
         explosionInstance.transform.localScale *= explosionScale * areaMultiplier;
-        Destroy(explosionInstance, explosionDuration);
         Destroy(gameObject);
     }
 

@@ -830,6 +830,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 520
   deathSound: {fileID: 8300000, guid: 908f40fcec6144b14b7e3bbdc64b4867, type: 3}
+  playerInventory: {fileID: 11400000, guid: 8cc70bfa099b6794da12b99af4b05484, type: 2}
+  isBoss: 0
 --- !u!82 &1467450425207385069
 AudioSource:
   m_ObjectHideFlags: 0

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f35313f5cd574c4a81a4738a418515d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectSound: {fileID: 0}
   timeToLive: 1
   rangeMultiplier: 4
 --- !u!114 &7101783529189944599
@@ -85,6 +86,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4773254902357213122}
     m_Modifications:
+    - target: {fileID: -2208102188885278348, guid: 93d9deb340b23a34f89b76b2ddf8ff51,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b6eb3cf1df623a14ea5706b03aad0c6d, type: 3}
+    - target: {fileID: -2208102188885278348, guid: 93d9deb340b23a34f89b76b2ddf8ff51,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2060143476056356777, guid: 335fe0149b8dd4970ab9e5a4b4621422,
+        type: 2}
     - target: {fileID: 7287754858345100792, guid: 93d9deb340b23a34f89b76b2ddf8ff51,
         type: 3}
       propertyPath: m_RootOrder
