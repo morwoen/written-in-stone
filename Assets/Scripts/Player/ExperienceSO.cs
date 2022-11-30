@@ -13,6 +13,10 @@ public class ExperienceSO : ScriptableObject
     public delegate void ExperienceChanged(int level, bool levelUp, int current, int required);
     public event ExperienceChanged change;
 
+    public int Level {
+        get { return level; }
+    }
+
     private void OnEnable() {
         Restart();
     }

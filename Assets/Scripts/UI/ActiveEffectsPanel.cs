@@ -8,6 +8,7 @@ public class ActiveEffectsPanel : MonoBehaviour
     [SerializeField] private EffectImage effectImagePrefab;
     [SerializeField] private InventorySO inventory;
     [SerializeField] private EffectCooldownsTrackerSO cooldownsTracker;
+    [SerializeField] private EffectImage.TooltipSide tooltipSide = EffectImage.TooltipSide.BottomRight;
 
     private List<EffectImage> elements;
 
@@ -48,7 +49,7 @@ public class ActiveEffectsPanel : MonoBehaviour
         if (active == null) return;
         var el = Instantiate(effectImagePrefab, transform);
         el.Apply(inventory.GetSlot(active));
-        el.SetTooltip(true, EffectImage.TooltipSide.BottomRight);
+        el.SetTooltip(true, tooltipSide);
         elements.Add(el);
         el.GetComponent<CooldownUIOverlay>().ShowCooldown(cooldownsTracker.GetCooldown(active));
     }

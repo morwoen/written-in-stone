@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4776e97b6222f3a4f986c3da2e4be634, type: 3}
+  m_Name: EnemyEarthBend
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 919645381, guid: cf73d4df1ff114702b05f36044e372ed, type: 3}
+  secondarySprite: {fileID: 0}
+  displayName: Enemy Earth Bend
+  tooltip: 
+  spawnOnPlayer: 0
+  traits: 0c000000
+  levels:
+  - spellPrefab: {fileID: 4619836957237898687, guid: 74b378cd08abf4049816b24e1293ab65,
+      type: 3}
+    cooldown: 10
+    damage: 0

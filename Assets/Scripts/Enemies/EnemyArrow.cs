@@ -10,7 +10,6 @@ public class EnemyArrow : EnemyAttack
 
     void Awake() {
         transform.parent = null;
-
     }
 
     void Update() {

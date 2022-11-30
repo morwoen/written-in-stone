@@ -112,6 +112,8 @@ public class EffectImage : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 quantityText.SetText("");
             }
 
+            tooltipText.SetText(passiveSlot.effect.displayName);
+
             primary.sprite = passiveSlot.effect.sprite;
             switch (passiveSlot.rarity) {
                 case PassiveEffectSO.EffectRarity.Common:

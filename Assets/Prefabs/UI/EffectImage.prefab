@@ -460,6 +460,7 @@ MonoBehaviour:
   tooltipText: {fileID: 8585152838902887910}
   tooltipObject: {fileID: 266476017549083852}
   activeEffectRarity: {r: 0.19215687, g: 0.3270283, b: 0.7372549, a: 1}
+  enemyActiveEffectRarity: {r: 0.7372549, g: 0.19728768, b: 0.19215687, a: 1}
   commonRarity: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
   uncommonRarity: {r: 0.3506903, g: 0.8018868, b: 0.17021184, a: 1}
   rareRarity: {r: 0.19215687, g: 0.71916556, b: 0.77254903, a: 1}

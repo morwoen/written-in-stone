@@ -16,6 +16,11 @@ public static class ExtensionMethods
     }
 
     public static Vector2 RandomPointInCircle(this float maxDistance, float minimumDistance = 0) {
+        //var offset = Random.Range(minimumDistance, maxDistance);
+        //var direction = Random.insideUnitCircle.normalized;
+
+        //return direction * offset;
+
         var randomPointInUnitCircle = (Random.insideUnitCircle * (maxDistance - minimumDistance));
         return randomPointInUnitCircle + (randomPointInUnitCircle / randomPointInUnitCircle.Abs()) * minimumDistance;
     }
