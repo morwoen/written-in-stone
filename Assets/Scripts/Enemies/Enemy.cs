@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyHealthBar healthBar;
     [SerializeField] private HealthSO playerHealth;
     [SerializeField] private LayerMask losMask;
+    [SerializeField] private AudioClip deathSound;
 
     private Cooldown cooldown;
 
@@ -135,6 +136,7 @@ public class Enemy : MonoBehaviour
             Instantiate(experiencePrefab, transform.position, Quaternion.identity);
             GameObject deathInstance = Instantiate(deathEffect, transform.position, transform.rotation);
             deathInstance.transform.localScale *= deathEffectScale;
+            deathInstance.GetComponent<AudioSource>().PlayOneShot(deathSound);
             Destroy(deathInstance, 3);
             Destroy(gameObject);
         }

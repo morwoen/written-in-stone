@@ -103,6 +103,7 @@ MonoBehaviour:
   losMask:
     serializedVersion: 2
     m_Bits: 520
+  deathSound: {fileID: 8300000, guid: 15337ff2d97c74ad6b6e3382b4478b33, type: 3}
 --- !u!1001 &1791354710834382993
 PrefabInstance:
   m_ObjectHideFlags: 0

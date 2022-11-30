@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 35102908155908233}
   - component: {fileID: 5214978773208081431}
   - component: {fileID: 8521077945956073155}
+  - component: {fileID: 4339200088149660489}
+  - component: {fileID: 5236604068163939419}
   m_Layer: 8
   m_Name: ArcherAttack
   m_TagString: Untagged
@@ -78,6 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 540269bdd072df344ac61fc6bffe21a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSound: {fileID: 8300000, guid: 7a0e597e7fe6d459cb734313741378d6, type: 3}
   velocity: 20
 --- !u!114 &5214978773208081431
 MonoBehaviour:
@@ -120,6 +123,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 35102908155908233}
+          m_TargetAssemblyTypeName: EnemyAttack, Assembly-CSharp
+          m_MethodName: PlayAttackSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   - delay: 3
     events:
       m_PersistentCalls:
@@ -148,6 +163,117 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af69e34bc2164ce0a7f10d4c10f76f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &4339200088149660489
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5551588593982358088}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 582139646398218081, guid: 335fe0149b8dd4970ab9e5a4b4621422,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &5236604068163939419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5551588593982358088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f20fa5d06a2a6b438e30403ea49b7a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pitchRange: {x: 0.9, y: 1.1}
+  destroyWhenDone: 0
 --- !u!1001 &2167543122389235560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -159,6 +285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070977871798919505, guid: 578eb3f250e4980428a8f7afa7b9e89b,
+        type: 3}
+      propertyPath: prefabSound
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8179759042634337845, guid: 578eb3f250e4980428a8f7afa7b9e89b,
         type: 3}
@@ -270,7 +401,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8070977871798919505, guid: 578eb3f250e4980428a8f7afa7b9e89b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 578eb3f250e4980428a8f7afa7b9e89b, type: 3}
 --- !u!1 &8035737789063639941 stripped
 GameObject:

@@ -70,6 +70,9 @@ public class PlayerController : MonoBehaviour, ICharacterController
     [SerializeField] private Animator animator = null;
     [SerializeField] private LayerMask enemyLayerMask;
 
+    [Header("SoundFX")]
+    [SerializeField] private AudioClip damagedSound;
+
     public CharacterState CurrentCharacterState { get; private set; }
 
     private LayerMask raycastMask;
@@ -333,6 +336,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
         } else {
             //Instantiate(hitEffectPrefab, transform.position, hitEffectPrefab.transform.rotation, transform);
 
+            source.PlayOneShot(damagedSound);
             invulnerable = true;
             meshRenderer.material.SetColor("_BaseColor", hitColor);
             Cooldown.Wait(invulnerabilityTime)

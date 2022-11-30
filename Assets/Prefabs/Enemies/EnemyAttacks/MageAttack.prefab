@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 8775120156754650722}
   - component: {fileID: 8285263302156819290}
   - component: {fileID: 572141818072440962}
+  - component: {fileID: -5477624723270422470}
+  - component: {fileID: 1530399355324520524}
+  - component: {fileID: -2097390086950707159}
   m_Layer: 13
   m_Name: MageAttack
   m_TagString: Untagged
@@ -76,6 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee852485020592d48b600476bea31d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSound: {fileID: 8300000, guid: c89fb831ccc21486c8ee8cc28f227f00, type: 3}
   spawnHeight: 50
   velocity: 30
   explosionDuration: 1
@@ -85,6 +89,146 @@ MonoBehaviour:
   explosion: {fileID: 9135538746692676714, guid: 7909dfda0c9479b4fbd6c9e9fd180b3e,
     type: 3}
   marker: {fileID: 6154350939864161618, guid: 4aac1471c15eb5b4b8fad5e66e835b54, type: 3}
+--- !u!82 &-5477624723270422470
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3625319077097973860}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 582139646398218081, guid: 335fe0149b8dd4970ab9e5a4b4621422,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1530399355324520524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3625319077097973860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f20fa5d06a2a6b438e30403ea49b7a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pitchRange: {x: 0.9, y: 1.1}
+  destroyWhenDone: 0
+--- !u!114 &-2097390086950707159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3625319077097973860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774ae0aaf97d23941ba31a5740953e40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions:
+  - delay: 0
+    events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 572141818072440962}
+          m_TargetAssemblyTypeName: EnemyAttack, Assembly-CSharp
+          m_MethodName: PlayAttackSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &358951699050567920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -183,7 +327,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114254603991072542, guid: 8241db815e240fa408297a3015a6db53, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8241db815e240fa408297a3015a6db53, type: 3}
 --- !u!4 &354107379988308692 stripped
 Transform:
