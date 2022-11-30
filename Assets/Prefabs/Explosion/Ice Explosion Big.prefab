@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -2208102188885278348}
   - component: {fileID: 6013142410781484931}
   m_Layer: 7
-  m_Name: Ice Explosion
+  m_Name: Ice Explosion Big
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f20fa5d06a2a6b438e30403ea49b7a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pitchRange: {x: 2.8, y: 3}
+  pitchRange: {x: 0.9, y: 1.1}
   destroyWhenDone: 0
 --- !u!1001 &8161498460131814011
 PrefabInstance:
