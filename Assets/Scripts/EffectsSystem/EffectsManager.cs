@@ -11,6 +11,8 @@ public class EffectsManager : MonoBehaviour
     [SerializeField] private EnemyKilledSO enemyKilled;
     [SerializeField] private ExperienceSO experience;
 
+    [SerializeField] private AudioSource randomisedSound;
+
     private void OnEnable() {
         enemyKilled.killed += OnKill;
         playerInventory.stonesChange += OnStonesChanged;
@@ -24,7 +26,8 @@ public class EffectsManager : MonoBehaviour
     }
 
     private void Start() {
-        OnKill(0, 0);
+        UpdatePlayer();
+        UpdateEnemy();
     }
 
     private void OnExperienceChange(int level, bool levelUp, int current, int required) {
@@ -53,6 +56,8 @@ public class EffectsManager : MonoBehaviour
         UpdatePlayer();
 
         UpdateEnemy();
+
+        Instantiate(randomisedSound);
     }
 
     private void UpdatePlayer() {

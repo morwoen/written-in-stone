@@ -7,6 +7,8 @@ public class RockSpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject rockPrefab;
 
+    [SerializeField] private HealthSO playerHealth;
+
     [SerializeField] private Vector2 areaSize;
 
     [SerializeField] private Transform firstSpawn;
@@ -15,12 +17,28 @@ public class RockSpawnManager : MonoBehaviour
 
     private GameObject spawnedRock;
 
+    private bool keepSpawning = true;
+
+    private void OnEnable() {
+        playerHealth.death += OnPlayerDeath;
+    }
+
+    private void OnDisable() {
+        playerHealth.death -= OnPlayerDeath;
+    }
+
+    private void OnPlayerDeath() {
+        keepSpawning = false;
+    }
+
     private IEnumerator Start() {
         spawnedRock = Instantiate(rockPrefab, firstSpawn.position.WithY(0), Quaternion.identity);
 
         yield return new WaitForSeconds(delay);
 
         while (true) {
+            if (!keepSpawning) break;
+
             if (!spawnedRock) {
                 var x = Random.Range(-areaSize.x / 2, areaSize.x / 2);
                 var y = Random.Range(-areaSize.y / 2, areaSize.y / 2);

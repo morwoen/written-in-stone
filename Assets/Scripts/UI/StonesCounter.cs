@@ -17,6 +17,8 @@ public class StonesCounter : MonoBehaviour
     [SerializeField] private Animator rock3;
     [SerializeField] private Animator stone;
 
+    [SerializeField] private AudioSource stoneCompletedSound;
+
     private int previousStones = 0;
 
     private void OnEnable() {
@@ -52,9 +54,11 @@ public class StonesCounter : MonoBehaviour
                 rock1.gameObject.SetActive(false);
                 rock2.gameObject.SetActive(false);
                 rock3.gameObject.SetActive(false);
+                Instantiate(stoneCompletedSound);
             });
         } else if (stones == previousStones + 1) {
             stone.SetTrigger("Gained");
+            Instantiate(stoneCompletedSound);
         }
 
         previousStones = stones;
