@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DebugDatabase
   m_EditorClassIdentifier: 
   active:
-  - {fileID: 11400000, guid: 6016cc75efe57c3408291152accc6ecf, type: 2}
+  - {fileID: 11400000, guid: 5e8ed7dcda6841e4baa76bacdcde8660, type: 2}
   passive:
   - {fileID: 11400000, guid: 2fdcf62e035200a49b07b7c021f98d43, type: 2}
   - {fileID: 11400000, guid: e12ab3f970c5a34449d8084af9aa874f, type: 2}

@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class Whirl : ActiveEffect
 {
-    [SerializeField]
-    int timeToLive = 5;
-    [SerializeField]
-    float rangeMultiplier = 2f;
-    [SerializeField]
-    float damageTickDelay = 1f;
+    [SerializeField] private int timeToLive = 5;
+    [SerializeField] private float rangeMultiplier = 2f;
+    [SerializeField] private float damageTickDelay = 1f;
+    [SerializeField] private GameObject damageSound;
 
     public override void UpdateGameObject() {
         transform.localScale *= areaMultiplier;
@@ -18,6 +16,10 @@ public class Whirl : ActiveEffect
     public void DealDamage() {
         LayerMask mask = LayerMask.GetMask("Enemy");
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, transform.localScale.x * rangeMultiplier, mask);
+
+        if (hitColliders.Length > 0 ) {
+            Instantiate(damageSound);
+        }
 
         foreach (Collider hitCollider in hitColliders) {
             hitCollider.GetComponent<Enemy>()?.Damage(damage);
