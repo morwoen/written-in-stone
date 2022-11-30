@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
 
     [Header("SoundFX")]
     [SerializeField] private AudioClip damagedSound;
+    [SerializeField] private AudioClip deadSound;
 
     public CharacterState CurrentCharacterState { get; private set; }
 
@@ -325,6 +326,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
         if (dead) {
             //animator.SetTrigger("Die");
 
+            source.PlayOneShot(deadSound);
             meshRenderer.gameObject.SetActive(false);
             Instantiate(deathEffect, transform.position, deathEffect.transform.rotation, transform);
 

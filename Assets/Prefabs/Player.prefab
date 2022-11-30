@@ -229,6 +229,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   damagedSound: {fileID: 8300000, guid: 302ef797250c74fd68d1211e2e81b5a4, type: 3}
+  deadSound: {fileID: 8300000, guid: 6c7c77ac418874097bc162bf2cf455f1, type: 3}
 --- !u!114 &323686791
 MonoBehaviour:
   m_ObjectHideFlags: 0
