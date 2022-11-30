@@ -10,6 +10,7 @@ public class EnemyDirector : MonoBehaviour
     [SerializeField] private Enemy[] enemyPrefabs;
     [SerializeField] private Enemy[] bossPrefabs;
     [SerializeField] private Vector2 spawnDistanceMinMax;
+    [SerializeField] private GameObject bossSpawnSound;
 
     private LayerMask groundLayer;
 
@@ -39,6 +40,7 @@ public class EnemyDirector : MonoBehaviour
         }
 
         if (total % 101 == 0) {
+            Instantiate(bossSpawnSound, player.transform.position, Quaternion.identity);
             SpawnEnemy(bossPrefabs);
         }
     }
