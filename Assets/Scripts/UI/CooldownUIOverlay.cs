@@ -16,6 +16,7 @@ public class CooldownUIOverlay : MonoBehaviour
 
     public void ShowCooldown(Cooldown cooldown) {
         this.cooldown = cooldown?.OnProgress((current, total) => {
+            if (overlay == null) return;
             overlay.fillAmount = 1 - (current / total);
         });
     }
